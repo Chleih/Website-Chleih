@@ -1,0 +1,43 @@
+// Mixins allow you to define styles that can be re-used throughout your stylesheet
+
+// SVG hover circle animation on links
+// TODO: Test size with parameters
+@mixin link-hover-animation(
+  $width: 70px,
+  $height: 36px,
+  $defaultStroke: #bbc1e1,
+  $hoverStroke: #275efe,
+  $strokeWidth: 2px
+) {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: margin 0.25s;
+
+  svg {
+    width: $width;
+    height: $height;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    fill: none;
+    stroke: $defaultStroke;
+    stroke-linecap: round;
+    stroke-width: $strokeWidth;
+    stroke-dasharray: 69px 278px;
+    stroke-dashoffset: 361px;
+    transition:
+      stroke 0.25s ease,
+      stroke-dasharray 0.35s;
+  }
+
+  &:hover {
+    svg {
+      stroke: $hoverStroke;
+      stroke-dasharray: 180px 278px;
+    }
+  }
+}
