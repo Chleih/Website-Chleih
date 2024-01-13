@@ -1,7 +1,10 @@
 body,
 html {
   margin: 0;
-  font: bold 14px/1.4 "Open Sans", arial, sans-serif;
+  font:
+    bold 14px/1.4 "Open Sans",
+    arial,
+    sans-serif;
   background: #313030;
 }
 
@@ -50,7 +53,9 @@ nav a svg {
   stroke-width: 2px;
   stroke-dasharray: 69px 278px;
   stroke-dashoffset: 361px;
-  transition: stroke 0.25s ease, stroke-dasharray 0.35s;
+  transition:
+    stroke 0.25s ease,
+    stroke-dasharray 0.35s;
 }
 nav a:hover svg {
   stroke: #275efe;
@@ -91,7 +96,9 @@ a:after {
   left: 50%;
   position: absolute;
   background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition:
+    width 0.3s ease 0s,
+    left 0.3s ease 0s;
   width: 0;
 }
 
