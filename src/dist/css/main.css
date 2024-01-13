@@ -1,0 +1,107 @@
+body,
+html {
+  margin: 0;
+  font: bold 14px/1.4 "Open Sans", arial, sans-serif;
+  background: #313030;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust as needed */
+}
+
+.brand {
+  font-size: 1.5em; /* Adjust as needed */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px; /* Spacing between menu items */
+}
+
+nav a {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: margin 0.25s;
+  text-decoration: none;
+  color: #fff; /* Adjust color as needed */
+}
+nav a svg {
+  width: 70px;
+  height: 36px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  fill: none;
+  stroke: #bbc1e1;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke-dasharray: 69px 278px;
+  stroke-dashoffset: 361px;
+  transition: stroke 0.25s ease, stroke-dasharray 0.35s;
+}
+nav a:hover svg {
+  stroke: #275efe;
+  stroke-dasharray: 180px 278px;
+}
+
+ul {
+  margin: 150px auto 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+
+li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
