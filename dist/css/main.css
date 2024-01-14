@@ -1,65 +1,9 @@
 body,
 html {
   margin: 0;
-  font:
-    bold 14px/1.4 "Open Sans",
-    arial,
-    sans-serif;
-  background: #313030;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px; /* Adjust as needed */
-}
-
-.brand {
-  font-size: 1.5em; /* Adjust as needed */
-}
-
-nav ul {
-  margin: 0;
   padding: 0;
-  list-style: none;
-  display: flex;
-}
-
-nav li {
-  margin-left: 20px; /* Spacing between menu items */
-}
-
-nav a {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: margin 0.25s;
-  text-decoration: none;
-  color: #fff; /* Adjust color as needed */
-}
-nav a svg {
-  width: 70px;
-  height: 36px;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  fill: none;
-  stroke: #bbc1e1;
-  stroke-linecap: round;
-  stroke-width: 2px;
-  stroke-dasharray: 69px 278px;
-  stroke-dashoffset: 361px;
-  transition:
-    stroke 0.25s ease,
-    stroke-dasharray 0.35s;
-}
-nav a:hover svg {
-  stroke: #275efe;
-  stroke-dasharray: 180px 278px;
+  font: bold 14px/1.4 "Open Sans", arial, sans-serif;
+  background: #313030;
 }
 
 ul {
@@ -96,15 +40,63 @@ a:after {
   left: 50%;
   position: absolute;
   background: #fff;
-  transition:
-    width 0.3s ease 0s,
-    left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
 
 a:hover:after {
   width: 100%;
   left: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 20px;
+  background-color: transparent;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f5f5dc;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 2em;
+  font-family: "Arial", sans-serif;
+  color: #4a4a4a;
+  font-weight: bold;
+  padding: 5px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease;
+}
+.brand:hover {
+  color: #275efe;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
 }
 
 @media screen and (max-height: 300px) {
