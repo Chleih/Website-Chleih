@@ -1,12 +1,13 @@
-body {
+.content-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    margin: 20px;
+    width: calc(100% - 40px);
+    min-height: calc(100vh - 40px);
 }
 
 .container {
     flex-grow: 1;
-    margin: 20px;
     background-color: transparent;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
