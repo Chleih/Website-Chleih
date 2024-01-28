@@ -1,0 +1,7 @@
+@use "../utils/variables" as var;
+
+.copyright {
+    font-size: 0.75em;
+    color: var.$faded-grey;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,47 @@
+@use "../utils/mixins" as mix;
+@use "../utils/fonts" as font;
+@use "../utils/variables" as var;
+
+header {
+    @include debug-border(green);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    @include debug-border(green);
+
+    font-family: font.$primary-font;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    @include debug-border(green);
+
+    margin-left: 20px;
+}
+
+nav a {
+    @include debug-border(green);
+
+    // @include link-hover-animation(70px, 36px, #bbc1e1, #275efe, 2px);
+    text-decoration: none;
+    color: var.$creamy-yellow;
+}
+
+.brand {
+    @include debug-border(green);
+
+    font-size: 2.5em;
+    font-family: font.$primary-font;
+    color: var.$creamy-yellow;
+    font-weight: lighter;
+    padding: 5px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
+}

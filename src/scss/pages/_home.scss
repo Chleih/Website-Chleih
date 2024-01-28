@@ -1,0 +1,32 @@
+@use "../utils/mixins" as mix;
+@use "../utils/fonts" as font;
+@use "../utils/variables" as var;
+
+.greeting {
+    @include debug-border(blue);
+
+    font-family: font.$primary-font;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: var.$creamy;
+    animation: fadeIn 2s;
+}
+
+.subtitle {
+    @include debug-border(red);
+
+    font-family: font.$primary-font;
+    font-style: italic;
+    color: #4a4a4a; // TODO: Change this color
+    margin-top: 0.5em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
