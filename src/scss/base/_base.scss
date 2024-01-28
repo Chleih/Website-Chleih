@@ -1,11 +1,12 @@
-@use "../utils/variables" as vars;
+@use "../utils/variables" as var;
+@use "../utils/fonts" as fonts;
 
 body,
 html {
     margin: 0;
     padding: 0;
-    font: vars.$primary-font;
-    background: vars.$primary-bg-color;
+    font: fonts.$primary-font;
+    background: var.$primary-bg-color;
 }
 
 ul {
@@ -24,7 +25,7 @@ li {
 }
 
 a {
-    color: #fff;
+    color: var.$white;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -42,7 +43,7 @@ a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #fff;
+    background: var.$white;
     transition:
         width 0.3s ease 0s,
         left 0.3s ease 0s;

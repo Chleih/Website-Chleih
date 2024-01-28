@@ -1,4 +1,8 @@
+@use "../utils/mixins" as mix;
+
 .content-wrapper {
+    @include mix.debug-border(red);
+
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -7,9 +11,35 @@
 }
 
 .container {
+    @include mix.debug-border(purple);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
     flex-grow: 1;
     background-color: transparent;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #f5f5dc;
+    border: 2px solid;
+    border-color: #f5f5dc;
+}
+
+.center-content {
+    @include mix.debug-border(yellow);
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-container {
+    @include mix.debug-border(blue);
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
