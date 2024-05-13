@@ -4,7 +4,7 @@
 
 </div>
 
-![My Website](./images/placeholder.jpg)
+![My Website](./dist/resources/images/placeholder.jpg)
 
 <div align="center">
 
