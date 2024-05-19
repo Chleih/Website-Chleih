@@ -2,6 +2,20 @@
 
 .copyright {
     font-size: 0.75em;
-    color: var.$faded-grey;
-    margin-bottom: 20px;
+    color: var.$color-ivory;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    margin-bottom: 0;
+    white-space: nowrap;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 2em;
+        border-top: 1px solid var.$color-ivory;
+        margin-right: 10px;
+        vertical-align: middle;
+        transform: translateY(-0.1em);
+    }
 }

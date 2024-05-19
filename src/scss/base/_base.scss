@@ -6,7 +6,8 @@ html {
     margin: 0;
     padding: 0;
     font: fonts.$primary-font;
-    background: var.$primary-bg-color;
+    background: var.$color-space;
+    overflow: hidden;
 }
 
 ul {
@@ -25,7 +26,7 @@ li {
 }
 
 a {
-    color: var.$white;
+    color: var.$color-ivory;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -43,7 +44,7 @@ a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: var.$white;
+    background: var.$color-ivory;
     transition:
         width 0.3s ease 0s,
         left 0.3s ease 0s;
