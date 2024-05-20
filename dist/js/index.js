@@ -1,8 +1,8 @@
 // Eventlistner for when the user hoveres over the brand
 document.addEventListener("DOMContentLoaded", function () {
   var hoverElements = document.querySelectorAll(".brand_hover");
-  var reducedDotColor = "rgba(102, 155, 188, 0.85)";
-  var reducedNameUnderscoreColor = "rgba(251, 254, 243, 0.85)";
+  var reducedDotColor = "rgba(102, 155, 188, 0.80)";
+  var reducedNameUnderscoreColor = "rgba(251, 254, 243, 0.80)";
   var originalIvory = "#fbfef3";
   var originalSuperioty = "#669bbc";
 
