@@ -39,5 +39,5 @@
 }
 
 @mixin debug-border($color: red) {
-    border: 0px solid $color;
+    border: 1px solid $color;
 }

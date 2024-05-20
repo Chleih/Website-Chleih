@@ -46,7 +46,14 @@ nav a {
     transition: color 0.3s ease;
 }
 
-.brand_name {
+.brand_name,
+.brand_underscore,
+.brand_dot {
+    transition: color 0.3s ease;
+}
+
+.brand_name,
+.brand_underscore {
     color: var.$color-ivory;
 }
 
@@ -55,6 +62,6 @@ nav a {
     color: var.$color-superioority;
 }
 
-.brand_underscore {
-    color: var.$color-ivory;
+.brand_hover {
+    cursor: pointer;
 }
