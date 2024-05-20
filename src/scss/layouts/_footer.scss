@@ -1,13 +1,13 @@
 @use "../utils/variables" as var;
+@use "../utils/mixins" as mix;
 
 .copyright {
     font-size: 0.75em;
     color: var.$color-ivory;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
     margin-bottom: 0;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
 
     &::before {
         content: "";
@@ -16,6 +16,23 @@
         border-top: 1px solid var.$color-ivory;
         margin-right: 10px;
         vertical-align: middle;
-        transform: translateY(-0.1em);
+    }
+}
+
+.based_in {
+    font-size: 0.75em;
+    color: var.$color-ivory;
+    margin-bottom: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 2em;
+        border-top: 1px solid var.$color-ivory;
+        margin-left: 10px;
+        vertical-align: middle;
     }
 }
