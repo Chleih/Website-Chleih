@@ -3,17 +3,18 @@
 
 .copyright {
     font-size: 0.75em;
-    color: var.$color-ivory;
+    color: var(--text-color);
     margin-bottom: 0;
     white-space: nowrap;
     display: flex;
     align-items: center;
+    transition: var(--theme-transition);
 
     &::before {
         content: "";
         display: inline-block;
         width: 2em;
-        border-top: 1px solid var.$color-ivory;
+        border-top: 1px solid var(--text-color);
         margin-right: 10px;
         vertical-align: middle;
     }
@@ -21,25 +22,19 @@
 
 .based_in {
     font-size: 0.75em;
-    color: var.$color-ivory;
+    color: var(--text-color);
     margin-bottom: 0;
     white-space: nowrap;
     display: flex;
     align-items: center;
+    transition: var(--theme-transition);
 
     &::after {
         content: "";
         display: inline-block;
         width: 2em;
-        border-top: 1px solid var.$color-ivory;
+        border-top: 1px solid var(--text-color);
         margin-left: 10px;
         vertical-align: middle;
     }
-}
-
-.testing {
-    font-size: 0.75em;
-    color: var.$color-ivory;
-    white-space: nowrap;
-    margin: 0;
 }

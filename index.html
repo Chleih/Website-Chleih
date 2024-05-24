@@ -12,6 +12,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/main.css" />
   </head>
   <body>
@@ -20,8 +21,20 @@
       <!-- Header container -->
       <div class="header-row">
         <!-- Container for the dark and light mode -->
-        <div class="right-header-container">
-          <p class="testing">PLACEHOLDER</p>
+        <div class="top-row-container">
+          <div class="theme_colors">
+            <div class="theme_btn" id="light_mode_btn">
+              <i class="bi bi-square"></i>
+              <i class="bi bi-square-fill" style="display: none"></i>
+              <div class="_text">Light</div>
+            </div>
+            <div class="theme_btn" id="dark_mode_btn">
+              <i class="bi bi-square-fill"></i>
+              <i class="bi bi-square" style="display: none"></i>
+              <div class="_text">Dark</div>
+            </div>
+          </div>
+          <p class="based_in"></p>
         </div>
       </div>
       <!-- Box container -->
@@ -56,7 +69,7 @@
       </div>
 
       <!-- Footer -->
-      <div class="footer-row">
+      <div class="footer-row-container">
         <!-- Container for the copyright text -->
         <div class="left-footer-container">
           <p class="copyright">&copy; 2024 All rights reserved.</p>
@@ -74,6 +87,7 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
     <script src="dist/js/index.js" defer></script>
   </body>
 </html>

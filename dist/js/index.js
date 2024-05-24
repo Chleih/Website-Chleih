@@ -33,3 +33,34 @@ document.addEventListener("DOMContentLoaded", function () {
     element.addEventListener("mouseout", hoverOut);
   });
 });
+
+// Toogle switch between light and dark mode
+document
+  .getElementById("light_mode_btn")
+  .addEventListener("click", function () {
+    // Set light theme
+    document.documentElement.style.setProperty("--text-color", "#474747");
+    document.documentElement.style.setProperty("--bg-color", "#fbfef3");
+    document.documentElement.style.setProperty("--bg-deep-color", "#e6e6e6");
+
+    updateIcons(this, document.getElementById("dark_mode_btn"));
+  });
+
+document.getElementById("dark_mode_btn").addEventListener("click", function () {
+  // Set dark theme
+  document.documentElement.style.setProperty("--text-color", "#fbfef3");
+  document.documentElement.style.setProperty("--bg-color", "#474747");
+  document.documentElement.style.setProperty("--bg-deep-color", "#313131");
+
+  updateIcons(this, document.getElementById("light_mode_btn"));
+});
+
+function updateIcons(activeBtn, inactiveBtn) {
+  // Hide square icon and show filled square icon for active button
+  activeBtn.querySelector(".bi-square").style.display = "none";
+  activeBtn.querySelector(".bi-square-fill").style.display = "inline-block";
+
+  // Reset icons for inactive button
+  inactiveBtn.querySelector(".bi-square-fill").style.display = "none";
+  inactiveBtn.querySelector(".bi-square").style.display = "inline-block";
+}

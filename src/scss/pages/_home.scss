@@ -9,9 +9,10 @@
     font-size: 4em;
     font-weight: 700;
     margin-bottom: 0em;
-    color: var.$color-ivory;
+    color: var(--text-color);
     animation: fadeIn 2s;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    transition: var(--theme-transition);
 }
 
 .custom-statement {
@@ -19,10 +20,11 @@
 
     font-family: font.$primary-font;
     font-style: italic;
-    color: var.$color-ivory;
+    color: var(--text-color);
     align-self: flex-end;
     text-align: left;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    transition: var(--theme-transition);
 }
 
 .illustration {
