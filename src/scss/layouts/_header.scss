@@ -47,20 +47,17 @@ nav a {
 .brand_name,
 .brand_underscore,
 .brand_dot {
-    transition: color 0.3s ease;
     transition: var(--theme-transition);
 }
 
 .brand_name,
 .brand_underscore {
     color: var(--text-color);
-    transition: var(--theme-transition);
 }
 
 .brand_dot {
     font-size: 1.5em;
     color: var.$color-superioority;
-    transition: var(--theme-transition);
 }
 
 .brand_hover {
