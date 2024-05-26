@@ -5,9 +5,7 @@
 .custom-tag {
     @include debug-border(blue);
 
-    font-family: font.$primary-font;
     font-size: 4em;
-    font-weight: 700;
     margin-bottom: 0em;
     color: var(--text-color);
     animation: fadeIn 2s;
@@ -18,21 +16,12 @@
 .custom-statement {
     @include debug-border(red);
 
-    font-family: font.$primary-font;
     font-style: italic;
     color: var(--text-color);
     align-self: flex-end;
     text-align: left;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
     transition: var(--theme-transition);
-}
-
-.illustration {
-    margin-top: 20px;
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
 @keyframes fadeIn {

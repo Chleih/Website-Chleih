@@ -20,39 +20,39 @@
     <div id="loadingScreen" class="loading-screen">
       <div class="loader"></div>
     </div>
+
     <!-- Full page canvas -->
-    <div class="content-wrapper content-hidden">
-      <!-- Header container -->
-      <div class="header-row">
-        <!-- Container for the dark and light mode -->
-        <div class="top-row-container">
-          <div class="theme_colors">
-            <div class="theme_btn" id="light_mode_btn">
-              <i class="bi bi-square"></i>
-              <i class="bi bi-square-fill" style="display: none"></i>
-              <div class="_text">Light</div>
-            </div>
-            <div class="theme_btn" id="dark_mode_btn">
-              <i class="bi bi-square-fill"></i>
-              <i class="bi bi-square" style="display: none"></i>
-              <div class="_text">Dark</div>
-            </div>
+    <div class="content-wrapper-container content-hidden">
+      <!-- Container for the dark and light mode -->
+      <div class="top-row-container">
+        <div class="theme-colors">
+          <div class="theme-btn" id="light-mode-btn">
+            <i class="bi bi-square"></i>
+            <i class="bi bi-square-fill" style="display: none"></i>
+            <div>Light</div>
           </div>
-          <p class="based_in"></p>
+          <div class="theme-btn" id="dark-mode-btn">
+            <i class="bi bi-square-fill"></i>
+            <i class="bi bi-square" style="display: none"></i>
+            <div>Dark</div>
+          </div>
         </div>
+        <p class="right-corner-content"></p>
       </div>
+
       <!-- Box container -->
-      <div class="custom-container">
+      <div class="central-box-container">
         <!-- Header container -->
-        <div class="header-container">
+        <div class="box-header-container">
           <header>
             <!-- Logo section -->
             <div class="brand">
-              <span class="brand_name brand_hover">MohamadChleih</span><span class="brand_dot brand_hover">.</span
-              ><span class="brand_underscore brand_hover">_</span>
+              <span class="brand-name brand-hover">MohamadChleih</span><span class="brand-dot brand-hover">.</span
+              ><span class="brand-underscore brand-hover">_</span>
             </div>
+
+            <!-- Navigation Menu -->
             <nav>
-              <!-- Navigation Menu -->
               <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Portfolio</a></li>
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Greeting center content container -->
-        <div class="center-content">
+        <div class="box-center-container">
           <div class="greeting-container">
             <div class="custom-tag">Mohamad Chleih</div>
             <div class="custom-statement">Translating abstract ideas into concrete software realities</div>
@@ -73,16 +73,12 @@
       </div>
 
       <!-- Footer -->
-      <div class="footer-row-container">
+      <div class="bottom-row-container">
         <!-- Container for the copyright text -->
-        <div class="left-footer-container">
-          <p class="copyright">&copy; 2024 All rights reserved.</p>
-        </div>
+        <p class="left-corner-content">&copy; 2024 All rights reserved.</p>
 
         <!-- Container for the based text -->
-        <div class="center-footer-container">
-          <p class="based_in">Based in Copenhagen, Denmark.</p>
-        </div>
+        <p class="right-corner-content">Based in Copenhagen, Denmark.</p>
       </div>
     </div>
     <script
@@ -91,7 +87,6 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
     <script src="dist/js/index.js" defer></script>
   </body>
 </html>

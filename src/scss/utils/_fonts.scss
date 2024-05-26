@@ -13,24 +13,31 @@ $primary-font: "Roboto", sans-serif;
     }
 }
 
+// Font family for Neue Montreal regular
 @include font-face(
     "Neue Montreal",
     "/dist/resources/fonts/neue_montreal/NeueMontreal-Regular.otf",
     $weight: normal,
     $style: normal
 );
+
+// Font family for Neue Montreal medium
 @include font-face(
     "Neue Montreal",
     "/dist/resources/fonts/neue_montreal/NeueMontreal-Medium.otf",
     $weight: 500,
     $style: normal
 );
+
+// Font family for Neue Montreal bold
 @include font-face(
     "Neue Montreal",
     "/dist/resources/fonts/neue_montreal/NeueMontreal-Bold.otf",
     $weight: bold,
     $style: normal
 );
+
+// Font family for Neue Montreal bold and italic
 @include font-face(
     "Neue Montreal",
     "/dist/resources/fonts/neue_montreal/NeueMontreal-BoldItalic.otf",

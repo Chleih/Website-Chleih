@@ -1,8 +1,8 @@
 @use "../utils/mixins" as mix;
 @use "../utils/variables" as var;
 
-.content-wrapper {
-    @include mix.debug-border(red, 0px);
+.content-wrapper-container {
+    @include mix.debug-border(red);
 
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     transition: var(--theme-transition);
 }
 
-.custom-container {
+.central-box-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,7 +31,7 @@
     transition: var(--theme-transition);
 }
 
-.center-content {
+.box-center-container {
     @include mix.debug-border(green);
 
     flex-grow: 1;
@@ -46,7 +46,7 @@
     @include mix.debug-border(black);
 }
 
-.header-container {
+.box-header-container {
     @include mix.debug-border(blue);
 
     display: flex;
@@ -54,19 +54,7 @@
     width: 100%;
 }
 
-.header-row {
-    @include mix.debug-border(yellow);
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-grow: 0.01;
-    margin: 0px 20px;
-    height: auto;
-    position: relative;
-}
-
-.footer-row-container {
+.bottom-row-container {
     @include mix.debug-border(black);
 
     display: flex;
@@ -79,11 +67,6 @@
     min-height: 20px;
 }
 
-.left-container {
-    display: flex;
-    align-items: center;
-}
-
 .center-container {
     position: absolute;
     left: 50%;
@@ -93,14 +76,17 @@
 }
 
 .top-row-container {
-    @include mix.debug-border(black, 0px);
+    @include mix.debug-border(black);
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
     max-height: 20px;
     min-height: 20px;
-    width: 100%;
+    flex-grow: 0.01;
+    margin: 0px 20px;
+    height: auto;
+    position: relative;
 }
 
 .content-hidden {

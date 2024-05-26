@@ -1,7 +1,7 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins" as mix;
 
-.copyright {
+.left-corner-content {
     font-size: 0.75em;
     color: var(--text-color);
     margin-bottom: 0;
@@ -20,7 +20,7 @@
     }
 }
 
-.based_in {
+.right-corner-content {
     font-size: 0.75em;
     color: var(--text-color);
     margin-bottom: 0;
