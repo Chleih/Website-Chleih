@@ -75,6 +75,7 @@ function updateIcons(activeBtn, inactiveBtn) {
  */
 function updateTheme(theme) {
   currentTheme = theme;
+  localStorage.setItem("theme", theme);
   document.documentElement.setAttribute("data-theme", theme);
 
   if (theme === "light") {
@@ -87,3 +88,52 @@ function updateTheme(theme) {
     document.documentElement.style.setProperty("--bg-deep-color", "#313131");
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const savedTheme = localStorage.getItem("theme") || "dark"; // Default to dark if no theme is saved
+  updateTheme(savedTheme);
+
+  // Ensure icons are updated correctly
+  if (savedTheme === "light") {
+    updateIcons(
+      document.getElementById("light_mode_btn"),
+      document.getElementById("dark_mode_btn"),
+    );
+  } else {
+    updateIcons(
+      document.getElementById("dark_mode_btn"),
+      document.getElementById("light_mode_btn"),
+    );
+  }
+});
+
+// Load screen on initial visit to website
+document.addEventListener("DOMContentLoaded", function () {
+  const loadingScreen = document.getElementById("loadingScreen");
+  const mainContent = document.querySelector(".content-wrapper");
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const testing = urlParams.get("testing");
+
+  loadingScreen.style.visibility = "visible";
+  loadingScreen.style.opacity = "1";
+
+  if (!localStorage.getItem("firstVisit") || testing === "true") {
+    localStorage.setItem("firstVisit", "true");
+    setTimeout(function () {
+      // Start the fade-out effect for the loading screen
+      loadingScreen.style.opacity = "0";
+
+      // Wait for the fade-out to complete before hiding the screen and showing content
+      setTimeout(function () {
+        loadingScreen.style.visibility = "hidden";
+        mainContent.classList.remove("content-hidden");
+        mainContent.classList.add("content-visible");
+      }, 500);
+    }, 2500);
+  } else {
+    loadingScreen.style.display = "none";
+    mainContent.classList.remove("content-hidden");
+    mainContent.classList.add("content-visible");
+  }
+});

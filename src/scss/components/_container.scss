@@ -27,7 +27,7 @@
     border-color: var(--text-color);
     margin: 0px 20px 0px 20px;
     box-sizing: border-box;
-    background-color: var(--bg-color-dark);
+    background-color: var(--bg-color);
     transition: var(--theme-transition);
 }
 
@@ -101,4 +101,18 @@
     max-height: 20px;
     min-height: 20px;
     width: 100%;
+}
+
+.content-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition:
+        visibility 0s 0.5s,
+        opacity 0.5s linear;
+}
+
+.content-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
 }
