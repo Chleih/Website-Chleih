@@ -1,0 +1,44 @@
+@use "../utils/mixins" as mix;
+@use "../utils/variables" as var;
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
+}
+
+.loader {
+    font-size: 2em;
+    color: var(--text-color);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader::after {
+    content: "";
+    display: block;
+    width: 3em;
+    height: 3em;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid var(--text-color);
+    border-color: var(--text-color) transparent var(--text-color) transparent;
+    animation: spin 1.2s linear infinite;
+}

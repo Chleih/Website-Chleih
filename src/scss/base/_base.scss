@@ -1,31 +1,64 @@
-@use "../utils/variables" as var;
-@use "../utils/fonts" as fonts;
+@use "../utils/mixins" as mix;
+
+:root {
+    // Light theme
+    --text-color-light: #474747;
+    --bg-color-light: #fbfef3;
+    --bg-deep-color-light: #e6e6e6;
+
+    // Dark theme
+    --text-color-dark: #fbfef3;
+    --bg-color-dark: #474747;
+    --bg-deep-color-dark: #313131;
+    --theme-transition: background-color 1s, color 1s;
+
+    // Other colors
+    --color-superioority: #669bbc;
+
+    // Fonts
+    --primary-font: "Neue Montreal", sans-serif;
+    --primary-font-regular-weight: 400;
+    --primary-font-medieum-weight: 500;
+    --primary-font-bold-weight: 700;
+    --primary-font-style-italic: italic;
+    --primary-font-style-regular: normal;
+    --primart-font-style-bold: bold;
+}
+
+:root.light-mode {
+    --text-color: var(--text-color-light);
+    --bg-color: var(--bg-color-light);
+    --bg-deep-color: var(--bg-deep-color-light);
+}
+
+:root.dark-mode {
+    --text-color: var(--text-color-dark);
+    --bg-color: var(--bg-color-dark);
+    --bg-deep-color: var(--bg-deep-color-dark);
+}
 
 body,
 html {
+    @include mix.debug-border(teal);
+
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    font: fonts.$primary-font;
-    background: var.$primary-bg-color;
-}
-
-ul {
-    margin: 150px auto 0;
-    padding: 0;
-    list-style: none;
-    display: table;
-    width: 600px;
-    text-align: center;
-}
-
-li {
-    display: table-cell;
-    position: relative;
-    padding: 15px 0;
+    font-family: var(--primary-font);
+    font-weight: var(--primary-font-regular-weight);
+    font-style: var(--primary-font-style-regular);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overscroll-behavior: none;
+    overflow: hidden;
+    transition: var(--theme-transition);
 }
 
 a {
-    color: var.$white;
+    color: var(--text-color);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -33,6 +66,7 @@ a {
     display: inline-block;
     padding: 15px 20px;
     position: relative;
+    transition: var(--theme-transition);
 }
 
 a:after {
@@ -43,7 +77,7 @@ a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: var.$white;
+    background: var(--text-color);
     transition:
         width 0.3s ease 0s,
         left 0.3s ease 0s;
@@ -53,4 +87,36 @@ a:after {
 a:hover:after {
     width: 100%;
     left: 0;
+}
+
+header {
+    @include mix.debug-border(green);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    @include debug-border(green);
+
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    @include mix.debug-border(green);
+
+    margin-left: 20px;
+}
+
+nav a {
+    @include debug-border(green);
+
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-weight: var(--primary-font-medieum-weight);
+    font-style: var(--primary-font-style-regular);
 }
