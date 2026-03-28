@@ -201,6 +201,26 @@ nav a {
   transition: opacity 0.5s linear;
 }
 
+#particle-container {
+  border: 1px solid var(--text-color);
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
 @font-face {
   font-family: "Neue Montreal";
   src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-Regular.otf.otf") format("opentype");

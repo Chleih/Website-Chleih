@@ -102,3 +102,24 @@
     opacity: 1;
     transition: opacity 0.5s linear;
 }
+
+#particle-container {
+    @include mix.debug-border(var(--text-color), 1px);
+
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;  
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    opacity: 0.75;
+}

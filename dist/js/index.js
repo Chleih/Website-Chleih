@@ -128,3 +128,41 @@ document.addEventListener("DOMContentLoaded", function () {
     mainContent.classList.add("content-visible");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("particle-container");
+  const numberOfParticles = 400; // Increased particle count
+
+  for (let i = 0; i < numberOfParticles; i++) {
+    let particle = document.createElement("div");
+    particle.classList.add("particle");
+    container.appendChild(particle);
+    animateParticle(particle, container);
+  }
+});
+
+function animateParticle(particle, container) {
+  const minRadius = (0.6 * container.offsetWidth) / 2; // Minimum radius
+  const maxRadius = (0.8 * container.offsetWidth) / 2; // Maximum radius
+  const radius = minRadius + Math.random() * (maxRadius - minRadius); // Random radius within range
+
+  const angleSpeed = 0.001 + Math.random() * 0.001; // Slower speed
+  let angle = Math.random() * Math.PI * 2; // Start from a random angle
+
+  function move() {
+    let x =
+      container.offsetWidth / 2 +
+      radius * Math.cos(angle) -
+      particle.offsetWidth / 2;
+    let y =
+      container.offsetHeight / 2 +
+      radius * Math.sin(angle) -
+      particle.offsetHeight / 2;
+    particle.style.transform = `translate(${x}px, ${y}px)`;
+    angle += angleSpeed;
+
+    requestAnimationFrame(move);
+  }
+
+  move();
+}
