@@ -1,6 +1,6 @@
-@use "../utils/mixins" as mix;
-@use "../utils/fonts" as font;
-@use "../utils/variables" as var;
+@use "../absracts/mixins" as mix;
+@use "../absracts/fonts" as font;
+@use "../absracts/variables" as var;
 
 .brand {
     @include debug-border(green);

@@ -289,8 +289,7 @@ nav a {
   text-transform: uppercase;
   cursor: pointer;
   max-height: 30px;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   color: var(--text-color);
   transition: var(--theme-transition);
 }
@@ -299,8 +298,7 @@ nav a {
   border: 0px solid black;
   display: flex;
   align-items: center;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
   font-weight: 400;
   text-transform: uppercase;
   cursor: pointer;

@@ -1,5 +1,5 @@
-@use "../utils/variables" as var;
-@use "../utils/mixins" as mix;
+@use "../absracts/variables" as var;
+@use "../absracts/mixins" as mix;
 
 .left-corner-content {
     font-size: 0.75em;
