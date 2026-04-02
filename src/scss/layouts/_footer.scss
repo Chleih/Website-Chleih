@@ -1,5 +1,5 @@
-@use "../absracts/variables" as var;
-@use "../absracts/mixins" as mix;
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
 
 .left-corner-content {
     font-size: 0.75em;
@@ -11,7 +11,7 @@
     transition: var(--theme-transition);
 
     &::before {
-        content: "";
+        content: '';
         display: inline-block;
         width: 2em;
         border-top: 1px solid var(--text-color);
@@ -30,7 +30,7 @@
     transition: var(--theme-transition);
 
     &::after {
-        content: "";
+        content: '';
         display: inline-block;
         width: 2em;
         border-top: 1px solid var(--text-color);

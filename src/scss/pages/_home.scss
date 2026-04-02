@@ -1,9 +1,9 @@
-@use "../absracts/mixins" as mix;
-@use "../absracts/fonts" as font;
-@use "../absracts/variables" as var;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/fonts' as font;
+@use '../abstracts/variables' as var;
 
 .custom-tag {
-    @include debug-border(blue);
+    @include mix.debug-border(blue);
 
     font-size: 4em;
     margin-bottom: 0em;
@@ -14,7 +14,7 @@
 }
 
 .custom-statement {
-    @include debug-border(red);
+    @include mix.debug-border(red);
 
     font-style: italic;
     color: var(--text-color);

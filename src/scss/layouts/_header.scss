@@ -1,9 +1,9 @@
-@use "../absracts/mixins" as mix;
-@use "../absracts/fonts" as font;
-@use "../absracts/variables" as var;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/fonts' as font;
+@use '../abstracts/variables' as var;
 
 .brand {
-    @include debug-border(green);
+    @include mix.debug-border(green);
 
     font-size: 2.5em;
     font-family: var(--primary-font);
@@ -37,7 +37,7 @@
 }
 
 .theme-colors {
-    @include debug-border(green);
+    @include mix.debug-border(green);
 
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@
 }
 
 .theme-btn {
-    @include debug-border(black);
+    @include mix.debug-border(black);
 
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@
 }
 
 .theme_btn i {
-    @include debug-border(black);
+    @include mix.debug-border(black);
 
     max-height: 100%;
     font-size: 0.75rem;
