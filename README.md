@@ -49,7 +49,7 @@ Install the project dependencies locally:
 npm install
 ```
 
-This ensures you get the same tooling versions used by the project, including shared development tools such as **Sass** and **Prettier**.
+This ensures you get the same tooling versions used by the project, including shared development tools such as **Sass**, **Prettier**, and **ESLint**.
 
 ### 3. Start Sass watch
 
