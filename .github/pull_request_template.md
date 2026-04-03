@@ -2,7 +2,7 @@
 
 Describe the purpose of this PR clearly and briefly.
 
-## 🔗 Related story
+## 🔗 Related work item
 
 - Jira issue:
 
