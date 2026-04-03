@@ -1,6 +1,20 @@
 {
-  "devDependencies": {
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1"
-  }
+    "name": "website-chleih",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Personal portfolio website",
+    "scripts": {
+        "sass:watch": "sass --watch src/scss:docs/css --no-source-map",
+        "sass:build": "sass src/scss:docs/css --no-source-map",
+        "lint": "eslint src/js",
+        "lint:fix": "eslint src/js --fix"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.2.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.1",
+        "prettier": "3.8.1",
+        "sass": "^1.98.0"
+    }
 }

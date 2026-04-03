@@ -1,5 +1,5 @@
-@use "../utils/mixins" as mix;
-@use "../utils/variables" as var;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/variables' as var;
 
 .loading-screen {
     position: fixed;
@@ -32,7 +32,7 @@
 }
 
 .loader::after {
-    content: "";
+    content: '';
     display: block;
     width: 3em;
     height: 3em;

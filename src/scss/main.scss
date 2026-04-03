@@ -1,7 +1,6 @@
-@import "utils/mixins";
-@import "base/base";
-@import "components/container";
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/loader";
-@import "pages/home";
+@use 'base/base';
+@use 'components/container';
+@use 'layouts/header';
+@use 'layouts/footer';
+@use 'layouts/loader';
+@use 'pages/home';

@@ -1,4 +1,4 @@
-@use "../utils/mixins" as mix;
+@use '../abstracts/mixins' as mix;
 
 :root {
     // Light theme
@@ -16,7 +16,7 @@
     --color-superioority: #669bbc;
 
     // Fonts
-    --primary-font: "Neue Montreal", sans-serif;
+    --primary-font: 'Neue Montreal', sans-serif;
     --primary-font-regular-weight: 400;
     --primary-font-medieum-weight: 500;
     --primary-font-bold-weight: 700;
@@ -72,7 +72,7 @@ a {
 a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
-    content: "";
+    content: '';
     display: block;
     height: 2px;
     left: 50%;
@@ -99,7 +99,7 @@ header {
 }
 
 nav ul {
-    @include debug-border(green);
+    @include mix.debug-border(green);
 
     margin: 0;
     list-style: none;
@@ -113,7 +113,7 @@ nav li {
 }
 
 nav a {
-    @include debug-border(green);
+    @include mix.debug-border(green);
 
     text-decoration: none;
     font-family: var(--primary-font);
