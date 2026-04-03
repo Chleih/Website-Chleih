@@ -79,6 +79,28 @@ Recommended VS Code extension:
 
 - **Prettier - Code formatter**
 
+### ESLint
+
+ESLint is used to analyse JavaScript code for potential issues and maintain consistent code quality.
+
+- The project configuration lives in `eslint.config.js`
+- ESLint is installed through the project dependencies via `npm install`
+- Linting can be run manually with:
+
+```bash
+npm run lint
+```
+
+- Auto-fixable lint issues can be fixed with:
+
+```bash
+npm run lint:fix
+```
+
+Recommended VS Code extension:
+
+- **ESLint**
+
 ### EditorConfig
 
 EditorConfig is used to keep consistent:

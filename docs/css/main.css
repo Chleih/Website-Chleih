@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap");
 :root {
   --text-color-light: #474747;
   --bg-color-light: #fbfef3;
@@ -9,7 +8,7 @@
   --bg-deep-color-dark: #313131;
   --theme-transition: background-color 1s, color 1s;
   --color-superioority: #669bbc;
-  --primary-font: "Neue Montreal", sans-serif;
+  --primary-font: 'Neue Montreal', sans-serif;
   --primary-font-regular-weight: 400;
   --primary-font-medieum-weight: 500;
   --primary-font-bold-weight: 700;
@@ -223,28 +222,28 @@ nav a {
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-Regular.otf.otf") format("opentype");
+  src: url("/src/resources/fonts/neue_montreal/NeueMontreal-Regular.otf.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-Medium.otf.otf") format("opentype");
+  src: url("/src/resources/fonts/neue_montreal/NeueMontreal-Medium.otf.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-Bold.otf.otf") format("opentype");
+  src: url("/src/resources/fonts/neue_montreal/NeueMontreal-Bold.otf.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-BoldItalic.otf.otf") format("opentype");
+  src: url("/src/resources/fonts/neue_montreal/NeueMontreal-BoldItalic.otf.otf") format("opentype");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -397,34 +396,6 @@ nav a {
   animation: spin 1.2s linear infinite;
 }
 
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-Regular.otf.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-Medium.otf.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-Bold.otf.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/dist/resources/fonts/neue_montreal/NeueMontreal-BoldItalic.otf.otf") format("opentype");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
 .custom-tag {
   border: 0px solid blue;
   font-size: 4em;
