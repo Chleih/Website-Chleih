@@ -18,6 +18,9 @@ Thumbs.db
 .vs/
 .vscode/*
 
+# ignore distribution folder created when building
+dist/
+
 # --------------------------------------------------------
 # BEGIN Explictly Allowed Files (i.e. do NOT ignore these)
 # --------------------------------------------------------
