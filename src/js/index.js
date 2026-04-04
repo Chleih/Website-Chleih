@@ -1,3 +1,5 @@
+import '../scss/main.scss';
+
 // Global variables
 var currentTheme = 'dark';
 
