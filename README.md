@@ -17,7 +17,7 @@
 
 ## 👋🏽 Introduction
 
-Welcome to the repository of my personal portfolio website. This site showcases my skills, projects, and a bit about myself.<br>
+Welcome to the repository of my personal portfolio website. This site showcases my skills, projects, and a bit about myself.
 The project is built with a simple frontend stack and is structured to support clean development, shared team conventions, and future scalability.
 
 ## 🛠 Technologies used
@@ -28,6 +28,7 @@ The project is built with a simple frontend stack and is structured to support c
 - **Sass (SCSS)**: Used to structure and maintain styles in a modular way.
 - **Node.js & npm**: Used for local development tooling and dependency management.
 - **Prettier**: Used as the shared code formatter for consistent formatting across the project.
+- **ESLint**: Used to analyse JavaScript code and maintain code quality.
 - **EditorConfig**: Used to enforce consistent editor behavior such as indentation, line endings, and final newlines.
 
 ## 🚀 Getting started
@@ -41,31 +42,9 @@ Make sure the following are installed on your machine:
 - **Git**
 - **VS Code** (recommended)
 
-### 2. Install dependencies
-
-Install the project dependencies locally:
-
-```bash
-npm install
-```
-
-This ensures you get the same tooling versions used by the project, including shared development tools such as **Sass**, **Prettier**, and **ESLint**.
-
-### 3. Start Sass watch
-
-Compile SCSS into CSS and keep it updated while developing:
-
-```bash
-npm run sass:watch
-```
-
-### 4. Open the site locally
-
-Open `index.html` with **Live Server** in VS Code, or in your browser if needed.
-
 ## 🎨 Formatting and code consistency
 
-This project uses shared formatting and editor configuration to ensure code stays consistent across developers and machines.
+This project uses shared formatting and linting configuration to ensure code stays consistent across developers and machines.
 
 ### Prettier
 
@@ -116,25 +95,35 @@ Recommended VS Code extension:
 
 - **EditorConfig for VS Code**
 
-### Workspace settings
+## ✅ Quality checks
 
-Shared project-specific VS Code settings are stored in:
+This project uses GitHub Actions to run shared quality checks on pull requests and protected branches.
 
-```text
-.vscode/settings.json
-```
+Current CI checks include:
 
-These settings are intended to support the repo setup and team consistency, while personal editor preferences should remain in each developer’s own user settings.
+- **Sass build**
+- **Prettier check**
+- **ESLint**
 
-## ✨ Features (TODO: Update this section)
+These checks help ensure that code is buildable, formatted consistently, and linted before being merged.
 
-- **Interactive UI**: Enhanced with pure JavaScript for a smooth user experience.
-- **Responsive Design**: Website optimized for various screen sizes, ensuring a pleasant experience on both desktop and mobile.
-- **SASS Architecture**: Modular SASS approach, making styles more maintainable.
+## ✨ Features
+
+- **Interactive UI**: Enhanced with JavaScript for a smooth user experience.
+- **Responsive Design**: Website optimized for different screen sizes.
+- **Modular Sass Structure**: Organized SCSS architecture for maintainability and future growth.
+- **Shared Formatting Setup**: Prettier, ESLint, and EditorConfig help keep the codebase consistent.
 
 ## 🤝 Contribution
 
-Feel free to fork this repository, submit pull requests, or suggest any other ways to improve the code.
+Feel free to fork this repository, open pull requests, or suggest improvements.
+This repository uses:
+
+- a shared **Pull Request template**
+- shared **workspace settings**
+- **CODEOWNERS**
+- **Dependabot**
+- **GitHub Actions** for continuous integration
 
 ## 🌿 Branch strategy
 
@@ -148,6 +137,38 @@ This project follows a structured Git branching strategy to support organized de
 - **`release/*`** - Used to prepare a new production release. Release branches are created from `develop` when the next version is ready for stabilization and final adjustments before deployment.
 - **`hotfix/*`** - Used for urgent fixes to production issues that require immediate attention. Hotfix branches are created from `main` and merged back into both `main` and `develop` to keep all branches aligned.
 
+### Branch protection and review process
+
+The repository is configured to simulate a team-oriented development workflow.
+
+Protected branches such as `develop` and `main` are intended to be updated through pull requests rather than through direct commits by regular contributors.
+
+The repository uses branch protection / rulesets to support:
+
+- pull request based changes
+- required reviews
+- required status checks
+- conversation resolution before merge
+- controlled bypass permissions for admins only
+
+### Continuous integration
+
+Pull requests and protected branches are validated through GitHub Actions.
+
+The current CI pipeline checks:
+
+- Sass compilation
+- Prettier formatting
+- ESLint validation
+
+### Code ownership
+
+This repository uses a `CODEOWNERS` file to define ownership of key parts of the codebase and support a clearer review process.
+
+### Dependency management
+
+This repository uses **Dependabot** to help keep dependencies up to date through pull requests targeting the development branch.
+
 ### Branch structure
 
 ```text
@@ -160,13 +181,13 @@ main
 
 ### Typical workflow
 
-1. Create a feature/\* branch from develop
-2. Merge completed feature work back into develop
-3. Create a release/\* branch from develop when preparing a new version
-4. Apply only release-related fixes and final adjustments in release/\*
-5. Merge release/\* into main once the release is ready
-6. Merge release/\* back into develop to keep branches aligned
-7. Create hotfix/\* from main for urgent production issues, then merge it into both main and develop
+1. Create a `feature/*` branch from `develop`
+2. Implement the required changes
+3. Run relevant local checks
+4. Open a pull request into `develop`
+5. Ensure CI checks pass
+6. Complete review and merge into `develop`
+7. Promote changes toward `main` through the defined release / hotfix workflow
 
 ## 📞 Contact
 
