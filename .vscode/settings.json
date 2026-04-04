@@ -1,0 +1,25 @@
+{
+    // -------------------- FORMATTING --------------------
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.detectIndentation": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    // -------------------- PRETTIER --------------------
+    "prettier.useEditorConfig": true,
+
+    // -------------------- FILE VISIBILITY --------------------
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/.DS_Store": true
+    },
+
+    // -------------------- LIVE SERVER --------------------
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+
+    // -------------------- LANGUAGE OVERRIDES --------------------
+    "[yaml]": {
+        "editor.formatOnSave": true
+    }
+}
