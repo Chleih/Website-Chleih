@@ -1,5 +1,5 @@
 @use '../abstracts/mixins' as mix;
-@use '../abstracts/variables' as var;
+@use '../abstracts/colors' as colors;
 
 .content-wrapper-container {
     @include mix.debug-border(red);

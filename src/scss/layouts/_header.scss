@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as mix;
 @use '../abstracts/fonts' as font;
-@use '../abstracts/variables' as var;
+@use '../abstracts/colors' as colors;
 
 .brand {
     @include mix.debug-border(green);
@@ -28,7 +28,7 @@
 
 .brand-dot {
     font-size: 1.5em;
-    color: var.$color-superioority;
+    color: colors.$color-accent-primary;
     transition: var(--theme-transition);
 }
 
