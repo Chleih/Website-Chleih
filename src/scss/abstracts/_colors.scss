@@ -1,50 +1,17 @@
 // ============================================
-// BASE PALETTE
-// Raw brand and neutral colors.
-// These are the source colors for the design system.
-// Should not be used for components.
+// NEUTRAL PALETTE
+// Foundation colors used to build surfaces, text,
+// borders, and layout contrast across themes.
 // ============================================
 
 $color-carbon: #1f1f1f; // was 313131 before
 $color-iron-grey: #474747;
-$color-procelain: #f8faf4; // was fbfef3 before
+$color-porcelain: #f8faf4; // was fbfef3 before
 $color-alabaster-grey: #e6e6e6;
+
+// ============================================
+// ACCENT PALETTE
+// Brand and emphasis colors.
+// ============================================
 $color-steel-blue: #669bbc;
-$color-tan: #d3b38d;
-
-// ============================================
-// TEXT COLORS
-// Used for readable text, headings, and text-based UI.
-// ============================================
-
-$color-text-primary: $color-carbon;
-$color-text-secondary: $color-iron-grey;
-$color-text-inverse: $color-procelain;
-
-// ============================================
-// SURFACE COLORS
-// Used for page backgrounds, section backgrounds,
-// cards, and other large UI surfaces.
-// ============================================
-
-$color-surface-primary: $color-procelain;
-$color-surface-secondary: $color-alabaster-grey;
-$color-surface-inverse: $color-carbon;
-
-// ============================================
-// BORDER COLORS
-// Used for outlines, separators, dividers,
-// and subtle visual structure.
-// ============================================
-
-$color-border-primary: $color-iron-grey;
-$color-border-secondary: $color-alabaster-grey;
-
-// ============================================
-// ACCENT COLORS
-// Used for interactive elements, highlights,
-// links, buttons, and visual emphasis.
-// ============================================
-
-$color-accent-primary: $color-steel-blue;
-$color-accent-secondary: $color-tan;
+$color-warm-sand: #d3b38d;
