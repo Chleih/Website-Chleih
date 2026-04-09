@@ -1,15 +1,50 @@
-// TEXT
-$color-text-primary: #1f1f1f; // was 313131 before
-$color-text-inverse: #f8faf4; // was fbfef3 before
+// ============================================
+// BASE PALETTE
+// Raw brand and neutral colors.
+// These are the source colors for the design system.
+// Should not be used for components.
+// ============================================
 
-// BACKGROUNDS
-$color-surface-primary: #fbfef3;
-$color-surface-secondary: #e6e6e6;
-$color-surface-inverse: #1f1f1f; // was 313131 before
+$color-carbon: #1f1f1f; // was 313131 before
+$color-iron-grey: #474747;
+$color-procelain: #f8faf4; // was fbfef3 before
+$color-alabaster-grey: #e6e6e6;
+$color-steel-blue: #669bbc;
+$color-tan: #d3b38d;
 
-// BORDERS
-$color-border-default: #474747;
+// ============================================
+// TEXT COLORS
+// Used for readable text, headings, and text-based UI.
+// ============================================
 
-// ACCENTS
-$color-accent-primary: #669bbc;
-$color-accent-secondary: #d3b38d;
+$color-text-primary: $color-carbon;
+$color-text-secondary: $color-iron-grey;
+$color-text-inverse: $color-procelain;
+
+// ============================================
+// SURFACE COLORS
+// Used for page backgrounds, section backgrounds,
+// cards, and other large UI surfaces.
+// ============================================
+
+$color-surface-primary: $color-procelain;
+$color-surface-secondary: $color-alabaster-grey;
+$color-surface-inverse: $color-carbon;
+
+// ============================================
+// BORDER COLORS
+// Used for outlines, separators, dividers,
+// and subtle visual structure.
+// ============================================
+
+$color-border-primary: $color-iron-grey;
+$color-border-secondary: $color-alabaster-grey;
+
+// ============================================
+// ACCENT COLORS
+// Used for interactive elements, highlights,
+// links, buttons, and visual emphasis.
+// ============================================
+
+$color-accent-primary: $color-steel-blue;
+$color-accent-secondary: $color-tan;
