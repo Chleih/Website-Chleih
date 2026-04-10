@@ -1,23 +1,15 @@
-@use '../abstracts/mixins' as mix;
-@use '../abstracts/fonts' as font;
-@use '../abstracts/colors' as colors;
-
 .custom-tag {
-    @include mix.debug-border(blue);
-
     font-size: 4em;
     margin-bottom: 0em;
-    color: var(--text-color);
+    color: var(--color-text-secondary);
     animation: fadeIn 2s;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
     transition: var(--theme-transition);
 }
 
 .custom-statement {
-    @include mix.debug-border(red);
-
     font-style: italic;
-    color: var(--text-color);
+    color: var(--color-text-secondary);
     align-self: flex-end;
     text-align: left;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
