@@ -1,13 +1,10 @@
-@use '../abstracts/mixins' as mix;
-@use '../abstracts/colors' as colors;
-
 .loading-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--bg-color);
+    background-color: var(--color-surface-primar);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +16,7 @@
 
 .loader {
     font-size: 2em;
-    color: var(--text-color);
+    color: var(--color-text-secondary);
 }
 
 @keyframes spin {
@@ -38,7 +35,7 @@
     height: 3em;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid var(--text-color);
-    border-color: var(--text-color) transparent var(--text-color) transparent;
+    border: 6px solid var(--color-text-secondary);
+    border-color: var(--color-text-secondary) transparent var(--color-text-secondary) transparent;
     animation: spin 1.2s linear infinite;
 }
