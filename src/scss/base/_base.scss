@@ -1,18 +1,4 @@
 :root {
-    // Light theme
-    --text-color-light: #474747;
-    --bg-color-light: #fbfef3;
-    --bg-deep-color-light: #e6e6e6;
-
-    // Dark theme
-    --text-color-dark: #fbfef3;
-    --bg-color-dark: #474747;
-    --bg-deep-color-dark: #313131;
-    --theme-transition: background-color 1s, color 1s;
-
-    // Other colors
-    --color-accent-primary: #669bbc;
-
     // Fonts
     --primary-font: 'Neue Montreal', sans-serif;
     --primary-font-regular-weight: 400;
@@ -21,18 +7,6 @@
     --primary-font-style-italic: italic;
     --primary-font-style-regular: normal;
     --primart-font-style-bold: bold;
-}
-
-:root.light-mode {
-    --text-color: var(--text-color-light);
-    --bg-color: var(--bg-color-light);
-    --bg-deep-color: var(--bg-deep-color-light);
-}
-
-:root.dark-mode {
-    --text-color: var(--text-color-dark);
-    --bg-color: var(--bg-color-dark);
-    --bg-deep-color: var(--bg-deep-color-dark);
 }
 
 body,
@@ -73,7 +47,7 @@ a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: var(--color-text-primary);
+    background: var(--color-text-secondary);
     transition:
         width 0.3s ease 0s,
         left 0.3s ease 0s;

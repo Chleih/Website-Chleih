@@ -1,12 +1,17 @@
 @use './colors' as colors;
 
-// ============================================
-// LIGHT THEME
-// Default theme tokens for readable text, surfaces,
-// borders, and interactive accents.
-// ============================================
+:root {
+    // ============================================
+    // ACCENT COLORS
+    // Used for interactive elements, highlights,
+    // links, buttons, and visual emphasis.
+    // ============================================
+    --color-accent-primary: #{colors.$color-steel-blue};
+    --color-accent-secondary: #{colors.$color-warm-sand};
 
-// TODO: Make sure we have a default theme
+    --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
 :root.light-mode {
     // ============================================
     // TEXT COLORS
@@ -32,24 +37,7 @@
     // ============================================
     --color-border-primary: #{colors.$color-iron-grey};
     --color-border-secondary: #{colors.$color-alabaster-grey};
-
-    // ============================================
-    // ACCENT COLORS
-    // Used for interactive elements, highlights,
-    // links, buttons, and visual emphasis.
-    // ============================================
-    --color-accent-primary: #{colors.$color-steel-blue};
-    --color-accent-secondary: #{colors.$color-warm-sand};
-
-    --theme-transition:
-        background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; // TODO: Remove or place somewhere else
 }
-
-// ============================================
-// DARK THEME
-// Alternate theme tokens for dark mode.
-// The token names stay the same; only their values change.
-// ============================================
 
 :root.dark-mode {
     // ============================================
@@ -76,15 +64,4 @@
     // ============================================
     --color-border-primary: #{colors.$color-alabaster-grey};
     --color-border-secondary: #{colors.$color-iron-grey};
-
-    // ============================================
-    // ACCENT COLORS
-    // Used for interactive elements, highlights,
-    // links, buttons, and visual emphasis.
-    // ============================================
-    --color-accent-primary: #{colors.$color-steel-blue};
-    --color-accent-secondary: #{colors.$color-warm-sand};
-
-    --theme-transition:
-        background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; // TODO: Remove or place somewhere else
 }

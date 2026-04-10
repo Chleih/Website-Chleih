@@ -1,3 +1,7 @@
-@mixin debug-border($color: red, $border: 1px) {
-    border: $border solid $color;
+@mixin debug-border($color: red, $width: 1px, $style: solid) {
+    border: $width $style $color;
+}
+
+@mixin debug-outline($color: red, $width: 1px, $style: solid) {
+    outline: $width $style $color;
 }
