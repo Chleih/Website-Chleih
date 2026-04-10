@@ -1,20 +1,4 @@
-@use '../abstracts/mixins' as mix;
-
 :root {
-    // Light theme
-    --text-color-light: #474747;
-    --bg-color-light: #fbfef3;
-    --bg-deep-color-light: #e6e6e6;
-
-    // Dark theme
-    --text-color-dark: #fbfef3;
-    --bg-color-dark: #474747;
-    --bg-deep-color-dark: #313131;
-    --theme-transition: background-color 1s, color 1s;
-
-    // Other colors
-    --color-superioority: #669bbc;
-
     // Fonts
     --primary-font: 'Neue Montreal', sans-serif;
     --primary-font-regular-weight: 400;
@@ -25,22 +9,8 @@
     --primart-font-style-bold: bold;
 }
 
-:root.light-mode {
-    --text-color: var(--text-color-light);
-    --bg-color: var(--bg-color-light);
-    --bg-deep-color: var(--bg-deep-color-light);
-}
-
-:root.dark-mode {
-    --text-color: var(--text-color-dark);
-    --bg-color: var(--bg-color-dark);
-    --bg-deep-color: var(--bg-deep-color-dark);
-}
-
 body,
 html {
-    @include mix.debug-border(teal);
-
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -50,15 +20,15 @@ html {
     font-family: var(--primary-font);
     font-weight: var(--primary-font-regular-weight);
     font-style: var(--primary-font-style-regular);
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--color-surface-primary);
+    color: var(--color-text-primary);
     overscroll-behavior: none;
     overflow: hidden;
     transition: var(--theme-transition);
 }
 
 a {
-    color: var(--text-color);
+    color: var(--color-text-primary);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -77,7 +47,7 @@ a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: var(--text-color);
+    background: var(--color-text-secondary);
     transition:
         width 0.3s ease 0s,
         left 0.3s ease 0s;
@@ -90,8 +60,6 @@ a:hover:after {
 }
 
 header {
-    @include mix.debug-border(green);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,22 +67,16 @@ header {
 }
 
 nav ul {
-    @include mix.debug-border(green);
-
     margin: 0;
     list-style: none;
     display: flex;
 }
 
 nav li {
-    @include mix.debug-border(green);
-
     margin-left: 20px;
 }
 
 nav a {
-    @include mix.debug-border(green);
-
     text-decoration: none;
     font-family: var(--primary-font);
     font-weight: var(--primary-font-medieum-weight);

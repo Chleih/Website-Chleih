@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var reducedDotColorDark = 'rgba(102, 155, 188, 0.80)';
     var reducedColorDark = 'rgba(251, 254, 243, 0.80)';
     var reducedColorLight = 'rgba(71, 71, 71, 0.80)';
-    var originalSuperioty = '--color-superioority';
+    var originalSuperioty = '--color-accent-primary';
     var currentTextThemeColor = 'var(--text-color)';
 
     // Slightly reduce the alpha of the brand

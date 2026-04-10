@@ -1,33 +1,28 @@
-@use '../abstracts/mixins' as mix;
-@use '../abstracts/fonts' as font;
-@use '../abstracts/variables' as var;
+.custom-tag,
+.custom-statement {
+    color: var(--color-text-secondary);
+    transition: var(--theme-transition);
+}
 
 .custom-tag {
-    @include mix.debug-border(blue);
-
-    font-size: 4em;
-    margin-bottom: 0em;
-    color: var(--text-color);
-    animation: fadeIn 2s;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-    transition: var(--theme-transition);
+    margin-bottom: 0;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 15%);
+    animation: fade-in 2s;
 }
 
 .custom-statement {
-    @include mix.debug-border(red);
-
-    font-style: italic;
-    color: var(--text-color);
     align-self: flex-end;
+    font-style: italic;
     text-align: left;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-    transition: var(--theme-transition);
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 15%);
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }

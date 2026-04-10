@@ -1,0 +1,67 @@
+@use './colors' as colors;
+
+:root {
+    // ============================================
+    // ACCENT COLORS
+    // Used for interactive elements, highlights,
+    // links, buttons, and visual emphasis.
+    // ============================================
+    --color-accent-primary: #{colors.$color-steel-blue};
+    --color-accent-secondary: #{colors.$color-warm-sand};
+
+    --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+:root.light-mode {
+    // ============================================
+    // TEXT COLORS
+    // Used for readable text, headings, and text-based UI.
+    // ============================================
+    --color-text-primary: #{colors.$color-carbon};
+    --color-text-secondary: #{colors.$color-iron-grey};
+    --color-text-inverse: #{colors.$color-porcelain};
+
+    // ============================================
+    // SURFACE COLORS
+    // Used for page backgrounds, section backgrounds,
+    // cards, and other large UI surfaces.
+    // ============================================
+    --color-surface-primary: #{colors.$color-porcelain};
+    --color-surface-secondary: #{colors.$color-alabaster-grey};
+    --color-surface-inverse: #{colors.$color-carbon};
+
+    // ============================================
+    // BORDER COLORS
+    // Used for outlines, separators, dividers,
+    // and subtle visual structure.
+    // ============================================
+    --color-border-primary: #{colors.$color-iron-grey};
+    --color-border-secondary: #{colors.$color-alabaster-grey};
+}
+
+:root.dark-mode {
+    // ============================================
+    // TEXT COLORS
+    // Used for readable text, headings, and text-based UI.
+    // ============================================
+    --color-text-primary: #{colors.$color-porcelain};
+    --color-text-secondary: #{colors.$color-alabaster-grey};
+    --color-text-inverse: #{colors.$color-carbon};
+
+    // ============================================
+    // SURFACE COLORS
+    // Used for page backgrounds, section backgrounds,
+    // cards, and other large UI surfaces.
+    // ============================================
+    --color-surface-primary: #{colors.$color-carbon};
+    --color-surface-secondary: #{colors.$color-iron-grey};
+    --color-surface-inverse: #{colors.$color-porcelain};
+
+    // ============================================
+    // BORDER COLORS
+    // Used for outlines, separators, dividers,
+    // and subtle visual structure.
+    // ============================================
+    --color-border-primary: #{colors.$color-alabaster-grey};
+    --color-border-secondary: #{colors.$color-iron-grey};
+}
