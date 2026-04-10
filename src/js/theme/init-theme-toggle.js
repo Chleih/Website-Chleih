@@ -3,6 +3,12 @@ import { DARK_THEME, LIGHT_THEME } from './constants';
 import { setStoredTheme } from './set-stored-theme';
 import { updateThemeToggle } from './update-theme-toggle';
 
+/**
+ * Initializes the theme toggle controls.
+ * Adds click event listeners to the light and dark mode buttons.
+ * When clicked, the selected theme is applied, persisted, and
+ * the toggle UI is updated to reflect the active state.
+ */
 export function initThemeToggle() {
     const lightBtn = document.getElementById('light-mode-btn');
     const darkBtn = document.getElementById('dark-mode-btn');

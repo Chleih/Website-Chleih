@@ -1,5 +1,11 @@
 import { DARK_THEME, LIGHT_THEME } from './constants';
 
+/**
+ * Updates the visual state of the theme toggle controls.
+ * Shows the filled icon for the currently active theme
+ * and the outlined icon for the inactive theme.
+ * @param {'light' | 'dark'} activeTheme - The currently active theme.
+ */
 export function updateThemeToggle(activeTheme) {
     const lightBtn = document.getElementById('light-mode-btn');
     const darkBtn = document.getElementById('dark-mode-btn');
