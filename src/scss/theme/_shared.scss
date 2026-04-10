@@ -1,5 +1,7 @@
 @use '../abstracts/colors' as colors;
 
+/// Applies shared theme variables used by all themes.
+/// Includes values that do not change between light and dark mode.
 @mixin shared-theme-variables {
     // ============================================
     // ACCENT COLORS
