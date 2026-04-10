@@ -1,9 +1,6 @@
 @use '../abstracts/mixins' as mix;
-@use '../abstracts/colors' as colors;
 
 .content-wrapper-container {
-    @include mix.debug-border(red);
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,7 +8,7 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background-color: var(--bg-deep-color);
+    background-color: var(--color-surface-secondary);
     transition: var(--theme-transition);
 }
 
@@ -24,16 +21,14 @@
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     border: 2px solid;
-    border-color: var(--text-color);
+    border-color: var(--color-text-primary);
     margin: 0px 20px 0px 20px;
     box-sizing: border-box;
-    background-color: var(--bg-color);
+    background-color: var(--color-surface-primary);
     transition: var(--theme-transition);
 }
 
 .box-center-container {
-    @include mix.debug-border(green);
-
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -43,20 +38,15 @@
 }
 
 .greeting-container {
-    @include mix.debug-border(black);
 }
 
 .box-header-container {
-    @include mix.debug-border(blue);
-
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
 .bottom-row-container {
-    @include mix.debug-border(black);
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,8 +66,6 @@
 }
 
 .top-row-container {
-    @include mix.debug-border(black);
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -104,7 +92,7 @@
 }
 
 #particle-container {
-    @include mix.debug-border(var(--text-color), 1px);
+    @include mix.debug-border(var(--color-surface-inverse), 1px);
 
     position: relative;
     width: 300px;
@@ -112,14 +100,14 @@
     margin: 20px auto;
     border-radius: 50%;
     overflow: hidden;
-    background-color: var(--bg-color);
+    background-color: var(--color-surface-primary);
 }
 
 .particle {
     position: absolute;
     width: 3px;
     height: 3px;
-    background-color: var(--text-color);
+    background-color: var(--color-text-primary);
     border-radius: 50%;
     opacity: 0.75;
 }
