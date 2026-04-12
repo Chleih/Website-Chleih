@@ -6,6 +6,9 @@
     font-size: 0.75rem;
     color: var(--color-text-secondary);
     transition: var(--theme-transition);
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-label-sm);
+    font-weight: var(--font-weight-regular);
 }
 
 .footer-corner-content--left::before,
