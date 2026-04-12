@@ -1,0 +1,20 @@
+@use './config' as config;
+
+/// Registers a self-hosted variable font face using the WOFF2 format.
+/// @param {string} $font-family - The font family name.
+/// @param {string} $file-path - Path to the WOFF2 file without extension.
+/// @param {string} $weight-range - Supported font-weight range.
+/// @param {string} $style - Font style.
+@mixin variable-woff2-font-face($font-family, $file-path, $weight-range: '100 900', $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.woff2') format('woff2');
+        font-weight: #{$weight-range};
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+@include variable-woff2-font-face(config.$font-family-display-name, config.$font-path-geist);
+@include variable-woff2-font-face(config.$font-family-body-name, config.$font-path-inter);
+@include variable-woff2-font-face(config.$font-family-body-name, config.$font-path-inter-italic, $style: italic);

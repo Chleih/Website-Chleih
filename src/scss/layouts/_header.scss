@@ -1,10 +1,9 @@
 .brand {
     padding: 0.3125rem 0;
-    font-family: var(--primary-font);
-    font-size: 2.5rem;
-    font-weight: var(--primary-font-bold-weight);
-    font-style: var(--primary-font-style-regular);
-    line-height: 1;
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-heading-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
     text-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
     transition: var(--theme-transition);
 }
@@ -46,10 +45,12 @@
 }
 
 .theme-btn {
+    font-family: var(--font-family-ui);
+    font-size: var(--font-size-label-sm);
+    font-weight: var(--font-weight-regular);
     max-height: 1.25rem;
     column-gap: 0.3125rem;
     padding: 0.125rem 0.3125rem;
-    font-weight: 400;
     text-transform: uppercase;
     cursor: pointer;
     color: inherit;
