@@ -1,0 +1,31 @@
+@use '../fonts' as fonts;
+@use './scale' as scale;
+
+// ============================================
+// TYPOGRAPHY TOKENS
+// ============================================
+:root {
+    --font-family-display: #{fonts.$font-family-display};
+    --font-family-body: #{fonts.$font-family-body};
+    --font-family-ui: #{fonts.$font-family-ui};
+
+    --font-weight-regular: #{scale.$font-weight-regular};
+    --font-weight-medium: #{scale.$font-weight-medium};
+    --font-weight-bold: #{scale.$font-weight-bold};
+
+    --font-size-body-sm: #{scale.$font-size-body-sm};
+    --font-size-body-md: #{scale.$font-size-body-md};
+    --font-size-body-lg: #{scale.$font-size-body-lg};
+
+    --font-size-label-sm: #{scale.$font-size-label-sm};
+    --font-size-label-md: #{scale.$font-size-label-md};
+
+    --font-size-heading-sm: #{scale.$font-size-heading-sm};
+    --font-size-heading-md: #{scale.$font-size-heading-md};
+    --font-size-heading-lg: #{scale.$font-size-heading-lg};
+    --font-size-hero: #{scale.$font-size-hero};
+
+    --line-height-body: #{scale.$line-height-body};
+    --line-height-heading: #{scale.$line-height-heading};
+    --line-height-tight: #{scale.$line-height-tight};
+}

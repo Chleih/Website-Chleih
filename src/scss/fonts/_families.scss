@@ -1,0 +1,8 @@
+@use './config' as config;
+
+// ============================================
+// FONT STACKS
+// ============================================
+$font-family-display: (#{config.$font-family-display-name}, Arial, Helvetica, sans-serif);
+$font-family-body: (#{config.$font-family-body-name}, Arial, Helvetica, sans-serif);
+$font-family-ui: (#{config.$font-family-ui-name}, Arial, Helvetica, sans-serif);

@@ -6,16 +6,27 @@
 
 .custom-tag {
     margin-bottom: 0;
-    font-size: 4rem;
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-hero);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    color: var(--color-text-secondary);
     text-shadow: 2px 2px 4px rgb(0 0 0 / 15%);
     animation: fade-in 2s;
+    transition: var(--theme-transition);
 }
 
 .custom-statement {
     align-self: flex-end;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
     font-style: italic;
+    color: var(--color-text-secondary);
     text-align: left;
     text-shadow: 1px 1px 3px rgb(0 0 0 / 15%);
+    transition: var(--theme-transition);
 }
 
 @keyframes fade-in {
