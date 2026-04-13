@@ -1,12 +1,44 @@
 import { applyLanguage } from './apply-language';
 import { LANGUAGE_BUTTON_SELECTOR } from './constants';
-import { normalizeLanguage } from './normalize-language';
-import { setStoredLanguage } from './set-stored-language';
 import { updateLanguageToggle } from './update-language-toggle';
 
 /**
+ * Handles a language button click and applies the selected language.
+ * @param {Event} event
+ * @returns {Promise<void>}
+ */
+async function handleLanguageButtonClick(event) {
+    const button = /** @type {HTMLButtonElement | null} */ (event.currentTarget);
+
+    if (!button) {
+        return;
+    }
+
+    const selectedLanguage = button.dataset.language;
+
+    if (!selectedLanguage) {
+        return;
+    }
+
+    const activeLanguage = await applyLanguage(selectedLanguage);
+    updateLanguageToggle(activeLanguage);
+}
+
+/**
+ * Binds the language toggle behavior to a single button once.
+ * @param {HTMLButtonElement} button
+ */
+function bindLanguageButton(button) {
+    if (button.dataset.i18nBound === 'true') {
+        return;
+    }
+
+    button.dataset.i18nBound = 'true';
+    button.addEventListener('click', handleLanguageButtonClick);
+}
+
+/**
  * Initializes the language toggle controls.
- * Adds click handlers to all language option buttons.
  */
 export function initLanguageToggle() {
     const languageButtons = document.querySelectorAll(LANGUAGE_BUTTON_SELECTOR);
@@ -15,17 +47,7 @@ export function initLanguageToggle() {
         return;
     }
 
-    languageButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const selectedLanguage = normalizeLanguage(button.dataset.language);
-
-            if (!selectedLanguage) {
-                return;
-            }
-
-            applyLanguage(selectedLanguage);
-            setStoredLanguage(selectedLanguage);
-            updateLanguageToggle(selectedLanguage);
-        });
-    });
+    for (const button of languageButtons) {
+        bindLanguageButton(/** @type {HTMLButtonElement} */ (button));
+    }
 }

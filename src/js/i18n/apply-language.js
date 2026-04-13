@@ -1,21 +1,25 @@
-import { FALLBACK_LANGUAGE } from './constants';
-import { normalizeLanguage } from './normalize-language';
-import { translatePage } from './translate-page';
+import { FALLBACK_LANGUAGE } from './config';
+import { getI18n } from './engine';
+import { syncTranslations } from './sync-translations';
 
 /**
- * Applies the provided language to the document.
- * Updates the <html> language attribute and translates the page content.
+ * Applies the provided language to the application and synchronizes all
+ * registered DOM translations.
  * @param {string} language
- * @returns {'da' | 'en'}
+ * @returns {Promise<string>}
  */
-export function applyLanguage(language) {
-    const activeLanguage = normalizeLanguage(language) ?? FALLBACK_LANGUAGE;
-    const root = document.documentElement;
+export async function applyLanguage(language) {
+    const i18n = getI18n();
+    const nextLanguage = language || i18n.resolvedLanguage || i18n.language || FALLBACK_LANGUAGE;
 
-    root.lang = activeLanguage;
-    root.dataset.language = activeLanguage;
+    await i18n.changeLanguage(nextLanguage);
 
-    translatePage(activeLanguage);
+    const activeLanguage = i18n.resolvedLanguage || i18n.language || FALLBACK_LANGUAGE;
+
+    document.documentElement.lang = activeLanguage;
+    document.documentElement.dataset.language = activeLanguage;
+
+    syncTranslations();
 
     return activeLanguage;
 }
