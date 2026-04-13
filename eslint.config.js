@@ -14,6 +14,8 @@ export default [
                 URLSearchParams: 'readonly',
                 setTimeout: 'readonly',
                 requestAnimationFrame: 'readonly',
+                navigator: 'readonly',
+                console: 'readonly',
             },
         },
         rules: {

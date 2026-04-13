@@ -4,24 +4,72 @@ import { setStoredTheme } from './set-stored-theme';
 import { updateThemeToggle } from './update-theme-toggle';
 
 /**
- * Initializes the theme toggle controls.
- * Adds click event listeners to the light and dark mode buttons.
- * When clicked, the selected theme is applied, persisted, and
- * the toggle UI is updated to reflect the active state.
+ * Returns the single theme toggle button from the DOM.
+ * @returns {HTMLButtonElement | null}
+ */
+function getThemeToggleButton() {
+    return document.getElementById('theme-toggle-btn');
+}
+
+/**
+ * Applies the provided theme, persists it, and synchronizes the toggle UI.
+ * @param {'light' | 'dark'} theme
+ */
+function selectTheme(theme) {
+    applyTheme(theme);
+    setStoredTheme(theme);
+    updateThemeToggle(theme);
+}
+
+/**
+ * Returns the theme configured as the next theme on the toggle button.
+ * @param {HTMLButtonElement} button
+ * @returns {'light' | 'dark' | null}
+ */
+function getNextThemeFromButton(button) {
+    const nextTheme = button.dataset.nextTheme;
+
+    if (nextTheme !== LIGHT_THEME && nextTheme !== DARK_THEME) {
+        return null;
+    }
+
+    return nextTheme;
+}
+
+/**
+ * Handles a click on the single theme toggle button.
+ * @param {Event} event
+ */
+function handleThemeToggleClick(event) {
+    const button = event.currentTarget;
+
+    if (!button) {
+        return;
+    }
+
+    const nextTheme = getNextThemeFromButton(button);
+
+    if (!nextTheme) {
+        return;
+    }
+
+    selectTheme(nextTheme);
+}
+
+/**
+ * Initializes the single theme toggle control.
  */
 export function initThemeToggle() {
-    const lightBtn = document.getElementById('light-mode-btn');
-    const darkBtn = document.getElementById('dark-mode-btn');
+    const themeToggleButton = getThemeToggleButton();
 
-    lightBtn.addEventListener('click', () => {
-        applyTheme(LIGHT_THEME);
-        setStoredTheme(LIGHT_THEME);
-        updateThemeToggle(LIGHT_THEME);
-    });
+    if (!themeToggleButton) {
+        return;
+    }
 
-    darkBtn.addEventListener('click', () => {
-        applyTheme(DARK_THEME);
-        setStoredTheme(DARK_THEME);
-        updateThemeToggle(DARK_THEME);
-    });
+    if (themeToggleButton.dataset.themeBound === 'true') {
+        return;
+    }
+
+    themeToggleButton.dataset.themeBound = 'true';
+    themeToggleButton.addEventListener('click', handleThemeToggleClick);
 }

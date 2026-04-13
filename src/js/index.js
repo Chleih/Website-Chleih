@@ -1,9 +1,24 @@
 import '../scss/main.scss';
-
+import { initLanguage } from './i18n';
 import { initTheme } from './theme';
 import { initUi } from './ui';
 
-document.addEventListener('DOMContentLoaded', () => {
+/**
+ * Initializes the application after the DOM is ready.
+ */
+async function initializeApplication() {
     initTheme();
+    await initLanguage();
     initUi();
-});
+}
+
+/**
+ * Registers the application bootstrap on DOMContentLoaded.
+ */
+function registerApplicationBootstrap() {
+    document.addEventListener('DOMContentLoaded', async () => {
+        await initializeApplication();
+    });
+}
+
+registerApplicationBootstrap();
