@@ -86,31 +86,37 @@
                         data-i18n-attr="aria-label=common:theme.label"
                     >
                         <button
-                            class="control-btn theme-btn"
-                            id="light-mode-btn"
+                            class="control-btn theme-toggle-btn"
+                            id="theme-toggle-btn"
                             type="button"
-                            data-theme-target="light"
                             aria-pressed="false"
                             data-active="false"
-                            data-i18n-attr="aria-label=common:theme.switchToLight; title=common:theme.switchToLight"
+                            data-next-theme="dark"
                         >
-                            <i class="bi bi-square" aria-hidden="true"></i>
-                            <i class="bi bi-square-fill" aria-hidden="true" style="display: none"></i>
-                            <span data-i18n="common:theme.light">Light</span>
-                        </button>
+                            <i
+                                class="bi bi-moon theme-toggle-btn__icon theme-toggle-btn__icon--moon"
+                                aria-hidden="true"
+                            ></i>
+                            <i
+                                class="bi bi-sun theme-toggle-btn__icon theme-toggle-btn__icon--sun"
+                                aria-hidden="true"
+                                hidden
+                            ></i>
 
-                        <button
-                            class="control-btn theme-btn"
-                            id="dark-mode-btn"
-                            type="button"
-                            data-theme-target="dark"
-                            aria-pressed="false"
-                            data-active="false"
-                            data-i18n-attr="aria-label=common:theme.switchToDark; title=common:theme.switchToDark"
-                        >
-                            <i class="bi bi-square" aria-hidden="true"></i>
-                            <i class="bi bi-square-fill" aria-hidden="true" style="display: none"></i>
-                            <span data-i18n="common:theme.dark">Dark</span>
+                            <span
+                                class="visually-hidden theme-toggle-btn__label theme-toggle-btn__label--dark"
+                                data-i18n="common:theme.switchToDark"
+                            >
+                                Switch to dark mode
+                            </span>
+
+                            <span
+                                class="visually-hidden theme-toggle-btn__label theme-toggle-btn__label--light"
+                                data-i18n="common:theme.switchToLight"
+                                hidden
+                            >
+                                Switch to light mode
+                            </span>
                         </button>
                     </div>
                 </div>
