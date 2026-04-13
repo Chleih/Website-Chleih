@@ -29,31 +29,63 @@
     transition: var(--theme-transition);
 }
 
-.theme-colors,
-.theme-btn {
+.top-row-controls {
     display: flex;
     align-items: center;
+    gap: 0.875rem;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-primary);
     transition: var(--theme-transition);
 }
 
-.theme-colors {
-    max-height: 1.875rem;
-    column-gap: 0.625rem;
-    color: var(--color-text-primary);
-    text-transform: uppercase;
-    cursor: pointer;
+.language-controls {
+    gap: 0.25rem;
 }
 
-.theme-btn {
+.theme-controls {
+    gap: 0.625rem;
+}
+
+.control-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3125rem;
+    padding: 0.125rem 0.3125rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
     font-family: var(--font-family-ui);
     font-size: var(--font-size-label-sm);
     font-weight: var(--font-weight-regular);
-    max-height: 1.25rem;
-    column-gap: 0.3125rem;
-    padding: 0.125rem 0.3125rem;
+    line-height: 1;
     text-transform: uppercase;
     cursor: pointer;
-    color: inherit;
+    transition: var(--theme-transition);
+}
+
+.control-btn:hover,
+.control-btn:focus-visible,
+.control-btn.is-active {
+    color: var(--color-accent-primary);
+}
+
+.control-btn:focus-visible {
+    outline: 1px solid currentColor;
+    outline-offset: 0.125rem;
+}
+
+.language-btn {
+    min-width: 2.25rem;
+    letter-spacing: 0.04em;
+}
+
+.theme-btn {
+    max-height: 1.25rem;
 }
 
 .bi-square,
