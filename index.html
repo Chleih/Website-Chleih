@@ -30,12 +30,7 @@
             <!-- Container for the language and theme controls -->
             <div class="top-row-container">
                 <div class="top-row-controls">
-                    <div
-                        class="control-group language-controls"
-                        role="group"
-                        aria-label="Language"
-                        data-i18n-attr="aria-label=common:language.label"
-                    >
+                    <div class="control-group language-controls" role="group" aria-label="Language" data-i18n-attr="aria-label=common:language.label">
                         <button
                             class="control-btn language-btn"
                             id="language-da-btn"
@@ -46,14 +41,7 @@
                             data-active="false"
                             data-i18n-attr="aria-label=common:language.switchToDanish; title=common:language.switchToDanish"
                         >
-                            <img
-                                class="language-btn__flag"
-                                src="./src/resources/icons/language/dk.svg"
-                                alt=""
-                                aria-hidden="true"
-                                width="16"
-                                height="12"
-                            />
+                            <img class="language-btn__flag" src="./src/resources/icons/language/dk.svg" alt="" aria-hidden="true" width="16" height="12" />
                             <span class="language-btn__label">DA</span>
                         </button>
 
@@ -67,24 +55,12 @@
                             data-active="false"
                             data-i18n-attr="aria-label=common:language.switchToEnglish; title=common:language.switchToEnglish"
                         >
-                            <img
-                                class="language-btn__flag"
-                                src="./src/resources/icons/language/gb.svg"
-                                alt=""
-                                aria-hidden="true"
-                                width="16"
-                                height="12"
-                            />
+                            <img class="language-btn__flag" src="./src/resources/icons/language/gb.svg" alt="" aria-hidden="true" width="16" height="12" />
                             <span class="language-btn__label">EN</span>
                         </button>
                     </div>
 
-                    <div
-                        class="control-group theme-controls"
-                        role="group"
-                        aria-label="Theme"
-                        data-i18n-attr="aria-label=common:theme.label"
-                    >
+                    <div class="control-group theme-controls" role="group" aria-label="Theme" data-i18n-attr="aria-label=common:theme.label">
                         <button
                             class="control-btn theme-toggle-btn"
                             id="theme-toggle-btn"
@@ -92,29 +68,31 @@
                             aria-pressed="false"
                             data-active="false"
                             data-next-theme="dark"
+                            data-active-theme="light"
                         >
-                            <i
-                                class="bi bi-moon theme-toggle-btn__icon theme-toggle-btn__icon--moon"
-                                aria-hidden="true"
-                            ></i>
-                            <i
-                                class="bi bi-sun theme-toggle-btn__icon theme-toggle-btn__icon--sun"
-                                aria-hidden="true"
-                                hidden
-                            ></i>
+                            <span class="theme-toggle-btn__icon-stack" aria-hidden="true">
+                                <img
+                                    class="theme-toggle-btn__icon theme-toggle-btn__icon--moon"
+                                    src="./src/resources/icons/themes/moon.svg"
+                                    alt=""
+                                    width="18"
+                                    height="18"
+                                />
 
-                            <span
-                                class="visually-hidden theme-toggle-btn__label theme-toggle-btn__label--dark"
-                                data-i18n="common:theme.switchToDark"
-                            >
+                                <img
+                                    class="theme-toggle-btn__icon theme-toggle-btn__icon--sun"
+                                    src="./src/resources/icons/themes/sun.svg"
+                                    alt=""
+                                    width="18"
+                                    height="18"
+                                />
+                            </span>
+
+                            <span class="visually-hidden theme-toggle-btn__label theme-toggle-btn__label--dark" data-i18n="common:theme.switchToDark">
                                 Switch to dark mode
                             </span>
 
-                            <span
-                                class="visually-hidden theme-toggle-btn__label theme-toggle-btn__label--light"
-                                data-i18n="common:theme.switchToLight"
-                                hidden
-                            >
+                            <span class="visually-hidden theme-toggle-btn__label theme-toggle-btn__label--light" data-i18n="common:theme.switchToLight" hidden>
                                 Switch to light mode
                             </span>
                         </button>
@@ -152,9 +130,7 @@
                 <div class="box-center-container">
                     <div class="greeting-container">
                         <div class="custom-tag" data-i18n="home:hero.name">Mohamad Chleih</div>
-                        <div class="custom-statement" data-i18n="home:hero.tagline">
-                            Translating abstract ideas into concrete software realities
-                        </div>
+                        <div class="custom-statement" data-i18n="home:hero.tagline">Translating abstract ideas into concrete software realities</div>
                     </div>
                 </div>
 
@@ -164,14 +140,10 @@
             <!-- Footer -->
             <div class="bottom-row-container">
                 <!-- Container for the copyright text -->
-                <p class="footer-corner-content footer-corner-content--left" data-i18n="footer:copyright">
-                    &copy; 2026 All rights reserved.
-                </p>
+                <p class="footer-corner-content footer-corner-content--left" data-i18n="footer:copyright">&copy; 2026 All rights reserved.</p>
 
                 <!-- Container for the based text -->
-                <p class="footer-corner-content footer-corner-content--right" data-i18n="footer:location">
-                    Based in Copenhagen, Denmark.
-                </p>
+                <p class="footer-corner-content footer-corner-content--right" data-i18n="footer:location">Based in Copenhagen, Denmark.</p>
             </div>
         </div>
 

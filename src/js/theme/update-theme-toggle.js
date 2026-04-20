@@ -2,6 +2,7 @@ import { DARK_THEME, LIGHT_THEME } from './constants';
 
 /**
  * Returns the single theme toggle button from the DOM.
+ *
  * @returns {HTMLButtonElement | null}
  */
 function getThemeToggleButton() {
@@ -10,6 +11,7 @@ function getThemeToggleButton() {
 
 /**
  * Returns a child element inside the theme toggle button.
+ *
  * @param {HTMLButtonElement} button
  * @param {string} selector
  * @returns {HTMLElement | null}
@@ -20,8 +22,10 @@ function getToggleChildElement(button, selector) {
 
 /**
  * Sets whether an element should be hidden.
+ *
  * @param {HTMLElement | null} element
  * @param {boolean} hidden
+ * @returns {void}
  */
 function setHiddenState(element, hidden) {
     if (!element) {
@@ -32,25 +36,21 @@ function setHiddenState(element, hidden) {
 }
 
 /**
- * Updates which icon is shown in the theme toggle button.
- * @param {HTMLButtonElement} button
+ * Returns the next theme that should be applied when the button is clicked.
+ *
  * @param {'light' | 'dark'} activeTheme
+ * @returns {'light' | 'dark'}
  */
-function updateThemeToggleIcon(button, activeTheme) {
-    const moonIcon = getToggleChildElement(button, '.theme-toggle-btn__icon--moon');
-    const sunIcon = getToggleChildElement(button, '.theme-toggle-btn__icon--sun');
-
-    const showMoonIcon = activeTheme === LIGHT_THEME;
-    const showSunIcon = activeTheme === DARK_THEME;
-
-    setHiddenState(moonIcon, !showMoonIcon);
-    setHiddenState(sunIcon, !showSunIcon);
+function getNextTheme(activeTheme) {
+    return activeTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
 }
 
 /**
  * Updates which accessible label is exposed by the theme toggle button.
+ *
  * @param {HTMLButtonElement} button
  * @param {'light' | 'dark'} activeTheme
+ * @returns {void}
  */
 function updateThemeToggleLabel(button, activeTheme) {
     const darkModeLabel = getToggleChildElement(button, '.theme-toggle-btn__label--dark');
@@ -64,17 +64,10 @@ function updateThemeToggleLabel(button, activeTheme) {
 }
 
 /**
- * Returns the next theme that should be applied when the button is clicked.
- * @param {'light' | 'dark'} activeTheme
- * @returns {'light' | 'dark'}
- */
-function getNextTheme(activeTheme) {
-    return activeTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
-}
-
-/**
  * Updates the visual and accessibility state of the single theme toggle button.
+ *
  * @param {'light' | 'dark'} activeTheme
+ * @returns {void}
  */
 export function updateThemeToggle(activeTheme) {
     const themeToggleButton = getThemeToggleButton();
@@ -90,7 +83,7 @@ export function updateThemeToggle(activeTheme) {
     themeToggleButton.setAttribute('aria-pressed', String(isDarkThemeActive));
     themeToggleButton.dataset.active = String(isDarkThemeActive);
     themeToggleButton.dataset.nextTheme = nextTheme;
+    themeToggleButton.dataset.activeTheme = activeTheme;
 
-    updateThemeToggleIcon(themeToggleButton, activeTheme);
     updateThemeToggleLabel(themeToggleButton, activeTheme);
 }
