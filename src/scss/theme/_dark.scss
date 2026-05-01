@@ -1,18 +1,23 @@
 @use '../abstracts/colors' as colors;
 
 /// Applies the dark theme variable mappings.
-/// Maps semantic theme tokens to the dark palette.
 @mixin dark-theme-variables {
     --color-text-primary: #{colors.$porcelain};
     --color-text-secondary: #{colors.$alabaster-grey};
+    --color-text-muted: #{colors.$warm-sand};
     --color-text-inverse: #{colors.$carbon};
 
-    --color-surface-primary: #{colors.$carbon};
-    --color-surface-secondary: #{colors.$iron-grey};
+    --color-surface-primary: #{colors.$charcoal};
+    --color-surface-secondary: #{colors.$carbon};
+    --color-surface-elevated: #24211d;
     --color-surface-inverse: #{colors.$porcelain};
 
-    --color-border-primary: #{colors.$alabaster-grey};
-    --color-border-secondary: #{colors.$iron-grey};
+    --color-border-primary: #{colors.$iron-grey};
+    --color-border-secondary: rgb(255 255 255 / 12%);
+
+    --color-page-background: #{colors.$carbon};
+    --color-hero-accent: #{colors.$rust-soft};
+    --color-hero-accent-strong: #{colors.$warm-sand};
 
     color-scheme: dark;
 }

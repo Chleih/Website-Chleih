@@ -1,15 +1,43 @@
 @use '../abstracts/colors' as colors;
 
 /// Applies shared theme variables used by all themes.
-/// Includes values that do not change between light and dark mode.
 @mixin shared-theme-variables {
     // ============================================
     // ACCENT COLORS
-    // Used for interactive elements, highlights,
-    // links, buttons, and visual emphasis.
     // ============================================
-    --color-accent-primary: #{colors.$steel-blue};
+    --color-accent-primary: #{colors.$rust};
+    --color-accent-primary-strong: #{colors.$rust-dark};
+    --color-accent-primary-soft: #{colors.$rust-soft};
     --color-accent-secondary: #{colors.$warm-sand};
 
-    --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    // ============================================
+    // INTERACTION
+    // ============================================
+    --color-focus-ring: #{colors.$rust};
+
+    // ============================================
+    // RADIUS
+    // ============================================
+    --radius-xs: 0.25rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+
+    // ============================================
+    // SHADOWS
+    // ============================================
+    --shadow-paper: 0 1.25rem 2.75rem rgb(31 31 31 / 16%);
+    --shadow-soft: 0 0.75rem 2rem rgb(31 31 31 / 10%);
+
+    // ============================================
+    // LAYOUT
+    // ============================================
+    --site-max-width: 108rem;
+    --site-gutter: clamp(1.25rem, 4vw, 4.5rem);
+
+    // ============================================
+    // TRANSITIONS
+    // ============================================
+    --transition-fast: 160ms ease;
+    --transition-base: 240ms ease;
+    --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }

@@ -1,18 +1,23 @@
 @use '../abstracts/colors' as colors;
 
 /// Applies the light theme variable mappings.
-/// Maps semantic theme tokens to the light palette.
 @mixin light-theme-variables {
     --color-text-primary: #{colors.$carbon};
     --color-text-secondary: #{colors.$iron-grey};
+    --color-text-muted: #{colors.$soft-grey};
     --color-text-inverse: #{colors.$porcelain};
 
-    --color-surface-primary: #{colors.$porcelain};
-    --color-surface-secondary: #{colors.$alabaster-grey};
+    --color-surface-primary: #{colors.$paper};
+    --color-surface-secondary: #{colors.$porcelain};
+    --color-surface-elevated: #fffaf2;
     --color-surface-inverse: #{colors.$carbon};
 
-    --color-border-primary: #{colors.$iron-grey};
-    --color-border-secondary: #{colors.$alabaster-grey};
+    --color-border-primary: #{colors.$linen-border};
+    --color-border-secondary: #{colors.$paper-deep};
+
+    --color-page-background: #{colors.$paper};
+    --color-hero-accent: #{colors.$rust};
+    --color-hero-accent-strong: #{colors.$rust-dark};
 
     color-scheme: light;
 }
