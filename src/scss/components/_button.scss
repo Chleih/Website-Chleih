@@ -2,8 +2,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 3.875rem;
-    padding: 0.875rem 2.25rem;
+    min-height: clamp(3.25rem, 5.5dvh, 3.875rem);
+    padding: 0.875rem clamp(1.75rem, 2.2vw, 2.25rem);
     font-family: var(--font-family-ui);
     font-size: clamp(0.95rem, 1vw, 1.125rem);
     font-weight: var(--font-weight-medium);
