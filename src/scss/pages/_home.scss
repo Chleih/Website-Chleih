@@ -78,7 +78,7 @@
 
 .hero-portrait {
     position: relative;
-    width: min(100%, clamp(24rem, 31vw, 34rem));
+    width: min(100%, clamp(16rem, 21vw, 23rem));
     margin: 0 auto;
 }
 
@@ -92,31 +92,73 @@
 
 .hero-portrait__image {
     width: 100%;
-    max-height: min(50dvh, 35rem);
-    aspect-ratio: 1 / 1.12;
+    max-height: min(48dvh, 32rem);
+    aspect-ratio: 4 / 5;
     object-fit: cover;
+    object-position: center;
     background-color: var(--color-border-secondary);
 }
 
 .hero-portrait__caption {
     display: inline-flex;
-    align-items: center;
-    gap: 0.625rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.05rem;
     margin-top: 1rem;
-    color: var(--color-text-muted);
-    transform: rotate(-4deg);
+    white-space: nowrap;
+    color: color-mix(in srgb, var(--color-text-muted) 82%, var(--color-hero-accent) 18%);
+    transform: rotate(-2.5deg);
+    transform-origin: left center;
 }
 
 .hero-portrait__arrow {
-    font-family: var(--font-family-editorial);
-    font-size: clamp(1.5rem, 2.3vw, 2.5rem);
-    line-height: 1;
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: -1.5rem;
+    margin-left: -0.5rem;
+}
+
+.hero-portrait__arrow-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translateY(0.3rem) rotate(-120deg) scaleX(-1);
+    transform-origin: center;
+}
+
+.hero-portrait__arrow-icon {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    transform: rotate(-5deg);
+    transform-origin: center;
+}
+
+.hero-portrait__arrow-line,
+.hero-portrait__arrow-head {
+    stroke: currentColor;
+    stroke-width: 2.15;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.92;
+}
+
+.hero-portrait__arrow-head {
+    stroke-width: 2;
 }
 
 .hero-portrait__text {
+    display: inline-block;
+    margin-top: -0.05rem;
+    margin-left: 0.05rem;
     font-family: var(--font-family-handwritten);
-    font-size: clamp(1rem, 1.4vw, 1.5rem);
+    font-size: clamp(1.05rem, 1.2vw, 1.35rem);
+    font-style: italic;
     line-height: 1;
+    letter-spacing: 0.01em;
+    color: color-mix(in srgb, var(--color-text-muted) 82%, var(--color-hero-accent) 18%);
 }
 
 .focus-overview {
@@ -237,18 +279,18 @@
 
 @include media.respond-from(lg) {
     .hero {
-        grid-template-columns: minmax(0, 1fr) minmax(22rem, 34rem);
+        grid-template-columns: minmax(0, 1fr) minmax(30rem, 38rem);
     }
 
     .hero-portrait {
-        justify-self: end;
+        justify-self: start;
         margin: 0;
     }
 
     .hero-portrait__caption {
         position: absolute;
-        right: -5.25rem;
-        bottom: 0.125rem;
+        top: 82%;
+        left: calc(100% + 0.75rem);
         margin-top: 0;
     }
 
@@ -284,7 +326,7 @@
 
 @include media.respond-from(xl) {
     .hero {
-        grid-template-columns: minmax(0, 1fr) minmax(28rem, 35rem);
+        grid-template-columns: minmax(0, 1fr) minmax(32rem, 40rem);
     }
 }
 
@@ -353,6 +395,11 @@
 
     .hero-portrait__image {
         max-height: 44dvh;
+    }
+
+    .hero-portrait__caption {
+        top: 88%;
+        left: calc(100% + 0.5rem);
     }
 
     .focus-card__description {
