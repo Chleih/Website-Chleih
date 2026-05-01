@@ -1,13 +1,11 @@
 import '../scss/main.scss';
 import { initLanguage } from './i18n';
-import { initTheme } from './theme';
 import { initUi } from './ui';
 
 /**
  * Initializes the application after the DOM is ready.
  */
 async function initializeApplication() {
-    initTheme();
     await initLanguage();
     initUi();
 }

@@ -1,0 +1,48 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.875rem;
+    padding: 0.875rem 2.25rem;
+    font-family: var(--font-family-ui);
+    font-size: clamp(0.95rem, 1vw, 1.125rem);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+    border: 1px solid transparent;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.button:hover {
+    transform: translateY(-0.125rem);
+}
+
+.button--primary {
+    color: var(--color-text-inverse);
+    background-color: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0.625rem 1.5rem rgb(163 58 31 / 18%);
+}
+
+.button--primary:hover {
+    background-color: var(--color-accent-primary-strong);
+    border-color: var(--color-accent-primary-strong);
+}
+
+.button--secondary {
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border-color: color-mix(in srgb, var(--color-text-primary) 38%, transparent);
+}
+
+.button--secondary:hover {
+    color: var(--color-accent-primary-strong);
+    border-color: var(--color-accent-primary-strong);
+    background-color: rgb(255 255 255 / 24%);
+}
