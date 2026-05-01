@@ -1,4 +1,4 @@
-@use 'fonts';
+/*@use 'fonts';
 @use 'typography';
 @use 'theme';
 
@@ -9,5 +9,19 @@
 @use 'layouts/header';
 @use 'layouts/footer';
 @use 'layouts/loader';
+
+@use 'pages/home';*/
+
+@use 'fonts';
+@use 'typography';
+@use 'theme';
+
+@use 'base/base';
+
+@use 'components/skip-link';
+@use 'components/button';
+
+@use 'layouts/loader';
+@use 'layouts/site-header';
 
 @use 'pages/home';
