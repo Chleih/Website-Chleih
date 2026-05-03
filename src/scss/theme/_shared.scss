@@ -1,20 +1,5 @@
-@use '../abstracts/colors' as colors;
-
-/// Applies shared theme variables used by all themes.
+/// Applies theme-independent design variables.
 @mixin shared-theme-variables {
-    // ============================================
-    // ACCENT COLORS
-    // ============================================
-    --color-accent-primary: #{colors.$rust};
-    --color-accent-primary-strong: #{colors.$rust-dark};
-    --color-accent-primary-soft: #{colors.$rust-soft};
-    --color-accent-secondary: #{colors.$warm-sand};
-
-    // ============================================
-    // INTERACTION
-    // ============================================
-    --color-focus-ring: #{colors.$rust};
-
     // ============================================
     // RADIUS
     // ============================================

@@ -2,22 +2,52 @@
 
 /// Applies the light theme variable mappings.
 @mixin light-theme-variables {
+    // ============================================
+    // TEXT
+    // ============================================
     --color-text-primary: #{colors.$carbon};
     --color-text-secondary: #{colors.$iron-grey};
     --color-text-muted: #{colors.$soft-grey};
     --color-text-inverse: #{colors.$porcelain};
 
+    // ============================================
+    // SURFACES
+    // ============================================
+    --color-page-background: #{colors.$paper};
     --color-surface-primary: #{colors.$paper};
     --color-surface-secondary: #{colors.$porcelain};
     --color-surface-elevated: #fffaf2;
     --color-surface-inverse: #{colors.$carbon};
 
+    // ============================================
+    // BORDERS
+    // ============================================
     --color-border-primary: #{colors.$linen-border};
     --color-border-secondary: #{colors.$paper-deep};
 
-    --color-page-background: #{colors.$paper};
+    // ============================================
+    // BRAND / ACCENTS
+    // ============================================
+    --color-accent-primary: #{colors.$rust};
+    --color-accent-primary-strong: #{colors.$rust-dark};
+    --color-accent-primary-soft: #{colors.$rust-soft};
+    --color-accent-secondary: #{colors.$warm-sand};
     --color-hero-accent: #{colors.$rust};
     --color-hero-accent-strong: #{colors.$rust-dark};
+
+    // ============================================
+    // COMPONENT COLORS
+    // ============================================
+    --color-button-secondary-text: #{colors.$warm-brown};
+    --color-button-secondary-border: #{colors.$warm-brown};
+    --color-button-secondary-hover-text: #{colors.$rust-dark};
+    --color-button-secondary-hover-border: #{colors.$rust-dark};
+    --color-button-secondary-hover-background: rgb(255 255 255 / 24%);
+
+    // ============================================
+    // INTERACTION
+    // ============================================
+    --color-focus-ring: #{colors.$rust};
 
     color-scheme: light;
 }
