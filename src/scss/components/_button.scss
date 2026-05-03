@@ -1,3 +1,5 @@
+@use '../abstracts/colors' as colors;
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -36,9 +38,9 @@
 }
 
 .button--secondary {
-    color: var(--color-text-primary);
+    color: colors.$warm-brown;
     background-color: transparent;
-    border-color: color-mix(in srgb, var(--color-text-primary) 38%, transparent);
+    border-color: colors.$warm-sand;
 }
 
 .button--secondary:hover {

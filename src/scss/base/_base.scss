@@ -38,10 +38,18 @@ body::before {
     pointer-events: none;
     content: '';
     background-image:
-        linear-gradient(rgb(31 31 31 / 3%) 1px, transparent 1px),
-        linear-gradient(90deg, rgb(31 31 31 / 2%) 1px, transparent 1px);
-    background-size: 7.5rem 7.5rem;
-    mask-image: linear-gradient(to bottom, rgb(0 0 0 / 20%), transparent 70%);
+        radial-gradient(circle at 18% 22%, rgb(31 31 31 / 2.8%) 0 0.04rem, transparent 0.05rem),
+        radial-gradient(circle at 72% 38%, rgb(31 31 31 / 2.4%) 0 0.035rem, transparent 0.045rem),
+        radial-gradient(circle at 42% 78%, rgb(255 255 255 / 35%) 0 0.05rem, transparent 0.06rem);
+    background-position:
+        0 0,
+        1.4rem 0.7rem,
+        0.5rem 1.2rem;
+    background-size:
+        2.75rem 2.75rem,
+        3.25rem 3.25rem,
+        2.25rem 2.25rem;
+    opacity: 0.72;
 }
 
 img,
