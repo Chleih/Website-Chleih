@@ -1,0 +1,45 @@
+.page-placeholder {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 48rem;
+    min-height: 0;
+    padding-block: clamp(2rem, 8dvh, 6rem);
+}
+
+.page-placeholder__eyebrow {
+    margin: 0 0 clamp(0.875rem, 2dvh, 1.5rem);
+    font-family: var(--font-family-ui);
+    font-size: clamp(0.75rem, 0.85vw, 0.95rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    letter-spacing: 0.34em;
+    color: var(--color-hero-accent);
+    text-transform: uppercase;
+}
+
+.page-placeholder__title {
+    margin: 0;
+    font-family: var(--font-family-editorial);
+    font-size: clamp(3rem, min(7vw, 9dvh), 6rem);
+    font-weight: var(--font-weight-regular);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+    color: var(--color-text-primary);
+}
+
+.page-placeholder__description {
+    max-width: 36rem;
+    margin: clamp(1rem, 2.2dvh, 1.75rem) 0 0;
+    font-size: clamp(1rem, 1.15vw, 1.25rem);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+.page-placeholder__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: clamp(1.5rem, 3dvh, 2.25rem);
+}

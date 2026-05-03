@@ -1,25 +1,33 @@
-import homePageTemplate from '../html/pages/home.html?raw';
+import siteShellTemplate from '../html/layouts/site-shell.html?raw';
 import '../scss/main.scss';
 import { initLanguage } from './i18n';
+import { syncTranslations } from './i18n/sync-translations';
+import { initRouter, renderRoute } from './router';
+import { restoreRedirectPath } from './router/restore-redirect';
 import { initUi } from './ui';
 
 /**
- * Renders the landing page into the root application entry point.
+ * Renders the persistent site shell into the root application entry point.
  */
-function renderHomePage() {
+function renderSiteShell() {
     const applicationRoot = document.getElementById('app');
 
-    applicationRoot.innerHTML = homePageTemplate;
+    applicationRoot.innerHTML = siteShellTemplate;
 }
 
 /**
  * Initializes the application after the DOM is ready.
  */
 async function initializeApplication() {
-    renderHomePage();
+    restoreRedirectPath();
+    renderSiteShell();
+    await renderRoute(window.location.pathname);
 
     await initLanguage();
     initUi();
+    initRouter({
+        afterRouteChange: syncTranslations,
+    });
 }
 
 /**

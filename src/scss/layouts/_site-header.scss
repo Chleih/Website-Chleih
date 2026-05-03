@@ -73,7 +73,16 @@
     color: var(--color-accent-primary-strong);
 }
 
+.site-navigation__link.is-active {
+    color: var(--color-accent-primary-strong);
+}
+
 .site-navigation__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.site-navigation__link.is-active::after {
     transform: scaleX(1);
     transform-origin: left;
 }

@@ -1,0 +1,34 @@
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div id="loadingScreen" class="loading-screen" aria-hidden="true">
+    <div class="loader"></div>
+</div>
+
+<div class="content-wrapper-container content-hidden">
+    <header class="site-header" aria-label="Primary navigation">
+        <a class="site-brand brand-hover" href="/" aria-label="Mohamad Chleih home" data-router-link>
+            <span class="site-brand__name">MohamadChleih</span>
+            <span class="site-brand__dot" aria-hidden="true">.</span>
+            <span class="site-brand__cursor" aria-hidden="true">_</span>
+        </a>
+
+        <nav class="site-navigation" aria-label="Main navigation">
+            <ul class="site-navigation__list">
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="/about" data-router-link>About</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="/projects" data-router-link>Projects</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="/skills" data-router-link>Skills</a>
+                </li>
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="/contact" data-router-link>Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="site-main" data-router-outlet></main>
+</div>

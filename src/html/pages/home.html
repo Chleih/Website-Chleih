@@ -1,133 +1,98 @@
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<section class="hero" aria-labelledby="hero-title">
+    <div class="hero__content">
+        <p class="hero__eyebrow">IT Developer &middot; Copenhagen, Denmark</p>
 
-<div id="loadingScreen" class="loading-screen" aria-hidden="true">
-    <div class="loader"></div>
-</div>
+        <h1 id="hero-title" class="hero__title">
+            <span class="hero__title-line">I build software</span>
+            <span class="hero__title-line hero__title-line--accent">that lasts.</span>
+        </h1>
 
-<div class="content-wrapper-container content-hidden">
-    <header class="site-header" aria-label="Primary navigation">
-        <a class="site-brand brand-hover" href="/" aria-label="Mohamad Chleih home">
-            <span class="site-brand__name">MohamadChleih</span>
-            <span class="site-brand__dot" aria-hidden="true">.</span>
-            <span class="site-brand__cursor" aria-hidden="true">_</span>
-        </a>
+        <div class="hero__underline" aria-hidden="true"></div>
 
-        <nav class="site-navigation" aria-label="Main navigation">
-            <ul class="site-navigation__list">
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="#about">About</a>
-                </li>
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="#projects">Projects</a>
-                </li>
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="#skills">Skills</a>
-                </li>
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <p class="hero__description">I build maintainable systems, clean architecture, and reliable digital products.</p>
 
-    <main id="main-content" class="site-main">
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero__content">
-                <p class="hero__eyebrow">IT Developer &middot; Copenhagen, Denmark</p>
+        <div class="hero__actions" aria-label="Hero actions">
+            <a class="button button--primary" href="/projects" data-router-link>View Projects</a>
+            <a class="button button--secondary" href="/about" data-router-link>About Me</a>
+        </div>
+    </div>
 
-                <h1 id="hero-title" class="hero__title">
-                    <span class="hero__title-line">I build software</span>
-                    <span class="hero__title-line hero__title-line--accent">that lasts.</span>
-                </h1>
+    <figure class="hero-portrait">
+        <div class="hero-portrait__frame">
+            <img
+                class="hero-portrait__image"
+                src="/src/resources/images/home/mohamad_placeholder.png"
+                alt="Portrait of Mohamad Chleih"
+                width="640"
+                height="720"
+            />
+        </div>
 
-                <div class="hero__underline" aria-hidden="true"></div>
+        <figcaption class="hero-portrait__caption">
+            <span class="hero-portrait__arrow" aria-hidden="true">
+                <img class="hero-portrait__arrow-image" src="/src/resources/images/decoratives/home_arrow.svg" alt="" width="72" height="72" />
+            </span>
 
-                <p class="hero__description">I build maintainable systems, clean architecture, and reliable digital products.</p>
+            <span class="hero-portrait__text">That&apos;s me</span>
+        </figcaption>
+    </figure>
+</section>
 
-                <div class="hero__actions" aria-label="Hero actions">
-                    <a class="button button--primary" href="#projects">View Projects</a>
-                    <a class="button button--secondary" href="#about">About Me</a>
-                </div>
-            </div>
+<section class="focus-overview" aria-labelledby="focus-overview-title">
+    <div class="focus-overview__main">
+        <h2 id="focus-overview-title" class="section-label">Currently focused on</h2>
 
-            <figure class="hero-portrait">
-                <div class="hero-portrait__frame">
-                    <img
-                        class="hero-portrait__image"
-                        src="/src/resources/images/home/mohamad_placeholder.png"
-                        alt="Portrait of Mohamad Chleih"
-                        width="640"
-                        height="720"
-                    />
+        <ul class="focus-list" aria-label="Current focus areas">
+            <li class="focus-card">
+                <div class="focus-card__icon" aria-hidden="true">
+                    <i class="bi bi-hdd-network"></i>
                 </div>
 
-                <figcaption class="hero-portrait__caption">
-                    <span class="hero-portrait__arrow" aria-hidden="true">
-                        <img class="hero-portrait__arrow-image" src="/src/resources/images/decoratives/home_arrow.svg" alt="" width="72" height="72" />
-                    </span>
+                <div class="focus-card__content">
+                    <h3 class="focus-card__title">Backend Systems</h3>
+                    <p class="focus-card__description">Scalable APIs and reliable services.</p>
+                </div>
+            </li>
 
-                    <span class="hero-portrait__text">That&apos;s me</span>
-                </figcaption>
-            </figure>
-        </section>
+            <li class="focus-card">
+                <div class="focus-card__icon" aria-hidden="true">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
 
-        <section class="focus-overview" aria-labelledby="focus-overview-title">
-            <div class="focus-overview__main">
-                <h2 id="focus-overview-title" class="section-label">Currently focused on</h2>
+                <div class="focus-card__content">
+                    <h3 class="focus-card__title">Clean Architecture</h3>
+                    <p class="focus-card__description">Simple, maintainable and well-structured code.</p>
+                </div>
+            </li>
 
-                <ul class="focus-list" aria-label="Current focus areas">
-                    <li class="focus-card">
-                        <div class="focus-card__icon" aria-hidden="true">
-                            <i class="bi bi-hdd-network"></i>
-                        </div>
+            <li class="focus-card">
+                <div class="focus-card__icon" aria-hidden="true">
+                    <i class="bi bi-speedometer2"></i>
+                </div>
 
-                        <div class="focus-card__content">
-                            <h3 class="focus-card__title">Backend Systems</h3>
-                            <p class="focus-card__description">Scalable APIs and reliable services.</p>
-                        </div>
-                    </li>
+                <div class="focus-card__content">
+                    <h3 class="focus-card__title">Data &amp; Performance</h3>
+                    <p class="focus-card__description">Designing systems that handle real-world load.</p>
+                </div>
+            </li>
 
-                    <li class="focus-card">
-                        <div class="focus-card__icon" aria-hidden="true">
-                            <i class="bi bi-diagram-3"></i>
-                        </div>
+            <li class="focus-card">
+                <div class="focus-card__icon" aria-hidden="true">
+                    <i class="bi bi-shield-check"></i>
+                </div>
 
-                        <div class="focus-card__content">
-                            <h3 class="focus-card__title">Clean Architecture</h3>
-                            <p class="focus-card__description">Simple, maintainable and well-structured code.</p>
-                        </div>
-                    </li>
+                <div class="focus-card__content">
+                    <h3 class="focus-card__title">Quality &amp; Reliability</h3>
+                    <p class="focus-card__description">Testing, monitoring and continuous improvement.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-                    <li class="focus-card">
-                        <div class="focus-card__icon" aria-hidden="true">
-                            <i class="bi bi-speedometer2"></i>
-                        </div>
+    <aside class="experience-summary" aria-labelledby="experience-summary-title">
+        <h2 id="experience-summary-title" class="section-label">Experience</h2>
 
-                        <div class="focus-card__content">
-                            <h3 class="focus-card__title">Data &amp; Performance</h3>
-                            <p class="focus-card__description">Designing systems that handle real-world load.</p>
-                        </div>
-                    </li>
-
-                    <li class="focus-card">
-                        <div class="focus-card__icon" aria-hidden="true">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-
-                        <div class="focus-card__content">
-                            <h3 class="focus-card__title">Quality &amp; Reliability</h3>
-                            <p class="focus-card__description">Testing, monitoring and continuous improvement.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <aside class="experience-summary" aria-labelledby="experience-summary-title">
-                <h2 id="experience-summary-title" class="section-label">Experience</h2>
-
-                <p class="experience-summary__value">3 years</p>
-                <p class="experience-summary__description">Building software that solves problems and stands the test of time.</p>
-            </aside>
-        </section>
-    </main>
-</div>
+        <p class="experience-summary__value">3 years</p>
+        <p class="experience-summary__description">Building software that solves problems and stands the test of time.</p>
+    </aside>
+</section>
