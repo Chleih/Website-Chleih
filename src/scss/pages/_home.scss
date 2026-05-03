@@ -202,22 +202,21 @@
 }
 
 .focus-card__icon {
-    width: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(2.75rem, 4vw, 3.25rem);
+    height: clamp(2.75rem, 4vw, 3.25rem);
+    flex-shrink: 0;
     color: var(--color-accent-primary);
+    background-color: color-mix(in srgb, var(--color-accent-primary) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-border-secondary) 88%, transparent);
+    border-radius: 999px;
 }
 
-.focus-card__icon svg {
-    width: 2rem;
-    height: 2rem;
-}
-
-.focus-card__icon path,
-.focus-card__icon ellipse {
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.6;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.focus-card__icon i {
+    font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+    line-height: 1;
 }
 
 .focus-card__title {
