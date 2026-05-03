@@ -1,4 +1,4 @@
-import { ROUTER_LINK_SELECTOR, ROUTER_OUTLET_SELECTOR } from './constants';
+import { ROUTE_CHANGED_EVENT, ROUTER_LINK_SELECTOR, ROUTER_OUTLET_SELECTOR } from './constants';
 import { notFoundRoute, routes } from './routes';
 
 /**
@@ -21,17 +21,6 @@ function findRoute(pathname) {
     const normalizedPathname = normalizePathname(pathname);
 
     return routes.find((route) => route.path === normalizedPathname);
-}
-
-/**
- * Loads a route template from its lazy page module.
- * @param {import('./types').RouteDefinition} route
- * @returns {Promise<string>}
- */
-async function loadRouteTemplate(route) {
-    const pageModule = await route.template();
-
-    return pageModule.default;
 }
 
 /**
@@ -62,6 +51,20 @@ function updateActiveNavigation(pathname) {
 }
 
 /**
+ * Announces that a route has finished rendering.
+ * @param {import('./types').RouteDefinition} route
+ */
+function dispatchRouteChangedEvent(route) {
+    document.dispatchEvent(
+        new CustomEvent(ROUTE_CHANGED_EVENT, {
+            detail: {
+                path: route.path,
+            },
+        }),
+    );
+}
+
+/**
  * Renders the route matching the provided path into the route outlet.
  * @param {string} pathname
  * @returns {Promise<import('./types').RouteDefinition>}
@@ -70,11 +73,10 @@ export async function renderRoute(pathname) {
     const route = findRoute(pathname) ?? notFoundRoute;
     const routerOutlet = document.querySelector(ROUTER_OUTLET_SELECTOR);
 
-    const template = await loadRouteTemplate(route);
-
-    routerOutlet.innerHTML = template;
+    routerOutlet.innerHTML = route.template;
     updateActiveNavigation(route.path);
     await route.afterRender?.();
+    dispatchRouteChangedEvent(route);
 
     return route;
 }

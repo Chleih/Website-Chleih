@@ -30,22 +30,19 @@ function getClickedRouterLink(target) {
 }
 
 /**
- * Navigates to an internal route and runs the optional route-change hook.
+ * Navigates to an internal route and runs the configured route-change effect.
  * @param {URL} url
- * @param {() => void | Promise<void>} [afterRouteChange]
  */
-async function navigateToRoute(url, afterRouteChange) {
+async function navigateToRoute(url) {
     window.history.pushState(null, '', `${url.pathname}${url.search}${url.hash}`);
     await renderRoute(url.pathname);
-    await afterRouteChange?.();
 }
 
 /**
  * Handles route-link clicks without leaving the single app entry.
  * @param {MouseEvent} event
- * @param {() => void | Promise<void>} [afterRouteChange]
  */
-async function handleRouterLinkClick(event, afterRouteChange) {
+async function handleRouterLinkClick(event) {
     if (shouldIgnoreClick(event)) {
         return;
     }
@@ -68,22 +65,18 @@ async function handleRouterLinkClick(event, afterRouteChange) {
         return;
     }
 
-    await navigateToRoute(url, afterRouteChange);
+    await navigateToRoute(url);
 }
 
 /**
  * Initializes browser navigation for internal route links and back/forward events.
- * @param {{ afterRouteChange?: () => void | Promise<void> }} [options]
  */
-export function initRouter(options = {}) {
-    const { afterRouteChange } = options;
-
+export function initRouter() {
     document.addEventListener('click', async (event) => {
-        await handleRouterLinkClick(event, afterRouteChange);
+        await handleRouterLinkClick(event);
     });
 
     window.addEventListener('popstate', async () => {
         await renderRoute(window.location.pathname);
-        await afterRouteChange?.();
     });
 }

@@ -1,27 +1,34 @@
+import aboutTemplate from '../../html/pages/about.html?raw';
+import contactTemplate from '../../html/pages/contact.html?raw';
+import homeTemplate from '../../html/pages/home.html?raw';
+import notFoundTemplate from '../../html/pages/not-found.html?raw';
+import projectsTemplate from '../../html/pages/projects.html?raw';
+import skillsTemplate from '../../html/pages/skills.html?raw';
+
 export const routes = [
     {
         path: '/',
-        template: () => import('../../html/pages/home.html?raw'),
+        template: homeTemplate,
     },
     {
         path: '/about',
-        template: () => import('../../html/pages/about.html?raw'),
+        template: aboutTemplate,
     },
     {
         path: '/projects',
-        template: () => import('../../html/pages/projects.html?raw'),
+        template: projectsTemplate,
     },
     {
         path: '/skills',
-        template: () => import('../../html/pages/skills.html?raw'),
+        template: skillsTemplate,
     },
     {
         path: '/contact',
-        template: () => import('../../html/pages/contact.html?raw'),
+        template: contactTemplate,
     },
 ];
 
 export const notFoundRoute = {
     path: '/404',
-    template: () => import('../../html/pages/not-found.html?raw'),
+    template: notFoundTemplate,
 };

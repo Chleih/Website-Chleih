@@ -1,7 +1,7 @@
 /**
  * @typedef {object} RouteDefinition
  * @property {string} path
- * @property {() => Promise<{ default: string }>} template
+ * @property {string} template
  * @property {() => void | Promise<void>} [afterRender]
  */
 
