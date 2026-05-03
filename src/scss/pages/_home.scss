@@ -31,6 +31,7 @@
     line-height: 1.2;
     letter-spacing: 0.28em;
     color: var(--color-hero-accent);
+    animation: home-reveal 560ms ease both;
 }
 
 .hero__title {
@@ -41,6 +42,7 @@
     line-height: 0.88;
     letter-spacing: -0.065em;
     color: var(--color-text-primary);
+    animation: home-reveal 640ms 90ms ease both;
 }
 
 .hero__title-line {
@@ -58,7 +60,9 @@
     margin-block: clamp(0.625rem, 1.4dvh, 1rem) clamp(1.25rem, 2.4dvh, 2rem);
     border-top: 0.1875rem solid color-mix(in srgb, var(--color-text-primary) 54%, transparent);
     border-radius: 50%;
-    transform: rotate(-1deg);
+    transform: rotate(-1deg) scaleX(1);
+    transform-origin: left center;
+    animation: home-underline-draw 720ms 260ms ease both;
 }
 
 .hero__description {
@@ -67,6 +71,7 @@
     font-size: clamp(1.05rem, min(1.35vw, 2.2dvh), 1.4rem);
     line-height: 1.42;
     color: var(--color-text-secondary);
+    animation: home-reveal 580ms 180ms ease both;
 }
 
 .hero__actions {
@@ -74,6 +79,7 @@
     flex-wrap: wrap;
     gap: clamp(0.875rem, 1.6vw, 1.25rem);
     margin-top: clamp(1.25rem, 2.8dvh, 2.25rem);
+    animation: home-reveal 580ms 260ms ease both;
 }
 
 .hero-portrait {
@@ -83,11 +89,24 @@
 }
 
 .hero-portrait__frame {
+    position: relative;
     padding: clamp(0.5rem, 1vw, 0.875rem);
     background-color: var(--color-surface-elevated);
     border: 1px solid var(--color-border-secondary);
-    box-shadow: var(--shadow-paper);
+    box-shadow:
+        0 0.35rem 0 color-mix(in srgb, var(--color-border-secondary) 72%, transparent),
+        var(--shadow-paper);
     transform: rotate(2deg);
+    animation: portrait-settle 760ms 180ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-portrait__frame::after {
+    position: absolute;
+    inset: clamp(0.5rem, 1vw, 0.875rem);
+    pointer-events: none;
+    content: '';
+    border: 1px solid rgb(255 255 255 / 38%);
+    box-shadow: inset 0 0 1.25rem rgb(31 31 31 / 3%);
 }
 
 .hero-portrait__image {
@@ -162,12 +181,25 @@
 }
 
 .focus-overview {
+    position: relative;
     display: grid;
     flex: 0 0 auto;
     grid-template-columns: 1fr;
     gap: clamp(1.25rem, 3vw, 3.5rem);
     padding-top: clamp(1.25rem, 2.8dvh, 2.5rem);
-    border-top: 1px solid var(--color-border-primary);
+}
+
+.focus-overview::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    background-color: var(--color-border-primary);
+    opacity: 0.92;
+    transform: rotate(-0.12deg);
+    transform-origin: left center;
 }
 
 .section-label {
@@ -179,6 +211,15 @@
     letter-spacing: 0.34em;
     color: var(--color-text-primary);
     text-transform: uppercase;
+}
+
+.focus-overview__note {
+    max-width: 28rem;
+    margin: clamp(-0.625rem, -0.7dvh, -0.25rem) 0 clamp(1rem, 2dvh, 1.5rem);
+    font-size: clamp(0.75rem, 0.78vw, 0.875rem);
+    font-style: italic;
+    line-height: 1.45;
+    color: color-mix(in srgb, var(--color-text-secondary) 82%, var(--color-accent-support) 18%);
 }
 
 .focus-list {
@@ -195,6 +236,9 @@
     gap: 1rem;
     padding-block: 0.875rem;
     border-top: 1px solid var(--color-border-secondary);
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
 }
 
 .focus-card:first-child {
@@ -212,11 +256,29 @@
     background-color: transparent;
     border: 0;
     border-radius: 0;
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
 }
 
-.focus-card__icon i {
-    font-size: clamp(1.35rem, 1.8vw, 1.75rem);
-    line-height: 1;
+.focus-card__icon-art {
+    width: clamp(1.55rem, 2vw, 1.95rem);
+    height: clamp(1.55rem, 2vw, 1.95rem);
+}
+
+.focus-card__icon-art path,
+.focus-card__icon-art ellipse {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.55;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.focus-card:hover .focus-card__icon {
+    color: var(--color-accent-support);
+    transform: translateY(-0.08rem);
 }
 
 .focus-card__title {
@@ -405,7 +467,58 @@
         display: none;
     }
 
+    .focus-overview__note {
+        display: none;
+    }
+
     .experience-summary__description {
         display: none;
+    }
+}
+
+@keyframes home-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(0.65rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes home-underline-draw {
+    from {
+        opacity: 0;
+        transform: rotate(-1deg) scaleX(0.08);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(-1deg) scaleX(1);
+    }
+}
+
+@keyframes portrait-settle {
+    from {
+        opacity: 0;
+        transform: translateY(0.75rem) rotate(0.8deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(2deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__eyebrow,
+    .hero__title,
+    .hero__underline,
+    .hero__description,
+    .hero__actions,
+    .hero-portrait__frame {
+        animation: none;
     }
 }
