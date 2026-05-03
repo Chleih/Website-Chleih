@@ -205,17 +205,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: clamp(2.75rem, 4vw, 3.25rem);
-    height: clamp(2.75rem, 4vw, 3.25rem);
+    width: clamp(2rem, 3vw, 2.5rem);
+    height: clamp(2rem, 3vw, 2.5rem);
     flex-shrink: 0;
     color: var(--color-accent-primary);
-    background-color: color-mix(in srgb, var(--color-accent-primary) 8%, transparent);
-    border: 1px solid color-mix(in srgb, var(--color-border-secondary) 88%, transparent);
-    border-radius: 999px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
 }
 
 .focus-card__icon i {
-    font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+    font-size: clamp(1.35rem, 1.8vw, 1.75rem);
     line-height: 1;
 }
 
