@@ -3,7 +3,6 @@ import '../scss/main.scss';
 import { initLanguage } from './i18n';
 import { syncTranslations } from './i18n/sync-translations';
 import { initRouter, renderRoute } from './router';
-import { restoreRedirectPath } from './router/restore-redirect';
 import { initUi } from './ui';
 
 /**
@@ -19,7 +18,6 @@ function renderSiteShell() {
  * Initializes the application after the DOM is ready.
  */
 async function initializeApplication() {
-    restoreRedirectPath();
     renderSiteShell();
     await renderRoute(window.location.pathname);
 
