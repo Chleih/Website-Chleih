@@ -20,11 +20,15 @@
 }
 
 .hero__content {
+    --hero-space-tight: clamp(0.55rem, 1.15dvh, 0.85rem);
+    --hero-space-base: clamp(0.95rem, 2dvh, 1.65rem);
+    --hero-space-loose: clamp(1.15rem, 2.45dvh, 1.95rem);
+
     max-width: 45rem;
 }
 
 .hero__eyebrow {
-    margin: 0 0 clamp(1rem, 2.5dvh, 2.25rem);
+    margin: 0 0 var(--hero-space-base);
     font-family: var(--font-family-ui);
     font-size: clamp(0.8rem, 0.95vw, 1rem);
     font-weight: var(--font-weight-medium);
@@ -57,7 +61,7 @@
 .hero__underline {
     width: min(100%, 31rem);
     height: clamp(0.5rem, 1.4dvh, 0.875rem);
-    margin-block: clamp(0.625rem, 1.4dvh, 1rem) clamp(1.25rem, 2.4dvh, 2rem);
+    margin-block: var(--hero-space-tight) var(--hero-space-base);
     border-top: 0.1875rem solid color-mix(in srgb, var(--color-text-primary) 54%, transparent);
     border-radius: 50%;
     transform: rotate(-1deg) scaleX(1);
@@ -78,7 +82,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: clamp(0.875rem, 1.6vw, 1.25rem);
-    margin-top: clamp(1.25rem, 2.8dvh, 2.25rem);
+    margin-top: var(--hero-space-loose);
     animation: home-reveal 580ms 260ms ease both;
 }
 
@@ -186,7 +190,7 @@
     flex: 0 0 auto;
     grid-template-columns: 1fr;
     gap: clamp(1.15rem, 2.75vw, 3.35rem);
-    padding-top: clamp(1.15rem, 2.55dvh, 2.35rem);
+    padding-top: clamp(1.05rem, 2.35dvh, 2.15rem);
 }
 
 .focus-overview::before {
