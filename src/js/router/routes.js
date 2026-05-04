@@ -2,8 +2,8 @@ import aboutTemplate from '../../html/pages/about.html?raw';
 import contactTemplate from '../../html/pages/contact.html?raw';
 import homeTemplate from '../../html/pages/home.html?raw';
 import notFoundTemplate from '../../html/pages/not-found.html?raw';
-import projectsTemplate from '../../html/pages/projects.html?raw';
-import skillsTemplate from '../../html/pages/skills.html?raw';
+import stackTemplate from '../../html/pages/stack.html?raw';
+import workTemplate from '../../html/pages/work.html?raw';
 
 export const routes = [
     {
@@ -15,12 +15,12 @@ export const routes = [
         template: aboutTemplate,
     },
     {
-        path: '/projects',
-        template: projectsTemplate,
+        path: '/work',
+        template: workTemplate,
     },
     {
-        path: '/skills',
-        template: skillsTemplate,
+        path: '/stack',
+        template: stackTemplate,
     },
     {
         path: '/contact',
