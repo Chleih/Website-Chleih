@@ -8,13 +8,25 @@ export default [
             ecmaVersion: 'latest',
             sourceType: 'module',
             globals: {
+                // Browser runtime globals
                 document: 'readonly',
                 window: 'readonly',
+                navigator: 'readonly',
                 localStorage: 'readonly',
+
+                // Browser constructors / types used in JSDoc and runtime code
+                Element: 'readonly',
+                HTMLElement: 'readonly',
+                HTMLAnchorElement: 'readonly',
+                CustomEvent: 'readonly',
+                URL: 'readonly',
                 URLSearchParams: 'readonly',
+
+                // Browser timing / animation APIs
                 setTimeout: 'readonly',
                 requestAnimationFrame: 'readonly',
-                navigator: 'readonly',
+
+                // Development/debugging
                 console: 'readonly',
             },
         },

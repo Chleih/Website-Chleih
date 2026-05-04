@@ -7,7 +7,9 @@ import { renderRoute } from './render-route';
  * @returns {boolean}
  */
 function shouldIgnoreClick(event) {
-    return event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+    return (
+        event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
+    );
 }
 
 /**
@@ -61,7 +63,10 @@ async function handleRouterLinkClick(event) {
 
     event.preventDefault();
 
-    if (`${url.pathname}${url.search}${url.hash}` === `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+    if (
+        `${url.pathname}${url.search}${url.hash}` ===
+        `${window.location.pathname}${window.location.search}${window.location.hash}`
+    ) {
         return;
     }
 
