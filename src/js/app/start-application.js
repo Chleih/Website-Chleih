@@ -1,7 +1,6 @@
 import { initLanguage } from '../i18n';
 import { syncTranslations } from '../i18n/sync-translations';
 import { initRouter, renderRoute, ROUTE_CHANGED_EVENT } from '../router';
-import { initUi } from '../ui';
 import { renderSiteShell } from './render-site-shell';
 
 /**
@@ -22,7 +21,6 @@ async function initializeApplication() {
     await initLanguage();
 
     initRouteTranslationSync();
-    initUi();
 }
 
 /**

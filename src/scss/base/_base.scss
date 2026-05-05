@@ -105,19 +105,6 @@ button {
     margin-inline: auto;
     padding-inline: var(--site-gutter);
     overflow: hidden;
-    transition:
-        opacity var(--transition-base),
-        visibility var(--transition-base);
-}
-
-.content-hidden {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.content-visible {
-    visibility: visible;
-    opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
