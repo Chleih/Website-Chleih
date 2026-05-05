@@ -151,27 +151,6 @@
     transform-origin: center;
 }
 
-.hero-portrait__arrow-icon {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    transform: rotate(-5deg);
-    transform-origin: center;
-}
-
-.hero-portrait__arrow-line,
-.hero-portrait__arrow-head {
-    stroke: currentColor;
-    stroke-width: 2.15;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    opacity: 0.92;
-}
-
-.hero-portrait__arrow-head {
-    stroke-width: 2;
-}
-
 .hero-portrait__text {
     display: inline-block;
     margin-top: -0.05rem;
@@ -215,15 +194,6 @@
     letter-spacing: 0.34em;
     color: var(--color-text-primary);
     text-transform: uppercase;
-}
-
-.focus-overview__note {
-    max-width: 28rem;
-    margin: clamp(-0.625rem, -0.7dvh, -0.25rem) 0 clamp(1rem, 2dvh, 1.5rem);
-    font-size: clamp(0.75rem, 0.78vw, 0.875rem);
-    font-style: italic;
-    line-height: 1.45;
-    color: color-mix(in srgb, var(--color-text-secondary) 82%, var(--color-accent-support) 18%);
 }
 
 .focus-list {
@@ -484,10 +454,6 @@
     }
 
     .focus-card__description {
-        display: none;
-    }
-
-    .focus-overview__note {
         display: none;
     }
 
