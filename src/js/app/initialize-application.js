@@ -1,12 +1,10 @@
-import { initLanguage } from '../i18n';
 import { initRouter, renderRoute } from '../router';
 import { runWithInitialLoader } from '../ui/initial-loader';
 import { resolveInitialRoutePath, syncInitialRoutePath } from './initial-route';
-import { initRouteTranslationSync } from './init-route-translation-sync';
 import { renderSiteShell } from './render-site-shell';
 
 /**
- * Initializes router, route content, language, and route translation sync.
+ * Initializes router behavior and the first route content.
  * @param {string} pathname
  * @returns {Promise<void>}
  */
@@ -14,9 +12,6 @@ async function initializeApplicationModules(pathname) {
     initRouter();
 
     await renderRoute(pathname);
-    await initLanguage();
-
-    initRouteTranslationSync();
 }
 
 /**
