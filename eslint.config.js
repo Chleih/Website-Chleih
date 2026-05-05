@@ -18,6 +18,7 @@ export default [
                 Element: 'readonly',
                 HTMLElement: 'readonly',
                 HTMLAnchorElement: 'readonly',
+                HTMLButtonElement: 'readonly',
                 CustomEvent: 'readonly',
                 URL: 'readonly',
                 URLSearchParams: 'readonly',

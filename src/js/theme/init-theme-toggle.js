@@ -8,12 +8,15 @@ import { updateThemeToggle } from './update-theme-toggle';
  * @returns {HTMLButtonElement | null}
  */
 function getThemeToggleButton() {
-    return document.getElementById('theme-toggle-btn');
+    const button = document.getElementById('theme-toggle-btn');
+
+    return button instanceof HTMLButtonElement ? button : null;
 }
 
 /**
  * Applies the provided theme, persists it, and synchronizes the toggle UI.
  * @param {'light' | 'dark'} theme
+ * @returns {void}
  */
 function selectTheme(theme) {
     applyTheme(theme);
@@ -39,11 +42,12 @@ function getNextThemeFromButton(button) {
 /**
  * Handles a click on the single theme toggle button.
  * @param {Event} event
+ * @returns {void}
  */
 function handleThemeToggleClick(event) {
     const button = event.currentTarget;
 
-    if (!button) {
+    if (!(button instanceof HTMLButtonElement)) {
         return;
     }
 
@@ -58,6 +62,7 @@ function handleThemeToggleClick(event) {
 
 /**
  * Initializes the single theme toggle control.
+ * @returns {void}
  */
 export function initThemeToggle() {
     const themeToggleButton = getThemeToggleButton();

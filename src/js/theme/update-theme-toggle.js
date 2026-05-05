@@ -6,7 +6,9 @@ import { DARK_THEME, LIGHT_THEME } from './constants';
  * @returns {HTMLButtonElement | null}
  */
 function getThemeToggleButton() {
-    return document.getElementById('theme-toggle-btn');
+    const button = document.getElementById('theme-toggle-btn');
+
+    return button instanceof HTMLButtonElement ? button : null;
 }
 
 /**

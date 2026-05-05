@@ -27,6 +27,7 @@ async function handleLanguageButtonClick(event) {
 /**
  * Binds the language toggle behavior to a single button once.
  * @param {HTMLButtonElement} button
+ * @returns {void}
  */
 function bindLanguageButton(button) {
     if (button.dataset.i18nBound === 'true') {
@@ -39,6 +40,7 @@ function bindLanguageButton(button) {
 
 /**
  * Initializes the language toggle controls.
+ * @returns {void}
  */
 export function initLanguageToggle() {
     const languageButtons = document.querySelectorAll(LANGUAGE_BUTTON_SELECTOR);

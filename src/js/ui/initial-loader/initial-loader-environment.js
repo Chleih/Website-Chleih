@@ -4,7 +4,7 @@ import { INITIAL_LOADER_DEVELOPMENT_HOSTS } from './constants';
  * Returns whether the current runtime is a local development host.
  * @returns {boolean}
  */
-export function isInitialLoaderDevelopmentHost() {
+function isInitialLoaderDevelopmentHost() {
     return INITIAL_LOADER_DEVELOPMENT_HOSTS.includes(window.location.hostname);
 }
 

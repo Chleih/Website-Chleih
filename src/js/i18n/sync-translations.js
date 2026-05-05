@@ -5,6 +5,7 @@ import { getI18n } from './engine';
  * Applies a text translation to a single element.
  * @param {Element} element
  * @param {import('i18next').i18n} i18n
+ * @returns {void}
  */
 function applyTextTranslation(element, i18n) {
     const translationKey = element.getAttribute(TRANSLATION_KEY_ATTRIBUTE);
@@ -65,6 +66,7 @@ function parseAttributeBinding(binding) {
  * Applies attribute translations to a single element.
  * @param {Element} element
  * @param {import('i18next').i18n} i18n
+ * @returns {void}
  */
 function applyAttributeTranslations(element, i18n) {
     const attributeMap = element.getAttribute(TRANSLATION_ATTRIBUTE_MAP);
@@ -88,6 +90,7 @@ function applyAttributeTranslations(element, i18n) {
 
 /**
  * Synchronizes all DOM translations for elements that declare i18n bindings.
+ * @returns {void}
  */
 export function syncTranslations() {
     const i18n = getI18n();

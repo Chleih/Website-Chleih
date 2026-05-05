@@ -2,6 +2,7 @@
     "name": "website-chleih",
     "version": "1.0.0",
     "private": true,
+    "type": "module",
     "description": "Personal portfolio website",
     "scripts": {
         "dev": "vite",

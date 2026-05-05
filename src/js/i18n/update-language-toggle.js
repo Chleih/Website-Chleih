@@ -6,6 +6,7 @@ import { getI18n } from './engine';
  * Updates the visual and accessibility state of a single language button.
  * @param {HTMLButtonElement} button
  * @param {string} activeLanguage
+ * @returns {void}
  */
 function updateLanguageButtonState(button, activeLanguage) {
     const buttonLanguage = button.dataset.language;
@@ -19,6 +20,7 @@ function updateLanguageButtonState(button, activeLanguage) {
 /**
  * Updates the visual and accessibility state of the language toggle controls.
  * @param {string} [activeLanguage]
+ * @returns {void}
  */
 export function updateLanguageToggle(activeLanguage) {
     const languageButtons = document.querySelectorAll(LANGUAGE_BUTTON_SELECTOR);

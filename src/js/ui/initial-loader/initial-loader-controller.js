@@ -44,7 +44,7 @@ export function shouldShowInitialLoader() {
 /**
  * Controls the visibility lifecycle for the initial page loader.
  */
-export class InitialLoaderController {
+class InitialLoaderController {
     /**
      * Creates a controller for the provided initial loader element.
      * @param {HTMLElement} loaderElement
@@ -134,7 +134,7 @@ export class InitialLoaderController {
  * Creates an initial loader controller when the current browser should see one.
  * @returns {InitialLoaderController | null}
  */
-export function createInitialLoader() {
+function createInitialLoader() {
     if (!shouldShowInitialLoader()) {
         return null;
     }
