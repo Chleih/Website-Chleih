@@ -1,9 +1,10 @@
 import {
     INITIAL_LOADER_ACTIVE_ROOT_CLASS,
+    INITIAL_LOADER_ANIMATION_FALLBACK_MS,
+    INITIAL_LOADER_ANIMATION_SELECTOR,
     INITIAL_LOADER_EXIT_MS,
     INITIAL_LOADER_EXITING_CLASS,
-    INITIAL_LOADER_LINE_FALLBACK_MS,
-    INITIAL_LOADER_LINE_SELECTOR,
+    INITIAL_LOADER_REVIEW_MIN_VISIBLE_MS,
     INITIAL_LOADER_SELECTOR,
     INITIAL_LOADER_VISIBLE_CLASS,
 } from './constants';
@@ -19,6 +20,17 @@ function delay(duration) {
     return new Promise((resolve) => {
         window.setTimeout(resolve, duration);
     });
+}
+
+/**
+ * Returns finite animations from an element and its children.
+ * @param {HTMLElement} animationRoot
+ * @returns {Animation[]}
+ */
+function getFiniteAnimations(animationRoot) {
+    return animationRoot
+        .getAnimations({ subtree: true })
+        .filter((animation) => animation.effect?.getTiming().iterations !== Infinity);
 }
 
 /**
@@ -39,6 +51,7 @@ export class InitialLoaderController {
      */
     constructor(loaderElement) {
         this.loaderElement = loaderElement;
+        this.startedAt = 0;
     }
 
     /**
@@ -62,36 +75,49 @@ export class InitialLoaderController {
      * @returns {void}
      */
     show() {
+        this.startedAt = window.performance.now();
         this.activatePageAnimationGate();
         this.loaderElement.hidden = false;
         this.loaderElement.classList.add(INITIAL_LOADER_VISIBLE_CLASS);
     }
 
     /**
-     * Waits until the signature line has had enough time to finish drawing.
+     * Waits until the blueprint animation sequence has completed.
      * @returns {Promise<void>}
      */
-    async waitForSignatureLine() {
-        const signatureLine = this.loaderElement.querySelector(INITIAL_LOADER_LINE_SELECTOR);
+    async waitForBlueprintAnimation() {
+        const animationRoot = this.loaderElement.querySelector(INITIAL_LOADER_ANIMATION_SELECTOR);
 
-        if (!(signatureLine instanceof HTMLElement)) {
+        if (!(animationRoot instanceof HTMLElement)) {
             return;
         }
 
-        if (typeof signatureLine.getAnimations !== 'function') {
-            await delay(INITIAL_LOADER_LINE_FALLBACK_MS);
+        if (typeof animationRoot.getAnimations !== 'function') {
+            await delay(INITIAL_LOADER_ANIMATION_FALLBACK_MS);
             return;
         }
 
-        await Promise.allSettled(signatureLine.getAnimations().map((animation) => animation.finished));
+        await Promise.allSettled(getFiniteAnimations(animationRoot).map((animation) => animation.finished));
     }
 
     /**
-     * Hides the initial loader after its signature animation has completed.
+     * Waits until the temporary review minimum visible duration has elapsed.
+     * @returns {Promise<void>}
+     */
+    async waitForReviewDuration() {
+        const elapsed = window.performance.now() - this.startedAt;
+        const remainingDuration = Math.max(INITIAL_LOADER_REVIEW_MIN_VISIBLE_MS - elapsed, 0);
+
+        await delay(remainingDuration);
+    }
+
+    /**
+     * Hides the initial loader after its blueprint animation has completed.
      * @returns {Promise<void>}
      */
     async hide() {
-        await this.waitForSignatureLine();
+        await this.waitForBlueprintAnimation();
+        await this.waitForReviewDuration();
 
         this.loaderElement.classList.add(INITIAL_LOADER_EXITING_CLASS);
         this.loaderElement.classList.remove(INITIAL_LOADER_VISIBLE_CLASS);
