@@ -1,17 +1,27 @@
 // ============================================
-// NEUTRAL PALETTE
-// Foundation colors used to build surfaces, text,
-// borders, and layout contrast across themes.
+// BASE PALETTE
+// Raw design colors only.
 // ============================================
 
-$carbon: #1f1f1f; // was 313131 before
+// NEUTRALS
+
+$carbon: #1f1f1f;
+$charcoal: #171717;
 $iron-grey: #474747;
-$porcelain: #f8faf4; // was fbfef3 before
-$alabaster-grey: #e6e6e6;
+$soft-grey: #7a746c;
 
-// ============================================
-// ACCENT PALETTE
-// Brand and emphasis colors.
-// ============================================
-$steel-blue: #669bbc;
+$porcelain: #f8faf4;
+$paper: #f4efe7;
+$paper-deep: #ebe1d2;
+$alabaster-grey: #e6e6e6;
+$linen-border: #d8ccba;
+
+// BRAND / WARM ACCENTS
+
+$rust: #a33a1f;
+$rust-dark: #7d2d19;
+$rust-soft: #b95a3f;
+
+$warm-brown: #5f442e;
 $warm-sand: #d3b38d;
+$olive-grey: #6f7667;

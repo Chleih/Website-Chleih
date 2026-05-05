@@ -4,10 +4,11 @@
 
 @use 'base/base';
 
-@use 'components/container';
+@use 'components/skip-link';
+@use 'components/button';
 
-@use 'layouts/header';
-@use 'layouts/footer';
-@use 'layouts/loader';
+@use 'layouts/site-header';
+@use 'layouts/site-footer';
 
 @use 'pages/home';
+@use 'pages/placeholder';

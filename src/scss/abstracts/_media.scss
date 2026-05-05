@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use './breakpoints' as breakpoints;
+
+/// Applies styles from a named breakpoint and up.
+/// @param {string} $breakpoint - Key from the breakpoint map.
+@mixin respond-from($breakpoint) {
+    $breakpoint-value: map.get(breakpoints.$breakpoints, $breakpoint);
+
+    @if $breakpoint-value == null {
+        @error 'Unknown breakpoint: #{$breakpoint}.';
+    }
+
+    @media (min-width: $breakpoint-value) {
+        @content;
+    }
+}

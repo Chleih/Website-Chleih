@@ -5,13 +5,13 @@
 </div>
 
 <div align="center">
-  <img src="./src/assets/images/placeholder.jpg" alt="My Website" width="700" />
+  <img src="./src/resources/images/readme_placeholder.jpg" alt="My Website" width="700" />
   <br /><br />
   <a href="https://forthebadge.com">
-    <img src="./src/assets/images/badges/built-with-love.svg" alt="Built with love" />
+    <img src="./src/resources/images/badges/built-with-love.svg" alt="Built with love" />
   </a>
   <a href="https://forthebadge.com">
-    <img src="./src/assets/images/badges/made-with-javascript.svg" alt="Made with JavaScript" />
+    <img src="./src/resources/images/badges/made-with-javascript.svg" alt="Made with JavaScript" />
   </a>
 </div>
 

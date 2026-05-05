@@ -1,13 +1,15 @@
 // ============================================
 // FONT PATHS
 // ============================================
-$font-path-geist: '/src/resources/fonts/geist/Geist-Variable';
-$font-path-inter: '/src/resources/fonts/inter/Inter-Variable';
-$font-path-inter-italic: '/src/resources/fonts/inter/Inter-Italic-Variable';
+$font-path-editorial: '/src/resources/fonts/newsreader/Newsreader-VariableFont_opsz,wght';
+$font-path-editorial-italic: '/src/resources/fonts/newsreader/Newsreader-Italic-VariableFont_opsz,wght';
+$font-path-sans: '/src/resources/fonts/ibm-plex-sans/IBMPlexSans-VariableFont_wdth,wght';
+$font-path-sans-italic: '/src/resources/fonts/ibm-plex-sans/IBMPlexSans-Italic-VariableFont_wdth,wght';
+$font-path-handwritten: '/src/resources/fonts/caveat/Caveat-VariableFont_wght';
 
 // ============================================
 // FONT ROLE ASSIGNMENTS
 // ============================================
-$font-family-display-name: 'Geist';
-$font-family-body-name: 'Inter';
-$font-family-ui-name: 'Inter';
+$font-family-editorial-name: 'Newsreader';
+$font-family-sans-name: 'IBM Plex Sans';
+$font-family-handwritten-name: 'Caveat';

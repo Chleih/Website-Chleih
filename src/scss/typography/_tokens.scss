@@ -4,10 +4,12 @@
 // ============================================
 // TYPOGRAPHY TOKENS
 // ============================================
+
 :root {
-    --font-family-display: #{fonts.$font-family-display};
     --font-family-body: #{fonts.$font-family-body};
     --font-family-ui: #{fonts.$font-family-ui};
+    --font-family-editorial: #{fonts.$font-family-editorial};
+    --font-family-handwritten: #{fonts.$font-family-handwritten};
 
     --font-weight-regular: #{scale.$font-weight-regular};
     --font-weight-medium: #{scale.$font-weight-medium};
