@@ -57,5 +57,9 @@
 }
 
 .button--secondary:active {
-    background-color: color-mix(in srgb, var(--color-button-secondary-hover-background) 72%, var(--color-surface-primary));
+    background-color: color-mix(
+        in srgb,
+        var(--color-button-secondary-hover-background) 72%,
+        var(--color-surface-primary)
+    );
 }
