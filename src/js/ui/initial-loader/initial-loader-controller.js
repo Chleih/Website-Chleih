@@ -1,11 +1,13 @@
 import {
-    HOME_PATH,
     INITIAL_LOADER_EXIT_MS,
     INITIAL_LOADER_EXITING_CLASS,
-    INITIAL_LOADER_MIN_VISIBLE_MS,
+    INITIAL_LOADER_LINE_FALLBACK_MS,
+    INITIAL_LOADER_LINE_SELECTOR,
     INITIAL_LOADER_SELECTOR,
     INITIAL_LOADER_VISIBLE_CLASS,
 } from './constants';
+import { shouldForceInitialLoader } from './initial-loader-environment';
+import { hasSeenInitialLoader, markInitialLoaderSeen } from './initial-loader-storage';
 
 /**
  * Resolves after the provided duration.
@@ -19,25 +21,11 @@ function delay(duration) {
 }
 
 /**
- * Normalizes a pathname for route matching.
- * @param {string} pathname
- * @returns {string}
- */
-function normalizePathname(pathname) {
-    const normalizedPathname = pathname.replace(/\/+$/, '');
-
-    return normalizedPathname || HOME_PATH;
-}
-
-/**
- * Test strategy: show on every full page load of the landing page.
- * Later this can be replaced with a first-visit/session strategy without
- * changing application startup.
- * @param {string} pathname
+ * Returns whether the initial loader should be shown.
  * @returns {boolean}
  */
-function shouldShowInitialLoader(pathname) {
-    return normalizePathname(pathname) === HOME_PATH;
+export function shouldShowInitialLoader() {
+    return shouldForceInitialLoader() || !hasSeenInitialLoader();
 }
 
 /**
@@ -50,28 +38,42 @@ export class InitialLoaderController {
      */
     constructor(loaderElement) {
         this.loaderElement = loaderElement;
-        this.startedAt = 0;
     }
 
     /**
-     * Makes the initial loader visible and starts the minimum-duration timer.
+     * Makes the initial loader visible.
      * @returns {void}
      */
     show() {
-        this.startedAt = window.performance.now();
         this.loaderElement.hidden = false;
         this.loaderElement.classList.add(INITIAL_LOADER_VISIBLE_CLASS);
     }
 
     /**
-     * Hides the initial loader after its minimum visible duration has elapsed.
+     * Waits until the signature line has had enough time to finish drawing.
+     * @returns {Promise<void>}
+     */
+    async waitForSignatureLine() {
+        const signatureLine = this.loaderElement.querySelector(INITIAL_LOADER_LINE_SELECTOR);
+
+        if (!(signatureLine instanceof HTMLElement)) {
+            return;
+        }
+
+        if (typeof signatureLine.getAnimations !== 'function') {
+            await delay(INITIAL_LOADER_LINE_FALLBACK_MS);
+            return;
+        }
+
+        await Promise.allSettled(signatureLine.getAnimations().map((animation) => animation.finished));
+    }
+
+    /**
+     * Hides the initial loader after its signature animation has completed.
      * @returns {Promise<void>}
      */
     async hide() {
-        const elapsed = window.performance.now() - this.startedAt;
-        const remainingDuration = Math.max(INITIAL_LOADER_MIN_VISIBLE_MS - elapsed, 0);
-
-        await delay(remainingDuration);
+        await this.waitForSignatureLine();
 
         this.loaderElement.classList.add(INITIAL_LOADER_EXITING_CLASS);
         this.loaderElement.classList.remove(INITIAL_LOADER_VISIBLE_CLASS);
@@ -84,12 +86,11 @@ export class InitialLoaderController {
 }
 
 /**
- * Creates an initial loader controller when the current route should show one.
- * @param {string} pathname
+ * Creates an initial loader controller when the current browser should see one.
  * @returns {InitialLoaderController | null}
  */
-export function createInitialLoader(pathname) {
-    if (!shouldShowInitialLoader(pathname)) {
+export function createInitialLoader() {
+    if (!shouldShowInitialLoader()) {
         return null;
     }
 
@@ -103,19 +104,24 @@ export function createInitialLoader(pathname) {
 }
 
 /**
- * Runs an async task while the initial loader is visible for the active route.
- * @param {string} pathname
+ * Runs an async task while the initial loader is visible.
  * @param {() => void | Promise<void>} task
  * @returns {Promise<void>}
  */
-export async function runWithInitialLoader(pathname, task) {
-    const initialLoader = createInitialLoader(pathname);
+export async function runWithInitialLoader(task) {
+    const initialLoader = createInitialLoader();
 
     initialLoader?.show();
 
     try {
         await task();
     } finally {
-        await initialLoader?.hide();
+        if (initialLoader) {
+            await initialLoader.hide();
+        }
+    }
+
+    if (initialLoader) {
+        markInitialLoaderSeen();
     }
 }

@@ -1,1 +1,2 @@
-export { createInitialLoader, runWithInitialLoader } from './initial-loader-controller';
+export { createInitialLoader, runWithInitialLoader, shouldShowInitialLoader } from './initial-loader-controller';
+export { shouldForceInitialLoader } from './initial-loader-environment';
