@@ -132,6 +132,7 @@
     color: color-mix(in srgb, var(--color-text-muted) 82%, var(--color-hero-accent) 18%);
     transform: rotate(-2.5deg);
     transform-origin: left center;
+    animation: home-annotation-reveal 580ms 260ms ease both;
 }
 
 .hero-portrait__arrow {
@@ -498,13 +499,26 @@
     }
 }
 
+@keyframes home-annotation-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(0.45rem) rotate(-3.5deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(-2.5deg);
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .hero__eyebrow,
     .hero__title,
     .hero__underline,
     .hero__description,
     .hero__actions,
-    .hero-portrait__frame {
+    .hero-portrait__frame,
+    .hero-portrait__caption {
         animation: none;
     }
 }
