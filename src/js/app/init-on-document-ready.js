@@ -19,9 +19,5 @@ function createDocumentReadyListener(initializer) {
  * @returns {void}
  */
 export function initOnDocumentReady(initializer) {
-    document.addEventListener(
-        'DOMContentLoaded',
-        createDocumentReadyListener(initializer),
-        { once: true },
-    );
+    document.addEventListener('DOMContentLoaded', createDocumentReadyListener(initializer), { once: true });
 }
