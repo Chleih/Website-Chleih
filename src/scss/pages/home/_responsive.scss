@@ -1,0 +1,171 @@
+@use '../../abstracts/media' as media;
+
+@include media.respond-from(md) {
+    .focus-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+    }
+
+    .focus-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: clamp(1.5rem, 2vw, 1.75rem) 1fr;
+        row-gap: 0.75rem;
+        padding: 0 2rem;
+        border-top: 0;
+        border-left: 1px solid var(--color-border-secondary);
+    }
+
+    .focus-card:nth-child(odd) {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .focus-card__title {
+        min-height: 2.3em;
+    }
+
+    .focus-card__content {
+        display: grid;
+        grid-template-rows: 2.3em auto;
+        row-gap: 0rem;
+        align-content: start;
+    }
+
+    .focus-card__title {
+        margin-bottom: 0;
+    }
+}
+
+@include media.respond-from(lg) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(30rem, 38rem);
+    }
+
+    .hero-portrait {
+        justify-self: start;
+        margin: 0;
+    }
+
+    .hero-portrait__caption {
+        position: absolute;
+        top: 82%;
+        left: calc(100% + 0.75rem);
+        margin-top: 0;
+    }
+
+    .focus-overview {
+        grid-template-columns: minmax(0, 1fr) minmax(17rem, 27rem);
+        align-items: start;
+    }
+
+    .focus-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .focus-card,
+    .focus-card:nth-child(odd) {
+        padding-inline: clamp(1.25rem, 2vw, 2rem);
+        border-left: 1px solid var(--color-border-secondary);
+    }
+
+    .focus-card:first-child,
+    .focus-card:nth-child(1) {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .experience-summary {
+        min-height: 100%;
+        padding-top: 0;
+        padding-left: clamp(2rem, 4vw, 4rem);
+        border-top: 0;
+        border-left: 1px solid var(--color-border-secondary);
+    }
+}
+
+@include media.respond-from(xl) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(32rem, 40rem);
+    }
+}
+
+@media (max-width: 63.99rem) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(16rem, 24rem);
+    }
+
+    .focus-overview {
+        display: none;
+    }
+}
+
+@media (max-width: 47.99rem) {
+    .site-main {
+        padding-block-end: 1rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        align-content: center;
+        text-align: left;
+    }
+
+    .hero-portrait {
+        width: min(100%, 18rem);
+    }
+
+    .hero-portrait__caption {
+        display: none;
+    }
+}
+
+@media (max-width: 35.99rem) {
+    .hero__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+        min-height: 3.25rem;
+    }
+
+    .hero__eyebrow {
+        letter-spacing: 0.16em;
+    }
+
+    .hero__title {
+        font-size: clamp(3rem, 16vw, 4.5rem);
+    }
+
+    .hero__description {
+        font-size: 1rem;
+    }
+
+    .hero-portrait {
+        display: none;
+    }
+}
+
+@media (max-height: 48rem) and (min-width: 64rem) {
+    .hero__title {
+        font-size: clamp(4rem, 9dvh, 6rem);
+    }
+
+    .hero-portrait__image {
+        max-height: 44dvh;
+    }
+
+    .hero-portrait__caption {
+        top: 88%;
+        left: calc(100% + 0.5rem);
+    }
+
+    .focus-card__description {
+        display: none;
+    }
+
+    .experience-summary__description {
+        display: none;
+    }
+}

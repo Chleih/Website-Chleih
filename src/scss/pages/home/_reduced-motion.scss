@@ -1,0 +1,11 @@
+@media (prefers-reduced-motion: reduce) {
+    .hero__eyebrow,
+    .hero__title,
+    .hero__underline,
+    .hero__description,
+    .hero__actions,
+    .hero-portrait__frame,
+    .hero-portrait__caption {
+        animation: none;
+    }
+}
