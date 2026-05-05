@@ -1,0 +1,36 @@
+.initial-loader__node {
+    width: 0.62rem;
+    height: 0.62rem;
+    background-color: var(--color-page-background);
+    border: 1px solid var(--blueprint-accent-color);
+    border-radius: 46% 54% 51% 49%;
+    opacity: 0;
+    transform: scale(0.68);
+    animation:
+        blueprint-loader-node 360ms ease both,
+        blueprint-loader-node-pulse 2400ms ease-in-out infinite;
+}
+
+.initial-loader__node--service {
+    top: 31%;
+    left: 27%;
+    animation-delay: 760ms, 2100ms;
+}
+
+.initial-loader__node--core {
+    top: 48%;
+    left: 48%;
+    animation-delay: 980ms, 1700ms;
+}
+
+.initial-loader__node--data {
+    right: 27%;
+    bottom: 31%;
+    animation-delay: 1160ms, 2500ms;
+}
+
+.initial-loader__node--support {
+    bottom: 13%;
+    left: 48%;
+    animation-delay: 1340ms, 2900ms;
+}

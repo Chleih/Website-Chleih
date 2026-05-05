@@ -1,0 +1,47 @@
+.initial-loader__connection {
+    --connection-angle: 0deg;
+
+    height: 0.45rem;
+    background-color: transparent;
+    border-top: 0.095rem solid var(--blueprint-line-color);
+    border-radius: 50%;
+    opacity: 0;
+    transform-origin: left center;
+    transform: rotate(var(--connection-angle)) scaleX(0);
+    animation:
+        blueprint-loader-connection 520ms ease both,
+        blueprint-loader-connection-pulse 2400ms ease-in-out infinite;
+}
+
+.initial-loader__connection--service {
+    --connection-angle: -4deg;
+
+    top: 38%;
+    left: 28%;
+    width: 21%;
+    animation-delay: 680ms, 1960ms;
+}
+
+.initial-loader__connection--data {
+    --connection-angle: 4deg;
+
+    right: 28%;
+    bottom: 38%;
+    width: 21%;
+    animation-delay: 920ms, 2360ms;
+}
+
+.initial-loader__connection--support {
+    --connection-angle: -2deg;
+
+    top: 52%;
+    left: 50%;
+    width: 0.45rem;
+    height: 28%;
+    border-top: 0;
+    border-left: 0.095rem solid var(--blueprint-line-color);
+    transform-origin: top center;
+    transform: rotate(var(--connection-angle)) scaleY(0);
+    animation-name: blueprint-loader-connection-vertical, blueprint-loader-connection-pulse;
+    animation-delay: 1120ms, 2760ms;
+}

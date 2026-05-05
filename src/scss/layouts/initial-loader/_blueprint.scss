@@ -1,0 +1,33 @@
+.initial-loader__blueprint {
+    --blueprint-line-color: color-mix(in srgb, var(--color-text-muted) 48%, transparent);
+    --blueprint-accent-color: color-mix(in srgb, var(--color-accent-primary) 84%, transparent);
+    --blueprint-surface-color: color-mix(in srgb, var(--color-surface-elevated) 82%, transparent);
+
+    position: relative;
+    width: clamp(7.5rem, 14vw, 10.75rem);
+    aspect-ratio: 1.36;
+    opacity: 0;
+    transform: translateY(0.25rem);
+    animation: blueprint-loader-enter 360ms 80ms ease both;
+}
+
+.initial-loader__blueprint::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background-image:
+        linear-gradient(var(--blueprint-line-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--blueprint-line-color) 1px, transparent 1px);
+    background-size: 1.45rem 1.45rem;
+    opacity: 0.2;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 28%, transparent 72%);
+    mask-image: radial-gradient(ellipse at center, black 28%, transparent 72%);
+    transform: rotate(-1.2deg);
+}
+
+.initial-loader__module,
+.initial-loader__connection,
+.initial-loader__node {
+    position: absolute;
+    display: block;
+}
