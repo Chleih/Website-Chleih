@@ -18,6 +18,12 @@
     --color-surface-secondary: #{colors.$porcelain};
     --color-surface-elevated: #fffaf2;
     --color-surface-inverse: #{colors.$carbon};
+    --color-page-glow-primary: rgb(255 255 255 / 46%);
+    --color-page-glow-secondary: rgb(211 179 141 / 18%);
+    --color-page-glow-tertiary: rgb(255 255 255 / 30%);
+    --color-page-texture-primary: rgb(31 31 31 / 2.8%);
+    --color-page-texture-secondary: rgb(31 31 31 / 2.4%);
+    --color-page-texture-highlight: rgb(255 255 255 / 35%);
 
     // ============================================
     // BORDERS
@@ -44,6 +50,12 @@
     --color-button-secondary-hover-text: #{colors.$rust-dark};
     --color-button-secondary-hover-border: #{colors.$rust-dark};
     --color-button-secondary-hover-background: rgb(255 255 255 / 24%);
+    --shadow-button-primary: 0 0.625rem 1.5rem rgb(163 58 31 / 18%);
+    --shadow-button-primary-hover: 0 0.375rem 0.875rem rgb(125 45 25 / 16%);
+    --shadow-button-primary-active: 0 0.125rem 0.35rem rgb(125 45 25 / 12%);
+    --shadow-initial-loader-module: 0 0.45rem 1.4rem rgb(31 31 31 / 5%);
+    --color-portrait-frame-highlight: rgb(255 255 255 / 38%);
+    --shadow-portrait-inner: inset 0 0 1.25rem rgb(31 31 31 / 3%);
 
     // ============================================
     // INTERACTION
