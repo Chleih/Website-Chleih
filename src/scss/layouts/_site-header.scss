@@ -55,7 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: clamp(1.25rem, 3vw, 4rem);
+    gap: clamp(1rem, 2.35vw, 3rem);
     padding: 0;
     margin: 0;
     list-style: none;
@@ -64,32 +64,39 @@
 .site-navigation__link {
     position: relative;
     display: inline-flex;
-    padding-block: 0.25rem;
+    padding-block: 0.35rem;
     font-family: var(--font-family-ui);
-    font-size: clamp(0.95rem, 1vw, 1.125rem);
+    font-size: clamp(0.92rem, 0.95vw, 1.075rem);
     font-weight: var(--font-weight-medium);
-    color: var(--color-text-primary);
+    line-height: 1.1;
+    color: color-mix(in srgb, var(--color-text-secondary) 86%, var(--color-text-primary));
     transition:
         color var(--transition-base),
+        opacity var(--transition-base),
         transform var(--transition-base);
 }
 
 .site-navigation__link::after {
     position: absolute;
     right: 0;
-    bottom: -0.25rem;
+    bottom: -0.28rem;
     left: 0;
-    height: 1px;
+    height: 0.32rem;
     content: '';
-    background-color: currentColor;
-    transform: scaleX(0);
+    border-top: 1px solid currentColor;
+    border-radius: 50%;
+    opacity: 0;
+    transform: rotate(-1.5deg) scaleX(0);
     transform-origin: right;
-    transition: transform var(--transition-base);
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base);
 }
 
 .site-navigation__link:hover {
     color: var(--color-accent-primary-strong);
-    transform: translateY(-0.04rem);
+    opacity: 1;
+    transform: translateY(-0.035rem);
 }
 
 .site-navigation__link:focus-visible {
@@ -101,17 +108,20 @@
 }
 
 .site-navigation__link:hover::after {
-    transform: scaleX(1);
+    opacity: 0.72;
+    transform: rotate(-1.5deg) scaleX(1);
     transform-origin: left;
 }
 
 .site-navigation__link:focus-visible::after {
-    transform: scaleX(1);
+    opacity: 0.72;
+    transform: rotate(-1.5deg) scaleX(1);
     transform-origin: left;
 }
 
 .site-navigation__link.is-active::after {
-    transform: scaleX(1);
+    opacity: 0.62;
+    transform: rotate(-1.5deg) scaleX(1);
     transform-origin: left;
 }
 
