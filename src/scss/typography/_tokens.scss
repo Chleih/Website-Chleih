@@ -6,17 +6,10 @@
 // ============================================
 
 :root {
-    --font-family-display: #{fonts.$font-family-display};
     --font-family-body: #{fonts.$font-family-body};
     --font-family-ui: #{fonts.$font-family-ui};
-
-    // Editorial fallback font for the hero/brand style.
-    // This gives the page a more personal, high-end portfolio feeling
-    // without requiring another font file yet.
-    --font-family-editorial: Georgia, 'Times New Roman', serif;
-
-    // Used only for small personal annotation-style text.
-    --font-family-handwritten: 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive;
+    --font-family-editorial: #{fonts.$font-family-editorial};
+    --font-family-handwritten: #{fonts.$font-family-handwritten};
 
     --font-weight-regular: #{scale.$font-weight-regular};
     --font-weight-medium: #{scale.$font-weight-medium};

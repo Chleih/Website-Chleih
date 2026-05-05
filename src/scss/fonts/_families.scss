@@ -3,6 +3,7 @@
 // ============================================
 // FONT STACKS
 // ============================================
-$font-family-display: (#{config.$font-family-display-name}, Arial, Helvetica, sans-serif);
-$font-family-body: (#{config.$font-family-body-name}, Arial, Helvetica, sans-serif);
-$font-family-ui: (#{config.$font-family-ui-name}, Arial, Helvetica, sans-serif);
+$font-family-editorial: (#{config.$font-family-editorial-name}, Georgia, 'Times New Roman', serif);
+$font-family-body: (#{config.$font-family-sans-name}, Arial, Helvetica, sans-serif);
+$font-family-ui: (#{config.$font-family-sans-name}, Arial, Helvetica, sans-serif);
+$font-family-handwritten: (#{config.$font-family-handwritten-name}, cursive);

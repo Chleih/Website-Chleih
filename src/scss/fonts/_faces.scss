@@ -15,6 +15,8 @@
     }
 }
 
-@include variable-woff2-font-face(config.$font-family-display-name, config.$font-path-geist);
-@include variable-woff2-font-face(config.$font-family-body-name, config.$font-path-inter);
-@include variable-woff2-font-face(config.$font-family-body-name, config.$font-path-inter-italic, $style: italic);
+@include variable-woff2-font-face(config.$font-family-editorial-name, config.$font-path-editorial, '200 800');
+@include variable-woff2-font-face(config.$font-family-editorial-name, config.$font-path-editorial-italic, '200 800', italic);
+@include variable-woff2-font-face(config.$font-family-sans-name, config.$font-path-sans, '100 700');
+@include variable-woff2-font-face(config.$font-family-sans-name, config.$font-path-sans-italic, '100 700', italic);
+@include variable-woff2-font-face(config.$font-family-handwritten-name, config.$font-path-handwritten, '400 700');
