@@ -27,6 +27,7 @@
 
 .site-brand__dot {
     color: var(--color-text-primary);
+    transition: color var(--transition-base);
 }
 
 .site-brand__cursor {
@@ -34,6 +35,22 @@
     margin-left: 0.0625rem;
     color: var(--color-accent-primary);
     transform: translateY(-0.15em);
+    transition:
+        color var(--transition-base),
+        opacity var(--transition-base),
+        transform var(--transition-base);
+}
+
+.site-brand:hover .site-brand__dot,
+.site-brand:focus-visible .site-brand__dot {
+    color: var(--color-accent-primary);
+}
+
+.site-brand:hover .site-brand__cursor,
+.site-brand:focus-visible .site-brand__cursor {
+    color: var(--color-accent-primary-strong);
+    opacity: 0.9;
+    transform: translateY(-0.15em) scaleX(1.12);
 }
 
 .site-navigation__list {
@@ -54,7 +71,9 @@
     font-size: clamp(0.95rem, 1vw, 1.125rem);
     font-weight: var(--font-weight-medium);
     color: var(--color-text-primary);
-    transition: color var(--transition-base);
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
 }
 
 .site-navigation__link::after {
@@ -72,6 +91,11 @@
 
 .site-navigation__link:hover {
     color: var(--color-accent-primary-strong);
+    transform: translateY(-0.04rem);
+}
+
+.site-navigation__link:focus-visible {
+    color: var(--color-accent-primary-strong);
 }
 
 .site-navigation__link.is-active {
@@ -79,6 +103,11 @@
 }
 
 .site-navigation__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.site-navigation__link:focus-visible::after {
     transform: scaleX(1);
     transform-origin: left;
 }
