@@ -1,14 +1,9 @@
+@use 'abstracts';
 @use 'fonts';
 @use 'typography';
-@use 'theme';
+@use 'design-tokens';
 
-@use 'base/base';
-
-@use 'components/skip-link';
-@use 'components/button';
-
-@use 'layouts/site-header';
-@use 'layouts/site-footer';
-
-@use 'pages/home';
-@use 'pages/placeholder';
+@use 'base';
+@use 'components';
+@use 'layouts';
+@use 'pages';

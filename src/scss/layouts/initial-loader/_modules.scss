@@ -1,0 +1,52 @@
+.initial-loader__module {
+    --module-angle: 0deg;
+
+    background-color: var(--blueprint-surface-color);
+    border: 1px solid var(--blueprint-line-color);
+    border-radius: 0.38rem 0.28rem 0.42rem 0.32rem;
+    box-shadow: var(--shadow-initial-loader-module);
+    opacity: 0;
+    transform: rotate(var(--module-angle)) scale(0.92);
+    animation:
+        blueprint-loader-module 420ms ease both,
+        blueprint-loader-module-pulse 2400ms ease-in-out infinite;
+}
+
+.initial-loader__module::before {
+    position: absolute;
+    inset: 0.12rem;
+    content: '';
+    border: 1px solid color-mix(in srgb, var(--blueprint-line-color) 56%, transparent);
+    border-radius: 0.32rem 0.44rem 0.28rem 0.38rem;
+    transform: rotate(1.1deg);
+}
+
+.initial-loader__module--core {
+    --module-angle: -1.2deg;
+
+    top: 34%;
+    left: 37%;
+    width: 26%;
+    height: 30%;
+    animation-delay: 280ms, 1700ms;
+}
+
+.initial-loader__module--service {
+    --module-angle: 1.8deg;
+
+    top: 10%;
+    left: 7%;
+    width: 24%;
+    height: 24%;
+    animation-delay: 520ms, 2100ms;
+}
+
+.initial-loader__module--data {
+    --module-angle: -1.6deg;
+
+    right: 7%;
+    bottom: 10%;
+    width: 24%;
+    height: 24%;
+    animation-delay: 760ms, 2500ms;
+}

@@ -34,6 +34,7 @@ function getClickedRouterLink(target) {
 /**
  * Navigates to an internal route and runs the configured route-change effect.
  * @param {URL} url
+ * @returns {Promise<void>}
  */
 async function navigateToRoute(url) {
     window.history.pushState(null, '', `${url.pathname}${url.search}${url.hash}`);
@@ -43,6 +44,7 @@ async function navigateToRoute(url) {
 /**
  * Handles route-link clicks without leaving the single app entry.
  * @param {MouseEvent} event
+ * @returns {Promise<void>}
  */
 async function handleRouterLinkClick(event) {
     if (shouldIgnoreClick(event)) {
@@ -74,14 +76,27 @@ async function handleRouterLinkClick(event) {
 }
 
 /**
+ * Handles document clicks and delegates route-link clicks to the router.
+ * @param {MouseEvent} event
+ * @returns {Promise<void>}
+ */
+async function handleDocumentClick(event) {
+    await handleRouterLinkClick(event);
+}
+
+/**
+ * Renders the current route after browser back or forward navigation.
+ * @returns {Promise<void>}
+ */
+async function handlePopState() {
+    await renderRoute(window.location.pathname);
+}
+
+/**
  * Initializes browser navigation for internal route links and back/forward events.
+ * @returns {void}
  */
 export function initRouter() {
-    document.addEventListener('click', async (event) => {
-        await handleRouterLinkClick(event);
-    });
-
-    window.addEventListener('popstate', async () => {
-        await renderRoute(window.location.pathname);
-    });
+    document.addEventListener('click', handleDocumentClick);
+    window.addEventListener('popstate', handlePopState);
 }

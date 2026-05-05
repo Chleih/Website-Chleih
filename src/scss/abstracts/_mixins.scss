@@ -1,7 +1,15 @@
+/// Adds a temporary border to inspect element dimensions during layout debugging.
+/// @param {Color} $color [red] - Border color used for visual debugging.
+/// @param {Length} $width [1px] - Border width.
+/// @param {String} $style [solid] - Border style.
 @mixin debug-border($color: red, $width: 1px, $style: solid) {
     border: $width $style $color;
 }
 
+/// Adds a temporary outline to inspect element boundaries without affecting layout.
+/// @param {Color} $color [red] - Outline color used for visual debugging.
+/// @param {Length} $width [1px] - Outline width.
+/// @param {String} $style [solid] - Outline style.
 @mixin debug-outline($color: red, $width: 1px, $style: solid) {
     outline: $width $style $color;
 }

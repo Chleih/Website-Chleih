@@ -23,10 +23,10 @@ body {
     line-height: var(--line-height-body);
     color: var(--color-text-primary);
     background:
-        radial-gradient(circle at 20% 15%, rgb(255 255 255 / 46%), transparent 24rem),
-        radial-gradient(circle at 80% 10%, rgb(211 179 141 / 18%), transparent 26rem),
-        linear-gradient(135deg, rgb(255 255 255 / 30%), transparent 42%), var(--color-page-background);
-    transition: var(--theme-transition);
+        radial-gradient(circle at 20% 15%, var(--color-page-glow-primary), transparent 24rem),
+        radial-gradient(circle at 80% 10%, var(--color-page-glow-secondary), transparent 26rem),
+        linear-gradient(135deg, var(--color-page-glow-tertiary), transparent 42%), var(--color-page-background);
+    transition: var(--ui-transition);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
@@ -38,9 +38,9 @@ body::before {
     pointer-events: none;
     content: '';
     background-image:
-        radial-gradient(circle at 18% 22%, rgb(31 31 31 / 2.8%) 0 0.04rem, transparent 0.05rem),
-        radial-gradient(circle at 72% 38%, rgb(31 31 31 / 2.4%) 0 0.035rem, transparent 0.045rem),
-        radial-gradient(circle at 42% 78%, rgb(255 255 255 / 35%) 0 0.05rem, transparent 0.06rem);
+        radial-gradient(circle at 18% 22%, var(--color-page-texture-primary) 0 0.04rem, transparent 0.05rem),
+        radial-gradient(circle at 72% 38%, var(--color-page-texture-secondary) 0 0.035rem, transparent 0.045rem),
+        radial-gradient(circle at 42% 78%, var(--color-page-texture-highlight) 0 0.05rem, transparent 0.06rem);
     background-position:
         0 0,
         1.4rem 0.7rem,

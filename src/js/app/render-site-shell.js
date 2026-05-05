@@ -2,6 +2,7 @@ import siteShellTemplate from '../../html/layouts/site-shell.html?raw';
 
 /**
  * Renders the persistent site shell into the root application entry point.
+ * @returns {void}
  */
 export function renderSiteShell() {
     const applicationRoot = document.getElementById('app');

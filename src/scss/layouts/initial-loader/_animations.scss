@@ -1,0 +1,96 @@
+@keyframes blueprint-loader-enter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blueprint-loader-module {
+    from {
+        opacity: 0;
+        transform: rotate(var(--module-angle)) scale(0.92);
+    }
+
+    62% {
+        border-color: var(--blueprint-accent-color);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(var(--module-angle)) scale(1);
+    }
+}
+
+@keyframes blueprint-loader-connection {
+    to {
+        opacity: 0.82;
+        transform: rotate(var(--connection-angle)) scaleX(1);
+    }
+}
+
+@keyframes blueprint-loader-module-pulse {
+    0%,
+    100% {
+        border-color: var(--blueprint-line-color);
+        box-shadow: var(--shadow-initial-loader-module);
+    }
+
+    16% {
+        border-color: var(--blueprint-accent-color);
+        box-shadow:
+            var(--shadow-initial-loader-module),
+            0 0 0 0.16rem color-mix(in srgb, var(--color-accent-primary) 10%, transparent);
+    }
+}
+
+@keyframes blueprint-loader-connection-pulse {
+    0%,
+    100% {
+        border-color: var(--blueprint-line-color);
+        box-shadow: none;
+    }
+
+    16% {
+        border-color: var(--blueprint-accent-color);
+        box-shadow: 0 0 0.75rem color-mix(in srgb, var(--color-accent-primary) 22%, transparent);
+    }
+}
+
+@keyframes blueprint-loader-connection-vertical {
+    to {
+        opacity: 0.82;
+        transform: rotate(var(--connection-angle)) scaleY(1);
+    }
+}
+
+@keyframes blueprint-loader-node {
+    58% {
+        background-color: var(--blueprint-accent-color);
+        box-shadow: 0 0 0 0.28rem color-mix(in srgb, var(--color-accent-primary) 14%, transparent);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes blueprint-loader-node-pulse {
+    0%,
+    100% {
+        background-color: var(--color-page-background);
+        box-shadow: none;
+    }
+
+    16% {
+        background-color: var(--blueprint-accent-color);
+        box-shadow: 0 0 0 0.28rem color-mix(in srgb, var(--color-accent-primary) 14%, transparent);
+    }
+}
+
+@keyframes blueprint-loader-status {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

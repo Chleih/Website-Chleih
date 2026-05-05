@@ -26,6 +26,7 @@ function findRoute(pathname) {
 /**
  * Updates navigation link state for the active route.
  * @param {string} pathname
+ * @returns {void}
  */
 function updateActiveNavigation(pathname) {
     const normalizedPathname = normalizePathname(pathname);
@@ -53,6 +54,7 @@ function updateActiveNavigation(pathname) {
 /**
  * Announces that a route has finished rendering.
  * @param {import('./types').RouteDefinition} route
+ * @returns {void}
  */
 function dispatchRouteChangedEvent(route) {
     document.dispatchEvent(

@@ -1,0 +1,26 @@
+.site-main {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    padding-block-end: clamp(1rem, 2.4dvh, 2rem);
+    overflow: hidden;
+}
+
+.hero {
+    display: grid;
+    flex: 1 1 auto;
+    grid-template-columns: 1fr;
+    gap: clamp(1.5rem, 4vw, 5.5rem);
+    align-items: center;
+    min-height: 0;
+    padding-block: clamp(0.5rem, 2dvh, 1.75rem);
+}
+
+.hero__content {
+    --hero-space-tight: clamp(0.55rem, 1.15dvh, 0.85rem);
+    --hero-space-base: clamp(0.95rem, 2dvh, 1.65rem);
+    --hero-space-loose: clamp(1.15rem, 2.45dvh, 1.95rem);
+
+    max-width: 45rem;
+}

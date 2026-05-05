@@ -1,0 +1,37 @@
+@media (prefers-reduced-motion: reduce) {
+    .initial-loader__blueprint,
+    .initial-loader__module,
+    .initial-loader__connection,
+    .initial-loader__node,
+    .initial-loader__status {
+        animation: none;
+    }
+
+    .initial-loader__blueprint,
+    .initial-loader__module,
+    .initial-loader__connection,
+    .initial-loader__node,
+    .initial-loader__status {
+        opacity: 1;
+    }
+
+    .initial-loader__blueprint,
+    .initial-loader__module,
+    .initial-loader__node,
+    .initial-loader__status {
+        transform: none;
+    }
+
+    .initial-loader__module {
+        transform: rotate(var(--module-angle));
+    }
+
+    .initial-loader__connection--service,
+    .initial-loader__connection--data {
+        transform: rotate(var(--connection-angle)) scaleX(1);
+    }
+
+    .initial-loader__connection--support {
+        transform: rotate(var(--connection-angle)) scaleY(1);
+    }
+}

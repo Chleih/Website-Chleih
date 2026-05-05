@@ -1,0 +1,49 @@
+.initial-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: var(--site-gutter);
+    color: var(--color-text-primary);
+    background: var(--color-page-background);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 320ms ease,
+        visibility 0s 320ms;
+}
+
+.initial-loader[hidden] {
+    display: none;
+}
+
+.initial-loader.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 280ms ease;
+}
+
+.initial-loader.is-exiting {
+    opacity: 0;
+    visibility: visible;
+}
+
+.initial-loader__content {
+    display: grid;
+    justify-items: center;
+    gap: clamp(0.9rem, 2dvh, 1.35rem);
+}
+
+.initial-loader__status {
+    margin: 0;
+    font-family: var(--font-family-ui);
+    font-size: clamp(0.72rem, 0.78vw, 0.84rem);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+    letter-spacing: 0.02em;
+    color: color-mix(in srgb, var(--color-text-secondary) 78%, transparent);
+    opacity: 0;
+    transform: translateY(-0.15rem);
+    animation: blueprint-loader-status 420ms 1160ms ease forwards;
+}
