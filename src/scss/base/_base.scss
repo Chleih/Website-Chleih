@@ -26,7 +26,7 @@ body {
         radial-gradient(circle at 20% 15%, var(--color-page-glow-primary), transparent 24rem),
         radial-gradient(circle at 80% 10%, var(--color-page-glow-secondary), transparent 26rem),
         linear-gradient(135deg, var(--color-page-glow-tertiary), transparent 42%), var(--color-page-background);
-    transition: var(--theme-transition);
+    transition: var(--ui-transition);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
