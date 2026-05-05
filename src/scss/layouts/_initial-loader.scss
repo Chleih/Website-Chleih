@@ -59,6 +59,7 @@
     opacity: 0.2;
     -webkit-mask-image: radial-gradient(ellipse at center, black 28%, transparent 72%);
     mask-image: radial-gradient(ellipse at center, black 28%, transparent 72%);
+    transform: rotate(-1.2deg);
 }
 
 .initial-loader__module,
@@ -69,17 +70,31 @@
 }
 
 .initial-loader__module {
+    --module-angle: 0deg;
+
     background-color: var(--blueprint-surface-color);
     border: 1px solid var(--blueprint-line-color);
+    border-radius: 0.38rem 0.28rem 0.42rem 0.32rem;
     box-shadow: 0 0.45rem 1.4rem rgb(31 31 31 / 5%);
     opacity: 0;
-    transform: scale(0.92);
+    transform: rotate(var(--module-angle)) scale(0.92);
     animation:
         blueprint-loader-module 420ms ease both,
         blueprint-loader-module-pulse 2400ms ease-in-out infinite;
 }
 
+.initial-loader__module::before {
+    position: absolute;
+    inset: 0.12rem;
+    content: '';
+    border: 1px solid color-mix(in srgb, var(--blueprint-line-color) 56%, transparent);
+    border-radius: 0.32rem 0.44rem 0.28rem 0.38rem;
+    transform: rotate(1.1deg);
+}
+
 .initial-loader__module--core {
+    --module-angle: -1.2deg;
+
     top: 34%;
     left: 37%;
     width: 26%;
@@ -88,6 +103,8 @@
 }
 
 .initial-loader__module--service {
+    --module-angle: 1.8deg;
+
     top: 10%;
     left: 7%;
     width: 24%;
@@ -96,6 +113,8 @@
 }
 
 .initial-loader__module--data {
+    --module-angle: -1.6deg;
+
     right: 7%;
     bottom: 10%;
     width: 24%;
@@ -104,39 +123,49 @@
 }
 
 .initial-loader__connection {
-    background-color: var(--blueprint-line-color);
+    --connection-angle: 0deg;
+
+    height: 0.45rem;
+    background-color: transparent;
+    border-top: 0.095rem solid var(--blueprint-line-color);
+    border-radius: 50%;
     opacity: 0;
     transform-origin: left center;
+    transform: rotate(var(--connection-angle)) scaleX(0);
     animation:
         blueprint-loader-connection 520ms ease both,
         blueprint-loader-connection-pulse 2400ms ease-in-out infinite;
 }
 
 .initial-loader__connection--service {
+    --connection-angle: -4deg;
+
     top: 38%;
     left: 28%;
     width: 21%;
-    height: 1px;
-    transform: scaleX(0);
     animation-delay: 680ms, 1960ms;
 }
 
 .initial-loader__connection--data {
+    --connection-angle: 4deg;
+
     right: 28%;
     bottom: 38%;
     width: 21%;
-    height: 1px;
-    transform: scaleX(0);
     animation-delay: 920ms, 2360ms;
 }
 
 .initial-loader__connection--support {
+    --connection-angle: -2deg;
+
     top: 52%;
     left: 50%;
-    width: 1px;
+    width: 0.45rem;
     height: 28%;
-    transform: scaleY(0);
+    border-top: 0;
+    border-left: 0.095rem solid var(--blueprint-line-color);
     transform-origin: top center;
+    transform: rotate(var(--connection-angle)) scaleY(0);
     animation-name: blueprint-loader-connection-vertical, blueprint-loader-connection-pulse;
     animation-delay: 1120ms, 2760ms;
 }
@@ -146,7 +175,7 @@
     height: 0.62rem;
     background-color: var(--color-page-background);
     border: 1px solid var(--blueprint-accent-color);
-    border-radius: 50%;
+    border-radius: 46% 54% 51% 49%;
     opacity: 0;
     transform: scale(0.68);
     animation:
@@ -199,20 +228,25 @@
 }
 
 @keyframes blueprint-loader-module {
+    from {
+        opacity: 0;
+        transform: rotate(var(--module-angle)) scale(0.92);
+    }
+
     62% {
         border-color: var(--blueprint-accent-color);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: rotate(var(--module-angle)) scale(1);
     }
 }
 
 @keyframes blueprint-loader-connection {
     to {
         opacity: 0.82;
-        transform: scaleX(1);
+        transform: rotate(var(--connection-angle)) scaleX(1);
     }
 }
 
@@ -234,12 +268,12 @@
 @keyframes blueprint-loader-connection-pulse {
     0%,
     100% {
-        background-color: var(--blueprint-line-color);
+        border-color: var(--blueprint-line-color);
         box-shadow: none;
     }
 
     16% {
-        background-color: var(--blueprint-accent-color);
+        border-color: var(--blueprint-accent-color);
         box-shadow: 0 0 0.75rem color-mix(in srgb, var(--color-accent-primary) 22%, transparent);
     }
 }
@@ -247,7 +281,7 @@
 @keyframes blueprint-loader-connection-vertical {
     to {
         opacity: 0.82;
-        transform: scaleY(1);
+        transform: rotate(var(--connection-angle)) scaleY(1);
     }
 }
 
@@ -307,12 +341,16 @@
         transform: none;
     }
 
+    .initial-loader__module {
+        transform: rotate(var(--module-angle));
+    }
+
     .initial-loader__connection--service,
     .initial-loader__connection--data {
-        transform: scaleX(1);
+        transform: rotate(var(--connection-angle)) scaleX(1);
     }
 
     .initial-loader__connection--support {
-        transform: scaleY(1);
+        transform: rotate(var(--connection-angle)) scaleY(1);
     }
 }
