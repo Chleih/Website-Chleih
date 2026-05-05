@@ -1,4 +1,5 @@
 import {
+    INITIAL_LOADER_ACTIVE_ROOT_CLASS,
     INITIAL_LOADER_EXIT_MS,
     INITIAL_LOADER_EXITING_CLASS,
     INITIAL_LOADER_LINE_FALLBACK_MS,
@@ -41,10 +42,27 @@ export class InitialLoaderController {
     }
 
     /**
+     * Marks the document as being behind the initial loader.
+     * @returns {void}
+     */
+    activatePageAnimationGate() {
+        document.documentElement.classList.add(INITIAL_LOADER_ACTIVE_ROOT_CLASS);
+    }
+
+    /**
+     * Allows deferred page entrance animations to start.
+     * @returns {void}
+     */
+    releasePageAnimationGate() {
+        document.documentElement.classList.remove(INITIAL_LOADER_ACTIVE_ROOT_CLASS);
+    }
+
+    /**
      * Makes the initial loader visible.
      * @returns {void}
      */
     show() {
+        this.activatePageAnimationGate();
         this.loaderElement.hidden = false;
         this.loaderElement.classList.add(INITIAL_LOADER_VISIBLE_CLASS);
     }
@@ -82,6 +100,7 @@ export class InitialLoaderController {
 
         this.loaderElement.hidden = true;
         this.loaderElement.classList.remove(INITIAL_LOADER_EXITING_CLASS);
+        this.releasePageAnimationGate();
     }
 }
 

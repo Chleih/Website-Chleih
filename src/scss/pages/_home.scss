@@ -164,6 +164,35 @@
     color: color-mix(in srgb, var(--color-text-muted) 82%, var(--color-hero-accent) 18%);
 }
 
+:root.is-initial-loader-active {
+    .hero__eyebrow,
+    .hero__title,
+    .hero__description,
+    .hero__actions {
+        opacity: 0;
+        transform: translateY(0.65rem);
+        animation: none;
+    }
+
+    .hero__underline {
+        opacity: 0;
+        transform: rotate(-1deg) scaleX(0.08);
+        animation: none;
+    }
+
+    .hero-portrait__frame {
+        opacity: 0;
+        transform: translateY(0.75rem) rotate(0.8deg);
+        animation: none;
+    }
+
+    .hero-portrait__caption {
+        opacity: 0;
+        transform: translateY(0.45rem) rotate(-3.5deg);
+        animation: none;
+    }
+}
+
 .focus-overview {
     position: relative;
     display: grid;
