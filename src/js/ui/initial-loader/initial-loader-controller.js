@@ -4,7 +4,6 @@ import {
     INITIAL_LOADER_ANIMATION_SELECTOR,
     INITIAL_LOADER_EXIT_MS,
     INITIAL_LOADER_EXITING_CLASS,
-    INITIAL_LOADER_REVIEW_MIN_VISIBLE_MS,
     INITIAL_LOADER_SELECTOR,
     INITIAL_LOADER_VISIBLE_CLASS,
 } from './constants';
@@ -101,23 +100,11 @@ class InitialLoaderController {
     }
 
     /**
-     * Waits until the temporary review minimum visible duration has elapsed.
-     * @returns {Promise<void>}
-     */
-    async waitForReviewDuration() {
-        const elapsed = window.performance.now() - this.startedAt;
-        const remainingDuration = Math.max(INITIAL_LOADER_REVIEW_MIN_VISIBLE_MS - elapsed, 0);
-
-        await delay(remainingDuration);
-    }
-
-    /**
      * Hides the initial loader after its blueprint animation has completed.
      * @returns {Promise<void>}
      */
     async hide() {
         await this.waitForBlueprintAnimation();
-        await this.waitForReviewDuration();
 
         this.loaderElement.classList.add(INITIAL_LOADER_EXITING_CLASS);
         this.loaderElement.classList.remove(INITIAL_LOADER_VISIBLE_CLASS);
