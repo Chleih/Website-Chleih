@@ -1,12 +1,12 @@
 @keyframes blueprint-loader-enter {
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 @keyframes blueprint-loader-module {
-    from {
+    0% {
         opacity: 0;
         transform: rotate(var(--module-angle)) scale(0.92);
     }
@@ -15,14 +15,14 @@
         border-color: var(--blueprint-accent-color);
     }
 
-    to {
+    100% {
         opacity: 1;
         transform: rotate(var(--module-angle)) scale(1);
     }
 }
 
 @keyframes blueprint-loader-connection {
-    to {
+    100% {
         opacity: 0.82;
         transform: rotate(var(--connection-angle)) scaleX(1);
     }
@@ -57,7 +57,7 @@
 }
 
 @keyframes blueprint-loader-connection-vertical {
-    to {
+    100% {
         opacity: 0.82;
         transform: rotate(var(--connection-angle)) scaleY(1);
     }
@@ -69,7 +69,7 @@
         box-shadow: 0 0 0 0.28rem color-mix(in srgb, var(--color-accent-primary) 14%, transparent);
     }
 
-    to {
+    100% {
         opacity: 1;
         transform: scale(1);
     }
@@ -89,7 +89,7 @@
 }
 
 @keyframes blueprint-loader-status {
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }

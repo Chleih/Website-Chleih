@@ -125,7 +125,7 @@
     transform-origin: left;
 }
 
-@media (max-width: 47.99rem) {
+@media (width <= 47.99rem) {
     .site-header {
         align-items: flex-start;
         flex-direction: column;

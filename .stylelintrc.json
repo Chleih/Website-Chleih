@@ -1,20 +1,23 @@
 {
     "extends": ["stylelint-config-standard-scss"],
     "rules": {
-        "at-rule-empty-line-before": null,
         "comment-empty-line-before": null,
-        "custom-property-pattern": null,
         "custom-property-empty-line-before": null,
-        "declaration-block-no-redundant-longhand-properties": null,
         "declaration-empty-line-before": null,
-        "keyframe-selector-notation": null,
-        "media-feature-range-notation": null,
-        "property-no-vendor-prefix": null,
         "no-descending-specificity": null,
-        "scss/at-if-no-null": null,
+        "property-no-deprecated": true,
         "scss/dollar-variable-empty-line-before": null,
-        "scss/dollar-variable-pattern": null,
-        "selector-class-pattern": null,
-        "value-keyword-case": null
+        "selector-class-pattern": [
+            "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?:__[a-z0-9]+(?:-[a-z0-9]+)*)?(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?$",
+            {
+                "message": "Expected class selectors to follow the project BEM-style naming convention."
+            }
+        ],
+        "value-keyword-case": [
+            "lower",
+            {
+                "ignoreKeywords": ["currentColor", "optimizeLegibility"]
+            }
+        ]
     }
 }

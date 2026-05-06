@@ -1,13 +1,14 @@
 {
+    "root": true,
     "extends": ["html-validate:recommended"],
     "rules": {
-        "doctype-style": "off",
-        "element-required-attributes": "off",
-        "heading-level": "off",
-        "missing-doctype": "off",
+        "doctype-style": ["error", { "style": "lowercase" }],
+        "element-required-attributes": "error",
+        "heading-level": "error",
+        "missing-doctype": "error",
         "no-inline-style": "error",
-        "no-raw-characters": "off",
-        "prefer-native-element": "off",
+        "no-raw-characters": "error",
+        "prefer-native-element": "error",
         "require-sri": "off",
         "valid-id": "error",
         "void-style": "off"

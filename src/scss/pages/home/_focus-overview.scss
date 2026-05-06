@@ -56,10 +56,9 @@
 
 .focus-card__icon {
     display: inline-flex;
-    align-self: start;
-    justify-self: start;
     align-items: flex-start;
     justify-content: flex-start;
+    place-self: start;
     width: max-content;
     height: clamp(1.35rem, 1.75vw, 1.625rem);
     flex-shrink: 0;

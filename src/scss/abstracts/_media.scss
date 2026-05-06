@@ -6,11 +6,11 @@
 @mixin respond-from($breakpoint) {
     $breakpoint-value: map.get(breakpoints.$breakpoints, $breakpoint);
 
-    @if $breakpoint-value == null {
+    @if not $breakpoint-value {
         @error 'Unknown breakpoint: #{$breakpoint}.';
     }
 
-    @media (min-width: $breakpoint-value) {
+    @media (width >= $breakpoint-value) {
         @content;
     }
 }

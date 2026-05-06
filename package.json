@@ -22,7 +22,7 @@
         "check:js": "node scripts/check-js-syntax.js",
         "check:sass": "node scripts/check-sass.js",
         "check:compile": "npm run check:js && npm run check:sass",
-        "check:html": "html-validate \"index.html\" \"src/html/**/*.html\"",
+        "check:html": "html-validate --config .htmlvalidate.json \"index.html\" && html-validate --config .htmlvalidate.fragments.json \"src/html/**/*.html\"",
         "check:audit": "npm audit --audit-level=moderate",
         "check:unused": "knip",
         "check:dependencies": "npm run check:audit && npm run check:unused",
