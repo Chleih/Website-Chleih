@@ -8,15 +8,14 @@
     // -------------------- PRETTIER --------------------
     "prettier.useEditorConfig": true,
 
+    // -------------------- LINTING --------------------
+    "eslint.validate": ["javascript"],
+
     // -------------------- FILE VISIBILITY --------------------
     "files.exclude": {
         "**/node_modules": true,
         "**/.DS_Store": true
     },
-
-    // -------------------- LIVE SERVER --------------------
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true,
 
     // -------------------- LANGUAGE OVERRIDES --------------------
     "[yaml]": {

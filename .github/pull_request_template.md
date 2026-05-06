@@ -1,12 +1,12 @@
-## 📌 Summary
+## Summary
 
 Describe the purpose of this PR clearly and briefly.
 
-## 🔗 Related work item
+## Related Work Item
 
 - Jira issue:
 
-## 🧩 Type of change
+## Type Of Change
 
 - [ ] Feature
 - [ ] Bug fix
@@ -16,7 +16,7 @@ Describe the purpose of this PR clearly and briefly.
 - [ ] Build / tooling / config
 - [ ] Other
 
-## ✅ Checklist
+## Checklist
 
 - [ ] I have linked the relevant Jira issue
 - [ ] I have tested my changes locally
