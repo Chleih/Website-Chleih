@@ -8,16 +8,44 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "lint": "eslint src/js",
-        "lint:fix": "eslint src/js --fix"
+        "prepare": "husky",
+        "format": "prettier . --write",
+        "format:check": "prettier . --check",
+        "lint": "npm run lint:js && npm run lint:scss",
+        "lint:fix": "npm run lint:js:fix && npm run lint:scss:fix",
+        "lint:js": "eslint src/js scripts eslint.config.js vite.config.js",
+        "lint:js:fix": "eslint src/js scripts eslint.config.js vite.config.js --fix",
+        "lint:scss": "stylelint \"src/scss/**/*.scss\"",
+        "lint:scss:fix": "stylelint \"src/scss/**/*.scss\" --fix",
+        "quality": "npm run lint && npm run check:html && npm run check:unused",
+        "quality:fix": "npm run lint:fix && npm run format",
+        "check:js": "node scripts/check-js-syntax.js",
+        "check:sass": "node scripts/check-sass.js",
+        "check:compile": "npm run check:js && npm run check:sass",
+        "check:html": "html-validate --config .htmlvalidate.json \"index.html\" && html-validate --config .htmlvalidate.fragments.json \"src/html/**/*.html\"",
+        "check:audit": "npm audit --audit-level=moderate",
+        "check:unused": "knip",
+        "check:dependencies": "npm run check:audit && npm run check:unused",
+        "precommit": "lint-staged",
+        "test": "node -e \"console.log('No automated tests configured yet.');\"",
+        "validate": "npm run format:check && npm run check:compile && npm run quality && npm run check:audit && npm run test"
+    },
+    "lint-staged": {
+        "*.{html,js,json,jsonc,md,scss,yml,yaml}": "prettier --check",
+        "*.js": "eslint",
+        "*.scss": "stylelint"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
         "eslint": "^10.3.0",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-prettier": "^5.5.5",
+        "html-validate": "^10.15.0",
+        "husky": "^9.1.7",
+        "knip": "^6.12.0",
+        "lint-staged": "^16.4.0",
         "prettier": "3.8.3",
         "sass": "^1.98.0",
+        "stylelint": "^17.11.0",
+        "stylelint-config-standard-scss": "^17.0.0",
         "vite": "^8.0.10"
     }
 }

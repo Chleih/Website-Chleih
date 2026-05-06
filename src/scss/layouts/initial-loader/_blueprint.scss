@@ -20,7 +20,6 @@
         linear-gradient(90deg, var(--blueprint-line-color) 1px, transparent 1px);
     background-size: 1.45rem 1.45rem;
     opacity: 0.2;
-    -webkit-mask-image: radial-gradient(ellipse at center, black 28%, transparent 72%);
     mask-image: radial-gradient(ellipse at center, black 28%, transparent 72%);
     transform: rotate(-1.2deg);
 }

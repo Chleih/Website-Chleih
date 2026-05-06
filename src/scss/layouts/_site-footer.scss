@@ -38,7 +38,7 @@
     content: none;
 }
 
-@media (max-width: 35.99rem) {
+@media (width <= 35.99rem) {
     .site-footer {
         align-items: flex-start;
         flex-direction: column;

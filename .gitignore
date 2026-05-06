@@ -12,6 +12,9 @@ Thumbs.db
 
 # ignore log files
 *.log
+.npm-cache/
+coverage/
+.commandtree/
 
 # VS Code
 .vsconfig
@@ -28,3 +31,4 @@ dist/
 # track these files, if they exist
 !.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/tasks.json
