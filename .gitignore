@@ -14,6 +14,7 @@ Thumbs.db
 *.log
 .npm-cache/
 coverage/
+.commandtree/
 
 # VS Code
 .vsconfig

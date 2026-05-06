@@ -17,14 +17,18 @@
         "lint:js:fix": "eslint src/js scripts eslint.config.js vite.config.js --fix",
         "lint:scss": "stylelint \"src/scss/**/*.scss\"",
         "lint:scss:fix": "stylelint \"src/scss/**/*.scss\" --fix",
+        "quality": "npm run lint && npm run check:html && npm run check:unused",
+        "quality:fix": "npm run lint:fix && npm run format",
         "check:js": "node scripts/check-js-syntax.js",
         "check:sass": "node scripts/check-sass.js",
+        "check:compile": "npm run check:js && npm run check:sass",
         "check:html": "html-validate \"index.html\" \"src/html/**/*.html\"",
         "check:audit": "npm audit --audit-level=moderate",
         "check:unused": "knip",
         "check:dependencies": "npm run check:audit && npm run check:unused",
         "precommit": "lint-staged",
-        "validate": "npm run format:check && npm run lint && npm run check:js && npm run check:sass && npm run check:html && npm run check:dependencies"
+        "test": "node -e \"console.log('No automated tests configured yet.');\"",
+        "validate": "npm run format:check && npm run check:compile && npm run quality && npm run check:audit && npm run test"
     },
     "lint-staged": {
         "*.{html,js,json,jsonc,md,scss,yml,yaml}": "prettier --check",
