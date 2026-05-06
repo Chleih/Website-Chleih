@@ -15,6 +15,7 @@
     // -------------------- LINTING --------------------
     "eslint.validate": ["javascript"],
     "eslint.workingDirectories": [{ "mode": "auto" }],
+    "stylelint.validate": ["css", "scss"],
 
     // -------------------- FILE VISIBILITY --------------------
     "files.exclude": {
