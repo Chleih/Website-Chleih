@@ -2,6 +2,23 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Dev Server",
+            "type": "npm",
+            "script": "dev",
+            "detail": "Starts the local Vite development server.",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Build",
+            "type": "npm",
+            "script": "build",
+            "detail": "Creates the production Vite build artifact.",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
             "label": "Validate",
             "type": "npm",
             "script": "validate",
@@ -26,14 +43,6 @@
             "problemMatcher": []
         },
         {
-            "label": "Format Check",
-            "type": "npm",
-            "script": "format:check",
-            "detail": "Checks Prettier formatting across the repository without changing files.",
-            "group": "test",
-            "problemMatcher": []
-        },
-        {
             "label": "Format",
             "type": "npm",
             "script": "format",
@@ -42,28 +51,19 @@
             "problemMatcher": []
         },
         {
+            "label": "Format Check",
+            "type": "npm",
+            "script": "format:check",
+            "detail": "Checks Prettier formatting across the repository without changing files.",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
             "label": "Test",
             "type": "npm",
             "script": "test",
             "detail": "Runs the project test suite once tests are configured.",
             "group": "test",
-            "problemMatcher": []
-        },
-        {
-            "label": "Build",
-            "type": "npm",
-            "script": "build",
-            "detail": "Creates the production Vite build artifact.",
-            "group": "build",
-            "problemMatcher": []
-        },
-        {
-            "label": "Dev Server",
-            "type": "npm",
-            "script": "dev",
-            "detail": "Starts the local Vite development server.",
-            "group": "build",
-            "isBackground": true,
             "problemMatcher": []
         }
     ]
