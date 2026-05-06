@@ -1,0 +1,70 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Validate",
+            "type": "npm",
+            "script": "validate",
+            "detail": "Runs the full CI-equivalent local gate: formatting, compile checks, quality checks, dependency audit, and tests.",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Quality",
+            "type": "npm",
+            "script": "quality",
+            "detail": "Runs static quality checks: ESLint, Stylelint, HTML validation, and unused dependency/code detection.",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile Check",
+            "type": "npm",
+            "script": "check:compile",
+            "detail": "Checks that JavaScript parses and Sass compiles without producing a production build.",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Format Check",
+            "type": "npm",
+            "script": "format:check",
+            "detail": "Checks Prettier formatting across the repository without changing files.",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Format",
+            "type": "npm",
+            "script": "format",
+            "detail": "Applies Prettier formatting across the repository.",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Test",
+            "type": "npm",
+            "script": "test",
+            "detail": "Runs the project test suite once tests are configured.",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build",
+            "type": "npm",
+            "script": "build",
+            "detail": "Creates the production Vite build artifact.",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Dev Server",
+            "type": "npm",
+            "script": "dev",
+            "detail": "Starts the local Vite development server.",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ]
+}

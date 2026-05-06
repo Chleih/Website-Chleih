@@ -31,3 +31,4 @@ dist/
 # track these files, if they exist
 !.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/tasks.json
