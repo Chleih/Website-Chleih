@@ -8,11 +8,16 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-# HTML, CSS and JS files
-[*.{html,css,scss,js,json,md}]
+# Prettier-managed source and config files
+[*.{html,css,scss,js,json,jsonc,md}]
 indent_style = space
 indent_size = 4
 
-# Whitespace override for all markdown files
+# YAML convention
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Whitespace override for markdown prose
 [*.md]
 trim_trailing_whitespace = false

@@ -12,6 +12,8 @@ Thumbs.db
 
 # ignore log files
 *.log
+.npm-cache/
+coverage/
 
 # VS Code
 .vsconfig

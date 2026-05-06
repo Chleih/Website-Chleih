@@ -4,12 +4,17 @@
     "editor.formatOnPaste": false,
     "editor.detectIndentation": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
 
     // -------------------- PRETTIER --------------------
+    "prettier.requireConfig": true,
     "prettier.useEditorConfig": true,
 
     // -------------------- LINTING --------------------
     "eslint.validate": ["javascript"],
+    "eslint.workingDirectories": [{ "mode": "auto" }],
 
     // -------------------- FILE VISIBILITY --------------------
     "files.exclude": {
@@ -18,6 +23,9 @@
     },
 
     // -------------------- LANGUAGE OVERRIDES --------------------
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
     "[yaml]": {
         "editor.formatOnSave": true
     }
