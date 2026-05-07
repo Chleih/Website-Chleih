@@ -1,17 +1,22 @@
-import { INITIAL_LOADER_DEVELOPMENT_HOSTS } from './constants';
+const ENABLED_ENV_VALUES = new Set(['1', 'true', 'yes', 'on']);
 
 /**
- * Returns whether the current runtime is a local development host.
+ * Parses a boolean environment flag.
+ * @param {string | boolean | undefined} value
  * @returns {boolean}
  */
-function isInitialLoaderDevelopmentHost() {
-    return INITIAL_LOADER_DEVELOPMENT_HOSTS.includes(window.location.hostname);
+function parseBooleanFlag(value) {
+    if (typeof value === 'boolean') {
+        return value;
+    }
+
+    return ENABLED_ENV_VALUES.has(String(value).toLowerCase());
 }
 
 /**
- * Returns whether the initial loader should be forced for development testing.
+ * Returns whether the initial loader should be forced for explicit review.
  * @returns {boolean}
  */
 export function shouldForceInitialLoader() {
-    return isInitialLoaderDevelopmentHost();
+    return parseBooleanFlag(import.meta.env.VITE_FORCE_INITIAL_LOADER);
 }

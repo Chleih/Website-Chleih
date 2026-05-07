@@ -4,8 +4,7 @@ export const INITIAL_LOADER_ACTIVE_ROOT_CLASS = 'is-initial-loader-active';
 export const INITIAL_LOADER_VISIBLE_CLASS = 'is-visible';
 export const INITIAL_LOADER_EXITING_CLASS = 'is-exiting';
 export const INITIAL_LOADER_STORAGE_KEY = 'website.initialLoader.seen';
-export const INITIAL_LOADER_DEVELOPMENT_HOSTS = ['', 'localhost', '127.0.0.1', '::1', '[::1]'];
 
 export const INITIAL_LOADER_ANIMATION_FALLBACK_MS = 1900;
-export const INITIAL_LOADER_REVIEW_MIN_VISIBLE_MS = 5000;
+export const INITIAL_LOADER_MIN_VISIBLE_MS = 4500;
 export const INITIAL_LOADER_EXIT_MS = 320;

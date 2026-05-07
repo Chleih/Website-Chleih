@@ -1,3 +1,6 @@
+// Development-only debugging utilities.
+// This module is intentionally not imported by the production SCSS entry point.
+
 /// Adds a temporary border to inspect element dimensions during layout debugging.
 /// @param {Color} $color [red] - Border color used for visual debugging.
 /// @param {Length} $width [1px] - Border width.
