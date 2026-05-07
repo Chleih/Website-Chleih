@@ -1,6 +1,6 @@
 import { initRouter, renderRoute } from '../router';
 import { runWithInitialLoader } from '../ui/initial-loader';
-import { resolveInitialRoutePath, syncInitialRoutePath } from './initial-route';
+import { resolveInitialRoute, syncInitialRoutePath } from './initial-route';
 import { renderSiteShell } from './render-site-shell';
 
 /**
@@ -21,10 +21,10 @@ async function initializeApplicationModules(pathname) {
 export async function initializeApplication() {
     renderSiteShell();
 
-    const initialRoutePathname = resolveInitialRoutePath(window.location.pathname);
+    const initialRoute = resolveInitialRoute(window.location);
 
-    syncInitialRoutePath(initialRoutePathname);
+    syncInitialRoutePath(initialRoute.address);
     await runWithInitialLoader(async () => {
-        await initializeApplicationModules(initialRoutePathname);
+        await initializeApplicationModules(initialRoute.pathname);
     });
 }

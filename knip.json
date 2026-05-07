@@ -1,3 +1,4 @@
 {
+    "entry": ["src/js/hosting/github-pages-fallback.js"],
     "ignore": ["src/scss/**"]
 }
