@@ -34,11 +34,19 @@ function getFiniteAnimations(animationRoot) {
 }
 
 /**
+ * Returns whether the browser should run the first-entry loader experience.
+ * @returns {boolean}
+ */
+export function shouldRunInitialEntryExperience() {
+    return !hasSeenInitialLoader();
+}
+
+/**
  * Returns whether the initial loader should be shown.
  * @returns {boolean}
  */
-export function shouldShowInitialLoader() {
-    return shouldForceInitialLoader() || !hasSeenInitialLoader();
+function shouldShowInitialLoader() {
+    return shouldForceInitialLoader() || shouldRunInitialEntryExperience();
 }
 
 /**

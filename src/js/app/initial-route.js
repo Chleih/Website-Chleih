@@ -1,5 +1,14 @@
-import { HOME_PATH } from '../router';
-import { shouldShowInitialLoader } from '../ui/initial-loader';
+import { HOME_PATH, isKnownRoutePath } from '../router';
+import { shouldRunInitialEntryExperience } from '../ui/initial-loader';
+
+/**
+ * Returns whether a direct startup route should enter through the home page.
+ * @param {string} pathname
+ * @returns {boolean}
+ */
+function shouldStartAtHome(pathname) {
+    return shouldRunInitialEntryExperience() && pathname !== HOME_PATH && isKnownRoutePath(pathname);
+}
 
 /**
  * Resolves the route that should be rendered during application startup.
@@ -7,7 +16,7 @@ import { shouldShowInitialLoader } from '../ui/initial-loader';
  * @returns {string}
  */
 export function resolveInitialRoutePath(currentPathname) {
-    return shouldShowInitialLoader() ? HOME_PATH : currentPathname;
+    return shouldStartAtHome(currentPathname) ? HOME_PATH : currentPathname;
 }
 
 /**
