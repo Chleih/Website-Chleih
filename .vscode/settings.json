@@ -17,6 +17,9 @@
     "eslint.workingDirectories": [{ "mode": "auto" }],
     "stylelint.validate": ["css", "scss"],
 
+    // -------------------- EXTENSIONS --------------------
+    "commandtree.enableAiSummaries": false,
+
     // -------------------- FILE VISIBILITY --------------------
     "files.exclude": {
         "**/node_modules": true,
