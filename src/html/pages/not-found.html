@@ -1,9 +1,25 @@
-<section class="page-placeholder" aria-labelledby="not-found-title">
-    <p class="page-placeholder__eyebrow">404</p>
-    <h1 id="not-found-title" class="page-placeholder__title">Page not found</h1>
-    <p class="page-placeholder__description">The page you are looking for does not exist yet.</p>
+<section class="not-found-page" aria-labelledby="not-found-title">
+    <div class="not-found-page__content">
+        <p class="not-found-page__eyebrow">404 &middot; Page not found</p>
+        <h1 id="not-found-title" class="not-found-page__title">
+            <span class="not-found-page__title-line">Nothing here.</span>
+            <span class="not-found-page__title-line">Let's get you back.</span>
+        </h1>
+        <div class="not-found-page__underline" aria-hidden="true"></div>
 
-    <div class="page-placeholder__actions">
-        <a class="button button--primary" href="/" data-router-link>Back Home</a>
+        <p class="not-found-page__description">The page you opened does not exist, or it has moved.</p>
+        <p class="not-found-page__description">Start from home and find the right route.</p>
+
+        <div class="not-found-page__actions">
+            <a class="button button--primary" href="/" data-router-link>Go Home</a>
+        </div>
+    </div>
+
+    <div class="not-found-page__divider" aria-hidden="true"></div>
+
+    <div class="not-found-page__sign" aria-hidden="true">
+        <span class="not-found-page__sign-code">404</span>
+        <span class="not-found-page__sign-rule"></span>
+        <span class="not-found-page__sign-label">route not found</span>
     </div>
 </section>
