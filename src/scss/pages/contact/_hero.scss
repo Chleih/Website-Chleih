@@ -1,0 +1,72 @@
+.contact-hero {
+    display: grid;
+    justify-items: center;
+    max-width: 72rem;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.contact-hero__eyebrow {
+    display: inline-grid;
+    grid-template-columns: clamp(1.6rem, 2.5vw, 2.5rem) auto clamp(1.6rem, 2.5vw, 2.5rem);
+    gap: clamp(0.8rem, 1.4vw, 1.25rem);
+    align-items: center;
+    margin: 0 0 clamp(0.85rem, 1.8dvh, 1.35rem);
+    font-family: var(--font-family-ui);
+    font-size: clamp(0.68rem, 0.76vw, 0.84rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    letter-spacing: 0.34em;
+    color: var(--color-hero-accent);
+    text-transform: uppercase;
+}
+
+.contact-hero__eyebrow::before,
+.contact-hero__eyebrow::after {
+    height: 1px;
+    content: '';
+    background-color: currentColor;
+    opacity: 0.72;
+}
+
+.contact-hero__title {
+    margin: 0;
+    font-family: var(--font-family-editorial);
+    font-size: clamp(4rem, min(7vw, 10dvh), 7rem);
+    font-weight: var(--font-weight-regular);
+    line-height: 0.9;
+    letter-spacing: -0.065em;
+    color: var(--color-text-primary);
+}
+
+.contact-hero__title-line {
+    display: block;
+}
+
+.contact-hero__title-line--accent {
+    color: var(--color-hero-accent);
+    font-style: italic;
+}
+
+.contact-hero__underline {
+    width: min(100%, 22rem);
+    height: clamp(0.45rem, 1.1dvh, 0.75rem);
+    margin-block: clamp(0.55rem, 1.2dvh, 0.85rem) clamp(1rem, 2dvh, 1.5rem);
+    border-top: 0.16rem solid color-mix(in srgb, var(--color-text-primary) 45%, transparent);
+    border-radius: 50%;
+    transform: rotate(-1deg);
+    transform-origin: center;
+}
+
+.contact-hero__description {
+    display: grid;
+    gap: 0.25rem;
+    max-width: 42rem;
+    font-size: clamp(1rem, min(1.15vw, 2dvh), 1.22rem);
+    line-height: 1.45;
+    color: var(--color-text-secondary);
+}
+
+.contact-hero__description p {
+    margin: 0;
+}

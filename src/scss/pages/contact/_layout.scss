@@ -1,0 +1,9 @@
+.contact-page {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: clamp(1.75rem, 4dvh, 3.5rem);
+    min-height: 0;
+    padding-block: clamp(0.75rem, 2.5dvh, 2rem);
+    overflow: auto;
+}
