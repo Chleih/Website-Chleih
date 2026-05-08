@@ -1,1 +1,1 @@
-export { runWithInitialLoader, shouldShowInitialLoader } from './initial-loader-controller';
+export { runWithInitialLoader, shouldRunInitialEntryExperience } from './initial-loader-controller';

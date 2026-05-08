@@ -1,27 +1,5 @@
 import { ROUTE_CHANGED_EVENT, ROUTER_LINK_SELECTOR, ROUTER_OUTLET_SELECTOR } from './constants';
-import { notFoundRoute, routes } from './routes';
-
-/**
- * Normalizes a route path for matching.
- * @param {string} pathname
- * @returns {string}
- */
-function normalizePathname(pathname) {
-    const normalizedPathname = pathname.replace(/\/+$/, '');
-
-    return normalizedPathname || '/';
-}
-
-/**
- * Finds a route matching the provided path.
- * @param {string} pathname
- * @returns {import('./types').RouteDefinition | undefined}
- */
-function findRoute(pathname) {
-    const normalizedPathname = normalizePathname(pathname);
-
-    return routes.find((route) => route.path === normalizedPathname);
-}
+import { normalizePathname, resolveRoute } from './route-resolution';
 
 /**
  * Updates navigation link state for the active route.
@@ -72,7 +50,7 @@ function dispatchRouteChangedEvent(route) {
  * @returns {Promise<import('./types').RouteDefinition>}
  */
 export async function renderRoute(pathname) {
-    const route = findRoute(pathname) ?? notFoundRoute;
+    const route = resolveRoute(pathname);
     const routerOutlet = document.querySelector(ROUTER_OUTLET_SELECTOR);
 
     routerOutlet.innerHTML = route.template;
