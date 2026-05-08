@@ -1,0 +1,14 @@
+@use '../fonts';
+@use '../typography';
+@use '../design-tokens';
+@use '../base';
+@use '../components/button';
+@use '../pages/not-found-page';
+
+.hosting-not-found-body {
+    display: grid;
+    place-items: center;
+    max-height: none;
+    padding-inline: var(--site-gutter);
+    overflow: auto;
+}
