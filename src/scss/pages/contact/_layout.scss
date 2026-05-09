@@ -1,7 +1,5 @@
 .contact-page {
-    --contact-line-color: color-mix(in srgb, var(--color-text-primary) 54%, transparent);
-    --contact-horizontal-inset: clamp(0.7rem, 1.15vw, 1.15rem);
-    --contact-horizontal-stroke: url('/src/resources/images/decoratives/stroke_horizontal.svg');
+    --contact-line-color: color-mix(in srgb, var(--color-text-primary) 46%, transparent);
     --contact-vertical-stroke: url('/src/resources/images/decoratives/stroke_vertical.svg');
 
     display: grid;
@@ -17,11 +15,13 @@
 
 .contact-page__divider {
     justify-self: center;
-    width: clamp(0.45rem, 0.85vw, 0.75rem);
-    height: clamp(20rem, 54dvh, 31rem);
+    width: clamp(0.38rem, 0.72vw, 0.62rem);
+    height: clamp(19rem, 51dvh, 29rem);
     background-color: var(--contact-line-color);
     mask-image: var(--contact-vertical-stroke);
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
+    transform-origin: center;
+    animation: contact-divider-draw 760ms 180ms ease both;
 }

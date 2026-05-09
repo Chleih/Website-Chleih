@@ -6,10 +6,6 @@
 }
 
 .contact-hero__eyebrow {
-    display: inline-grid;
-    grid-template-columns: auto clamp(1.55rem, 2vw, 2.25rem);
-    gap: clamp(0.45rem, 0.75vw, 0.7rem);
-    align-items: center;
     margin: 0 0 clamp(1.25rem, 2.4dvh, 2rem);
     font-family: var(--font-family-ui);
     font-size: clamp(0.68rem, 0.76vw, 0.84rem);
@@ -18,17 +14,7 @@
     letter-spacing: 0.34em;
     color: var(--color-hero-accent);
     text-transform: uppercase;
-}
-
-.contact-hero__eyebrow::after {
-    height: clamp(0.25rem, 0.55dvh, 0.4rem);
-    content: '';
-    background-color: currentColor;
-    mask-image: var(--contact-horizontal-stroke);
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-    opacity: 0.72;
+    animation: contact-reveal 520ms ease both;
 }
 
 .contact-hero__title {
@@ -39,6 +25,7 @@
     line-height: 0.95;
     letter-spacing: -0.065em;
     color: var(--color-text-primary);
+    animation: contact-reveal 620ms 80ms ease both;
 }
 
 .contact-hero__title-line {
@@ -58,6 +45,7 @@
     border-radius: 50%;
     transform: rotate(-1deg) scaleX(1);
     transform-origin: left center;
+    animation: contact-underline-draw 720ms 220ms ease both;
 }
 
 .contact-hero__description {
@@ -66,15 +54,22 @@
     font-size: clamp(1.1rem, min(1.35vw, 2.45dvh), 1.45rem);
     line-height: 1.45;
     color: var(--color-text-secondary);
+    animation: contact-reveal 560ms 170ms ease both;
 }
 
 .contact-hero__actions {
     margin-top: clamp(1.45rem, 3dvh, 2.35rem);
+    animation: contact-reveal 560ms 250ms ease both;
 }
 
 .contact-hero__button {
     gap: clamp(0.85rem, 1.5vw, 1.25rem);
     min-width: clamp(15rem, 20vw, 19rem);
+}
+
+.contact-hero__button:hover,
+.contact-hero__button:focus-visible {
+    transform: translateY(-0.12rem);
 }
 
 .contact-hero__button-icon {

@@ -17,39 +17,84 @@
     align-items: center;
     min-width: 0;
     padding-block: clamp(1.35rem, 2.8dvh, 2rem);
+    padding-inline-end: clamp(1.2rem, 2vw, 1.75rem);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-border-primary) 78%, transparent);
+    animation: contact-reveal 520ms ease both;
+    transition:
+        border-color var(--transition-base),
+        transform var(--transition-base);
 }
 
-.contact-method::after {
+.contact-method:last-child {
+    border-bottom: 0;
+}
+
+.contact-method:nth-child(1) {
+    animation-delay: 180ms;
+}
+
+.contact-method:nth-child(2) {
+    animation-delay: 250ms;
+}
+
+.contact-method:nth-child(3) {
+    animation-delay: 320ms;
+}
+
+.contact-method:nth-child(4) {
+    animation-delay: 390ms;
+}
+
+.contact-method:has(.contact-method__link) {
+    cursor: pointer;
+}
+
+.contact-method:has(.contact-method__link)::before {
     position: absolute;
-    right: var(--contact-horizontal-inset);
-    bottom: 0;
-    left: var(--contact-horizontal-inset);
-    height: clamp(0.3rem, 0.65dvh, 0.45rem);
+    top: 50%;
+    right: 0.1rem;
+    width: 0.42rem;
+    aspect-ratio: 1;
     content: '';
-    background-color: var(--contact-line-color);
-    mask-image: var(--contact-horizontal-stroke);
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    opacity: 0;
+    transform: translate(-0.35rem, -50%) rotate(45deg);
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base);
 }
 
-.contact-method:last-child::after {
-    content: none;
+.contact-method:has(.contact-method__link):hover,
+.contact-method:has(.contact-method__link):focus-within {
+    border-color: color-mix(in srgb, var(--color-accent-primary) 46%, transparent);
+    color: var(--color-accent-primary-strong);
+    transform: translateX(0.12rem);
+}
+
+.contact-method:has(.contact-method__link):hover::before,
+.contact-method:has(.contact-method__link):focus-within::before {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(45deg);
 }
 
 .contact-method__icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: clamp(3.5rem, 5vw, 4.7rem);
+    width: clamp(3.25rem, 4.55vw, 4.25rem);
     aspect-ratio: 1;
     color: var(--color-accent-primary);
-    background-color: color-mix(in srgb, var(--color-accent-secondary) 24%, transparent);
+    background-color: color-mix(in srgb, var(--color-accent-secondary) 18%, transparent);
     border-radius: var(--radius-sm);
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base),
+        transform var(--transition-base);
 }
 
 .contact-method__icon i {
-    font-size: clamp(1.65rem, 2.35vw, 2.15rem);
+    font-size: clamp(1.45rem, 2vw, 1.9rem);
     line-height: 1;
 }
 
@@ -66,6 +111,7 @@
     font-weight: var(--font-weight-bold);
     line-height: 1.2;
     color: var(--color-text-primary);
+    transition: color var(--transition-base);
 }
 
 .contact-method__link,
@@ -76,13 +122,36 @@
     font-size: clamp(1rem, 1.15vw, 1.25rem);
     line-height: 1.35;
     color: var(--color-text-secondary);
+    transition: color var(--transition-base);
 }
 
 .contact-method__link {
+    display: inline-flex;
+    width: fit-content;
     transition: color var(--transition-base);
+}
+
+.contact-method__link::after {
+    position: absolute;
+    inset: 0;
+    content: '';
 }
 
 .contact-method__link:hover,
 .contact-method__link:focus-visible {
+    color: var(--color-accent-primary-strong);
+}
+
+.contact-method:has(.contact-method__link):hover .contact-method__icon,
+.contact-method:has(.contact-method__link):focus-within .contact-method__icon {
+    color: var(--color-accent-primary-strong);
+    background-color: color-mix(in srgb, var(--color-accent-secondary) 30%, transparent);
+    transform: translateY(-0.04rem);
+}
+
+.contact-method:has(.contact-method__link):hover .contact-method__title,
+.contact-method:has(.contact-method__link):focus-within .contact-method__title,
+.contact-method:has(.contact-method__link):hover .contact-method__link,
+.contact-method:has(.contact-method__link):focus-within .contact-method__link {
     color: var(--color-accent-primary-strong);
 }

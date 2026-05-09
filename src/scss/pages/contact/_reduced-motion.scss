@@ -1,0 +1,21 @@
+@media (prefers-reduced-motion: reduce) {
+    .contact-hero__eyebrow,
+    .contact-hero__title,
+    .contact-hero__underline,
+    .contact-hero__description,
+    .contact-hero__actions,
+    .contact-page__divider,
+    .contact-method {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+
+    .contact-method,
+    .contact-method__icon,
+    .contact-method__title,
+    .contact-method__link,
+    .contact-method__text {
+        transition: none;
+    }
+}

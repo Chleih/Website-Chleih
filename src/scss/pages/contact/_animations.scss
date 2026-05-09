@@ -1,0 +1,35 @@
+@keyframes contact-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(0.55rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contact-divider-draw {
+    from {
+        opacity: 0;
+        transform: scaleY(0.12);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes contact-underline-draw {
+    from {
+        opacity: 0;
+        transform: rotate(-1deg) scaleX(0.08);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(-1deg) scaleX(1);
+    }
+}
