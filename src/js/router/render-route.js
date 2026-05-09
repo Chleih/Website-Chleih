@@ -1,4 +1,6 @@
+import { getRequiredElement } from '../dom/required-element';
 import { ROUTE_CHANGED_EVENT, ROUTER_LINK_SELECTOR, ROUTER_OUTLET_SELECTOR } from './constants';
+import { focusRouteContent, syncRouteDocumentMetadata } from './route-document';
 import { normalizePathname, resolveRoute } from './route-resolution';
 
 /**
@@ -38,6 +40,7 @@ function dispatchRouteChangedEvent(route) {
     document.dispatchEvent(
         new CustomEvent(ROUTE_CHANGED_EVENT, {
             detail: {
+                name: route.name,
                 path: route.path,
             },
         }),
@@ -47,15 +50,23 @@ function dispatchRouteChangedEvent(route) {
 /**
  * Renders the route matching the provided path into the route outlet.
  * @param {string} pathname
+ * @param {{shouldFocusRoute?: boolean}} [options]
  * @returns {Promise<import('./types').RouteDefinition>}
  */
-export async function renderRoute(pathname) {
+export async function renderRoute(pathname, options = {}) {
+    const { shouldFocusRoute = true } = options;
     const route = resolveRoute(pathname);
-    const routerOutlet = document.querySelector(ROUTER_OUTLET_SELECTOR);
+    const routerOutlet = getRequiredElement(document, ROUTER_OUTLET_SELECTOR, HTMLElement);
 
+    syncRouteDocumentMetadata(route);
     routerOutlet.innerHTML = route.template;
     updateActiveNavigation(route.path);
     await route.afterRender?.();
+
+    if (shouldFocusRoute) {
+        focusRouteContent(routerOutlet);
+    }
+
     dispatchRouteChangedEvent(route);
 
     return route;

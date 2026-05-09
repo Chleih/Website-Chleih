@@ -4,7 +4,7 @@ import homeTemplate from '../../html/pages/home.html?raw';
 import notFoundTemplate from '../../html/pages/not-found.html?raw';
 import stackTemplate from '../../html/pages/stack.html?raw';
 import workTemplate from '../../html/pages/work.html?raw';
-import { NOT_FOUND_PAGE_NAME, appPageDefinitions } from './page-definitions';
+import { appPageDefinitions, notFoundPageDefinition } from './page-definitions';
 
 const pageTemplates = {
     home: homeTemplate,
@@ -20,7 +20,6 @@ export const routes = appPageDefinitions.map((pageDefinition) => ({
 }));
 
 export const notFoundRoute = {
-    name: NOT_FOUND_PAGE_NAME,
-    path: '/404',
+    ...notFoundPageDefinition,
     template: notFoundTemplate,
 };
