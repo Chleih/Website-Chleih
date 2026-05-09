@@ -96,17 +96,6 @@ button {
     clip-path: inset(50%);
 }
 
-.content-wrapper-container {
-    display: flex;
-    flex-direction: column;
-    width: min(100%, var(--site-max-width));
-    height: 100dvh;
-    max-height: 100dvh;
-    margin-inline: auto;
-    padding-inline: var(--site-gutter);
-    overflow: hidden;
-}
-
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
