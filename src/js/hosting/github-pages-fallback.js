@@ -1,6 +1,7 @@
 import { HOME_PATH } from '../router/constants';
 import { createRouteAddress } from '../router/route-address';
 import { storeFallbackRouteAddress } from './fallback-route-storage';
+import { renderHostingNotFoundPage } from './render-hosting-not-found-page';
 
 const FILE_EXTENSION_PATTERN = /\.[a-z0-9]+$/i;
 
@@ -37,6 +38,7 @@ function shouldRedirectToApplication(pathname) {
  */
 function redirectDocumentRequestToApplication() {
     if (!shouldRedirectToApplication(window.location.pathname)) {
+        renderHostingNotFoundPage();
         return;
     }
 
