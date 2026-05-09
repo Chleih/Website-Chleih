@@ -18,6 +18,8 @@ const browserGlobals = {
     HTMLElement: 'readonly',
     HTMLAnchorElement: 'readonly',
     HTMLButtonElement: 'readonly',
+    HTMLMetaElement: 'readonly',
+    HTMLUListElement: 'readonly',
     CustomEvent: 'readonly',
     URL: 'readonly',
     URLSearchParams: 'readonly',

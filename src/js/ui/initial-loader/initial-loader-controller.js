@@ -8,7 +8,6 @@ import {
     INITIAL_LOADER_SELECTOR,
     INITIAL_LOADER_VISIBLE_CLASS,
 } from './constants';
-import { shouldForceInitialLoader } from './initial-loader-environment';
 import { hasSeenInitialLoader, markInitialLoaderSeen } from './initial-loader-storage';
 
 /**
@@ -46,7 +45,7 @@ export function shouldRunInitialEntryExperience() {
  * @returns {boolean}
  */
 function shouldShowInitialLoader() {
-    return shouldForceInitialLoader() || shouldRunInitialEntryExperience();
+    return shouldRunInitialEntryExperience();
 }
 
 /**

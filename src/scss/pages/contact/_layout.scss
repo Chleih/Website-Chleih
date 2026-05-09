@@ -1,0 +1,27 @@
+.contact-page {
+    --contact-line-color: color-mix(in srgb, var(--color-text-primary) 46%, transparent);
+    --contact-vertical-stroke: url('/src/resources/images/decoratives/stroke_vertical.svg');
+
+    display: grid;
+    flex: 1 1 0;
+    grid-template-columns: minmax(0, 0.95fr) auto minmax(0, 1fr);
+    gap: clamp(2.5rem, 5vw, 6rem);
+    align-items: center;
+    min-height: 0;
+    max-height: 100%;
+    padding-block: clamp(0.5rem, 1.6dvh, 1.25rem);
+    overflow: hidden;
+}
+
+.contact-page__divider {
+    justify-self: center;
+    width: clamp(0.38rem, 0.72vw, 0.62rem);
+    height: clamp(19rem, 51dvh, 29rem);
+    background-color: var(--contact-line-color);
+    mask-image: var(--contact-vertical-stroke);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    transform-origin: center;
+    animation: contact-divider-draw 760ms 180ms ease both;
+}

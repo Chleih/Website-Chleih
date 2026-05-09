@@ -11,7 +11,7 @@ import { renderSiteShell } from './render-site-shell';
 async function initializeApplicationModules(pathname) {
     initRouter();
 
-    await renderRoute(pathname);
+    await renderRoute(pathname, { shouldFocusRoute: false });
 }
 
 /**

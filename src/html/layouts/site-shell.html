@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div class="content-wrapper-container">
+<div class="site-frame">
     <header class="site-header" aria-label="Primary navigation">
         <a class="site-brand" href="/" aria-label="Mohamad Chleih home" data-router-link>
             <span class="site-brand__name">mohamadChleih</span>
@@ -30,27 +30,11 @@
         </a>
 
         <nav class="site-navigation" aria-label="Main navigation">
-            <ul class="site-navigation__list">
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="/" data-router-link>Home</a>
-                </li>
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="/about" data-router-link>About</a>
-                </li>
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="/work" data-router-link>Work</a>
-                </li>
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="/stack" data-router-link>Stack</a>
-                </li>
-                <li class="site-navigation__item">
-                    <a class="site-navigation__link" href="/contact" data-router-link>Contact</a>
-                </li>
-            </ul>
+            <ul class="site-navigation__list" data-site-navigation-list></ul>
         </nav>
     </header>
 
-    <main id="main-content" class="site-main" data-router-outlet></main>
+    <main id="main-content" class="site-main" tabindex="-1" data-router-outlet></main>
 
     <footer class="site-footer" aria-label="Site information">
         <p class="site-footer__text">&copy; 2026 All rights reserved.</p>
