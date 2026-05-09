@@ -1,0 +1,33 @@
+@use '../abstracts/colors' as colors;
+
+:root {
+    --color-text-primary: #{colors.$carbon};
+    --color-text-secondary: #{colors.$iron-grey};
+    --color-text-muted: #{colors.$soft-grey};
+    --color-text-inverse: #{colors.$porcelain};
+
+    --color-page-background: #{colors.$paper};
+    --color-surface-primary: #{colors.$paper};
+    --color-surface-secondary: #{colors.$porcelain};
+    --color-surface-elevated: #fffaf2;
+    --color-surface-inverse: #{colors.$carbon};
+    --color-page-glow-primary: rgb(255 255 255 / 46%);
+    --color-page-glow-secondary: rgb(211 179 141 / 18%);
+    --color-page-glow-tertiary: rgb(255 255 255 / 30%);
+    --color-page-texture-primary: rgb(31 31 31 / 2.8%);
+    --color-page-texture-secondary: rgb(31 31 31 / 2.4%);
+    --color-page-texture-highlight: rgb(255 255 255 / 35%);
+
+    --color-border-primary: #{colors.$linen-border};
+    --color-border-secondary: #{colors.$paper-deep};
+
+    --color-accent-primary: #{colors.$rust};
+    --color-accent-primary-strong: #{colors.$rust-dark};
+    --color-accent-primary-soft: #{colors.$rust-soft};
+    --color-accent-secondary: #{colors.$warm-sand};
+    --color-accent-support: #{colors.$olive-grey};
+    --color-hero-accent: #{colors.$rust};
+    --color-hero-accent-strong: #{colors.$rust-dark};
+
+    --color-focus-ring: #{colors.$rust};
+}
