@@ -1,3 +1,5 @@
+@use '../abstracts/media' as media;
+
 .not-found-page {
     display: grid;
     flex: 1 1 auto;
@@ -143,7 +145,7 @@
     transform: rotate(-2deg);
 }
 
-@media (width <= 58rem) {
+@include media.respond-until(lg) {
     .not-found-page {
         grid-template-columns: 1fr;
         gap: clamp(1.5rem, 4dvh, 2.5rem);
