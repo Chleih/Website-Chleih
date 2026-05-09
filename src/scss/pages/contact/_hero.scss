@@ -1,17 +1,16 @@
 .contact-hero {
     display: grid;
-    justify-items: center;
-    max-width: 72rem;
-    margin-inline: auto;
-    text-align: center;
+    justify-items: start;
+    max-width: 43rem;
+    text-align: left;
 }
 
 .contact-hero__eyebrow {
     display: inline-grid;
-    grid-template-columns: clamp(1.6rem, 2.5vw, 2.5rem) auto clamp(1.6rem, 2.5vw, 2.5rem);
-    gap: clamp(0.8rem, 1.4vw, 1.25rem);
+    grid-template-columns: auto clamp(1.55rem, 2vw, 2.25rem);
+    gap: clamp(0.45rem, 0.75vw, 0.7rem);
     align-items: center;
-    margin: 0 0 clamp(0.85rem, 1.8dvh, 1.35rem);
+    margin: 0 0 clamp(1.25rem, 2.4dvh, 2rem);
     font-family: var(--font-family-ui);
     font-size: clamp(0.68rem, 0.76vw, 0.84rem);
     font-weight: var(--font-weight-bold);
@@ -21,20 +20,23 @@
     text-transform: uppercase;
 }
 
-.contact-hero__eyebrow::before,
 .contact-hero__eyebrow::after {
-    height: 1px;
+    height: clamp(0.25rem, 0.55dvh, 0.4rem);
     content: '';
     background-color: currentColor;
+    mask-image: var(--contact-horizontal-stroke);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
     opacity: 0.72;
 }
 
 .contact-hero__title {
     margin: 0;
     font-family: var(--font-family-editorial);
-    font-size: clamp(4rem, min(7vw, 10dvh), 7rem);
+    font-size: clamp(4rem, min(5.9vw, 8.7dvh), 7rem);
     font-weight: var(--font-weight-regular);
-    line-height: 0.9;
+    line-height: 0.95;
     letter-spacing: -0.065em;
     color: var(--color-text-primary);
 }
@@ -43,30 +45,45 @@
     display: block;
 }
 
-.contact-hero__title-line--accent {
+.contact-hero__title-accent {
     color: var(--color-hero-accent);
     font-style: italic;
 }
 
 .contact-hero__underline {
-    width: min(100%, 22rem);
-    height: clamp(0.45rem, 1.1dvh, 0.75rem);
-    margin-block: clamp(0.55rem, 1.2dvh, 0.85rem) clamp(1rem, 2dvh, 1.5rem);
-    border-top: 0.16rem solid color-mix(in srgb, var(--color-text-primary) 45%, transparent);
+    width: min(100%, 31rem);
+    height: clamp(0.5rem, 1.4dvh, 0.875rem);
+    margin-block: clamp(0.55rem, 1.15dvh, 0.85rem) clamp(0.95rem, 2dvh, 1.65rem);
+    border-top: 0.1875rem solid color-mix(in srgb, var(--color-text-primary) 54%, transparent);
     border-radius: 50%;
-    transform: rotate(-1deg);
-    transform-origin: center;
+    transform: rotate(-1deg) scaleX(1);
+    transform-origin: left center;
 }
 
 .contact-hero__description {
-    display: grid;
-    gap: 0.25rem;
-    max-width: 42rem;
-    font-size: clamp(1rem, min(1.15vw, 2dvh), 1.22rem);
+    max-width: 32rem;
+    margin: 0;
+    font-size: clamp(1.1rem, min(1.35vw, 2.45dvh), 1.45rem);
     line-height: 1.45;
     color: var(--color-text-secondary);
 }
 
-.contact-hero__description p {
-    margin: 0;
+.contact-hero__actions {
+    margin-top: clamp(1.45rem, 3dvh, 2.35rem);
+}
+
+.contact-hero__button {
+    gap: clamp(0.85rem, 1.5vw, 1.25rem);
+    min-width: clamp(15rem, 20vw, 19rem);
+}
+
+.contact-hero__button-icon {
+    font-size: 1.25em;
+    line-height: 1;
+    transition: transform var(--transition-base);
+}
+
+.contact-hero__button:hover .contact-hero__button-icon,
+.contact-hero__button:focus-visible .contact-hero__button-icon {
+    transform: translateX(0.18rem);
 }
