@@ -1,6 +1,6 @@
 import { existsSync, readdirSync } from 'node:fs';
 import { join, parse } from 'node:path';
-import { NOT_FOUND_PAGE_NAME, appPageDefinitions } from '../src/js/router/page-definitions.js';
+import { NOT_FOUND_PAGE_NAME, appPageDefinitions, notFoundPageDefinition } from '../src/js/router/page-definitions.js';
 
 const HTML_PAGES_DIRECTORY = 'src/html/pages';
 const SCSS_PAGES_DIRECTORY = 'src/scss/pages';
@@ -40,6 +40,15 @@ function hasMirroredRoutePath(pageDefinition) {
     const expectedPath = pageDefinition.name === HOME_PAGE_NAME ? '/' : `/${pageDefinition.name}`;
 
     return pageDefinition.path === expectedPath;
+}
+
+/**
+ * Returns whether a value is a non-empty string.
+ * @param {unknown} value
+ * @returns {boolean}
+ */
+function isNonEmptyString(value) {
+    return typeof value === 'string' && value.trim().length > 0;
 }
 
 /**
@@ -93,7 +102,38 @@ function checkPageArchitecture() {
             }".`,
             violations,
         );
+        assertArchitectureRule(
+            isNonEmptyString(pageDefinition.label),
+            `Route "${pageDefinition.name}" must define a navigation label.`,
+            violations,
+        );
+        assertArchitectureRule(
+            isNonEmptyString(pageDefinition.title),
+            `Route "${pageDefinition.name}" must define document title metadata.`,
+            violations,
+        );
+        assertArchitectureRule(
+            isNonEmptyString(pageDefinition.description),
+            `Route "${pageDefinition.name}" must define description metadata.`,
+            violations,
+        );
     }
+
+    assertArchitectureRule(
+        notFoundPageDefinition.name === NOT_FOUND_PAGE_NAME,
+        `Not-found route definition must use name "${NOT_FOUND_PAGE_NAME}".`,
+        violations,
+    );
+    assertArchitectureRule(
+        isNonEmptyString(notFoundPageDefinition.title),
+        'Not-found route definition must define document title metadata.',
+        violations,
+    );
+    assertArchitectureRule(
+        isNonEmptyString(notFoundPageDefinition.description),
+        'Not-found route definition must define description metadata.',
+        violations,
+    );
 
     for (const pageDirectoryName of scssPageDirectoryNames) {
         assertArchitectureRule(
