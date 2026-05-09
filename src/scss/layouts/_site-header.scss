@@ -1,3 +1,5 @@
+@use '../abstracts/media' as media;
+
 .site-header {
     display: flex;
     flex: 0 0 auto;
@@ -125,7 +127,7 @@
     transform-origin: left;
 }
 
-@media (width <= 47.99rem) {
+@include media.respond-until(md) {
     .site-header {
         align-items: flex-start;
         flex-direction: column;

@@ -14,3 +14,17 @@
         @content;
     }
 }
+
+/// Applies styles below a named breakpoint.
+/// @param {string} $breakpoint - Key from the breakpoint map.
+@mixin respond-until($breakpoint) {
+    $breakpoint-value: map.get(breakpoints.$breakpoints, $breakpoint);
+
+    @if not $breakpoint-value {
+        @error 'Unknown breakpoint: #{$breakpoint}.';
+    }
+
+    @media (width < $breakpoint-value) {
+        @content;
+    }
+}
