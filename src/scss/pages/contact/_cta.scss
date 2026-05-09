@@ -1,0 +1,66 @@
+.contact-cta {
+    display: grid;
+    justify-items: center;
+    gap: clamp(1rem, 2dvh, 1.5rem);
+    padding-block-end: clamp(0.75rem, 2dvh, 1.5rem);
+    text-align: center;
+}
+
+.contact-cta__title {
+    max-width: 44rem;
+    margin: 0;
+    font-family: var(--font-family-editorial);
+    font-size: clamp(1.5rem, min(2vw, 3.2dvh), 2rem);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.2;
+    color: var(--color-text-primary);
+}
+
+.contact-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.875rem, 1.6vw, 1.35rem);
+    justify-content: center;
+}
+
+.contact-cta__button {
+    gap: clamp(0.75rem, 1.3vw, 1.15rem);
+    min-width: clamp(12rem, 17vw, 16rem);
+}
+
+.contact-cta__button-icon {
+    font-size: 1.2em;
+    line-height: 1;
+    transition: transform var(--transition-base);
+}
+
+.contact-cta__button:hover .contact-cta__button-icon,
+.contact-cta__button:focus-visible .contact-cta__button-icon {
+    transform: translateX(0.18rem);
+}
+
+.contact-cta__response-time {
+    display: inline-flex;
+    gap: 0.65rem;
+    align-items: center;
+    margin: 0;
+    font-size: clamp(0.9rem, 0.95vw, 1rem);
+    line-height: 1.35;
+    color: var(--color-text-muted);
+}
+
+.contact-cta__response-time i {
+    color: color-mix(in srgb, var(--color-text-muted) 72%, var(--color-accent-primary) 28%);
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+@media (width <= 42rem) {
+    .contact-cta__actions {
+        width: 100%;
+    }
+
+    .contact-cta__button {
+        width: 100%;
+    }
+}
