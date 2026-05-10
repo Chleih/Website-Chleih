@@ -4,9 +4,9 @@
     left: 1rem;
     z-index: 2000;
     padding: 0.75rem 1rem;
-    color: var(--color-text-inverse);
-    background-color: var(--color-surface-inverse);
-    border-radius: var(--radius-sm);
+    color: var(--ds-theme-color-text-on-primary);
+    background-color: var(--ds-theme-color-surface-emphasis);
+    border-radius: var(--ds-radius-md);
     transform: translateY(-150%);
     transition: transform var(--transition-fast);
 }

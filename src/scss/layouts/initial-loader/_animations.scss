@@ -32,14 +32,14 @@
     0%,
     100% {
         border-color: var(--blueprint-line-color);
-        box-shadow: var(--shadow-initial-loader-module);
+        box-shadow: var(--ds-initial-loader-module-shadow);
     }
 
     16% {
         border-color: var(--blueprint-accent-color);
         box-shadow:
-            var(--shadow-initial-loader-module),
-            0 0 0 0.16rem color-mix(in srgb, var(--color-accent-primary) 10%, transparent);
+            var(--ds-initial-loader-module-shadow),
+            0 0 0 0.16rem color-mix(in srgb, var(--ds-theme-color-action-primary) 10%, transparent);
     }
 }
 
@@ -52,7 +52,7 @@
 
     16% {
         border-color: var(--blueprint-accent-color);
-        box-shadow: 0 0 0.75rem color-mix(in srgb, var(--color-accent-primary) 22%, transparent);
+        box-shadow: 0 0 0.75rem color-mix(in srgb, var(--ds-theme-color-action-primary) 22%, transparent);
     }
 }
 
@@ -66,7 +66,7 @@
 @keyframes blueprint-loader-node {
     58% {
         background-color: var(--blueprint-accent-color);
-        box-shadow: 0 0 0 0.28rem color-mix(in srgb, var(--color-accent-primary) 14%, transparent);
+        box-shadow: 0 0 0 0.28rem color-mix(in srgb, var(--ds-theme-color-action-primary) 14%, transparent);
     }
 
     100% {
@@ -78,13 +78,13 @@
 @keyframes blueprint-loader-node-pulse {
     0%,
     100% {
-        background-color: var(--color-page-background);
+        background-color: var(--ds-theme-color-background);
         box-shadow: none;
     }
 
     16% {
         background-color: var(--blueprint-accent-color);
-        box-shadow: 0 0 0 0.28rem color-mix(in srgb, var(--color-accent-primary) 14%, transparent);
+        box-shadow: 0 0 0 0.28rem color-mix(in srgb, var(--ds-theme-color-action-primary) 14%, transparent);
     }
 }
 

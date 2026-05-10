@@ -7,7 +7,7 @@
     justify-content: space-between;
     gap: 1rem;
     padding-block: clamp(0.5rem, 1.1dvh, 0.75rem);
-    border-top: 1px solid color-mix(in srgb, var(--color-border-primary) 58%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--ds-theme-color-border) 58%, transparent);
 }
 
 .site-footer__text {
@@ -18,9 +18,9 @@
     font-family: var(--font-family-ui);
     font-size: clamp(0.5rem, 0.52vw, 0.625rem);
     font-style: italic;
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--ds-typography-body-md-weight);
     line-height: 1.3;
-    color: color-mix(in srgb, var(--color-text-secondary) 68%, transparent);
+    color: color-mix(in srgb, var(--ds-theme-color-text-body) 68%, transparent);
 }
 
 .site-footer__text::before,

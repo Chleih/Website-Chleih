@@ -4,9 +4,9 @@
     z-index: 1000;
     display: grid;
     place-items: center;
-    padding: var(--site-gutter);
-    color: var(--color-text-primary);
-    background: var(--color-page-background);
+    padding: var(--ds-container-gutter);
+    color: var(--ds-theme-color-text-primary);
+    background: var(--ds-theme-color-background);
     opacity: 0;
     visibility: hidden;
     transition:
@@ -39,10 +39,10 @@
     margin: 0;
     font-family: var(--font-family-ui);
     font-size: clamp(0.72rem, 0.78vw, 0.84rem);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--line-height-normal);
+    font-weight: var(--ds-typography-title-sm-weight);
+    line-height: var(--ds-typography-caption-line-height);
     letter-spacing: 0.02em;
-    color: color-mix(in srgb, var(--color-text-secondary) 78%, transparent);
+    color: color-mix(in srgb, var(--ds-theme-color-text-body) 78%, transparent);
     opacity: 0;
     transform: translateY(-0.15rem);
     animation: blueprint-loader-status 420ms 1160ms ease forwards;

@@ -9,19 +9,9 @@
     --ds-space-section: 6rem;
     --ds-space-cta-band: 4rem;
 
-    --space-xxs: var(--ds-space-xxs);
-    --space-xs: var(--ds-space-xs);
-    --space-sm: var(--ds-space-sm);
-    --space-md: var(--ds-space-md);
-    --space-lg: var(--ds-space-lg);
-    --space-xl: var(--ds-space-xl);
-    --space-xxl: var(--ds-space-xxl);
-    --space-section: var(--ds-space-section);
-
     --ds-container-max-width: 75rem;
+    --ds-container-gutter: clamp(var(--ds-space-md), 5vw, var(--ds-space-xxl));
     --ds-grid-columns: 12;
-    --site-max-width: var(--ds-container-max-width);
-    --site-gutter: clamp(var(--ds-space-md), 5vw, var(--ds-space-xxl));
 
     --ds-breakpoint-mobile-max: 47.9375rem;
     --ds-breakpoint-tablet-min: 48rem;

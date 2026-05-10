@@ -2,10 +2,10 @@
     margin: 0 0 var(--hero-space-base);
     font-family: var(--font-family-ui);
     font-size: clamp(0.8rem, 0.95vw, 1rem);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--ds-typography-title-sm-weight);
     line-height: 1.2;
     letter-spacing: 0.28em;
-    color: var(--color-hero-accent);
+    color: var(--ds-theme-color-action-primary);
     animation: home-reveal 560ms ease both;
 }
 
@@ -13,10 +13,10 @@
     margin: 0;
     font-family: var(--font-family-editorial);
     font-size: clamp(4rem, min(8vw, 11dvh), 7.25rem);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--ds-typography-body-md-weight);
     line-height: 0.88;
     letter-spacing: -0.065em;
-    color: var(--color-text-primary);
+    color: var(--ds-theme-color-text-primary);
     animation: home-reveal 640ms 90ms ease both;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .hero__title-line--accent {
-    color: var(--color-hero-accent);
+    color: var(--ds-theme-color-action-primary);
     font-style: italic;
 }
 
@@ -33,7 +33,7 @@
     width: min(100%, 31rem);
     height: clamp(0.5rem, 1.4dvh, 0.875rem);
     margin-block: var(--hero-space-tight) var(--hero-space-base);
-    border-top: 0.1875rem solid color-mix(in srgb, var(--color-text-primary) 54%, transparent);
+    border-top: 0.1875rem solid color-mix(in srgb, var(--ds-theme-color-text-primary) 54%, transparent);
     border-radius: 50%;
     transform: rotate(-1deg) scaleX(1);
     transform-origin: left center;
@@ -45,7 +45,7 @@
     margin: 0;
     font-size: clamp(1.05rem, min(1.35vw, 2.2dvh), 1.4rem);
     line-height: 1.42;
-    color: var(--color-text-secondary);
+    color: var(--ds-theme-color-text-body);
     animation: home-reveal 580ms 180ms ease both;
 }
 

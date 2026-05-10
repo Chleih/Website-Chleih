@@ -78,27 +78,3 @@ $typography-nav-link-size: 0.875rem;
 $typography-nav-link-weight: $font-weight-medium;
 $typography-nav-link-line-height: 1.4;
 $typography-nav-link-letter-spacing: 0;
-
-// ============================================
-// APPLICATION TYPOGRAPHY ALIASES
-// Existing components consume these names.
-// ============================================
-$font-size-body-sm: $typography-body-sm-size;
-$font-size-body-md: $typography-body-md-size;
-$font-size-body-lg: $typography-title-md-size;
-
-$font-size-label-sm: $typography-caption-uppercase-size;
-$font-size-label-md: $typography-body-sm-size;
-
-$font-size-heading-sm: $typography-display-sm-size;
-$font-size-heading-md: $typography-display-md-size;
-$font-size-heading-lg: $typography-display-lg-size;
-$font-size-hero: $typography-display-xl-size;
-
-// ============================================
-// APPLICATION LINE HEIGHT ALIASES
-// ============================================
-$line-height-body: $typography-body-md-line-height;
-$line-height-heading: $typography-display-lg-line-height;
-$line-height-tight: 1;
-$line-height-normal: $typography-title-sm-line-height;

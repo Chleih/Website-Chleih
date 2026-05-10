@@ -1,7 +1,7 @@
 .initial-loader__blueprint {
-    --blueprint-line-color: color-mix(in srgb, var(--color-text-muted) 48%, transparent);
-    --blueprint-accent-color: color-mix(in srgb, var(--color-accent-primary) 84%, transparent);
-    --blueprint-surface-color: color-mix(in srgb, var(--color-surface-elevated) 82%, transparent);
+    --blueprint-line-color: color-mix(in srgb, var(--ds-theme-color-text-muted) 48%, transparent);
+    --blueprint-accent-color: color-mix(in srgb, var(--ds-theme-color-action-primary) 84%, transparent);
+    --blueprint-surface-color: color-mix(in srgb, var(--ds-theme-color-surface-card) 82%, transparent);
 
     position: relative;
     width: clamp(7.5rem, 14vw, 10.75rem);

@@ -18,7 +18,7 @@
     min-width: 0;
     padding-block: clamp(1.35rem, 2.8dvh, 2rem);
     padding-inline-end: clamp(1.2rem, 2vw, 1.75rem);
-    border-bottom: 1px solid color-mix(in srgb, var(--color-border-primary) 78%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--ds-theme-color-border) 78%, transparent);
     animation: contact-reveal 520ms ease both;
     transition:
         border-color var(--transition-base),
@@ -67,8 +67,8 @@
 
 .contact-method:has(.contact-method__link):hover,
 .contact-method:has(.contact-method__link):focus-within {
-    border-color: color-mix(in srgb, var(--color-accent-primary) 46%, transparent);
-    color: var(--color-accent-primary-strong);
+    border-color: color-mix(in srgb, var(--ds-theme-color-action-primary) 46%, transparent);
+    color: var(--ds-theme-color-action-primary-active);
     transform: translateX(0.12rem);
 }
 
@@ -84,9 +84,9 @@
     justify-content: center;
     width: clamp(3.25rem, 4.55vw, 4.25rem);
     aspect-ratio: 1;
-    color: var(--color-accent-primary);
-    background-color: color-mix(in srgb, var(--color-accent-secondary) 18%, transparent);
-    border-radius: var(--radius-sm);
+    color: var(--ds-theme-color-action-primary);
+    background-color: color-mix(in srgb, var(--ds-color-accent-amber) 18%, transparent);
+    border-radius: var(--ds-radius-md);
     transition:
         color var(--transition-base),
         background-color var(--transition-base),
@@ -108,9 +108,9 @@
     margin: 0;
     font-family: var(--font-family-ui);
     font-size: clamp(1rem, 1.15vw, 1.25rem);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--ds-typography-title-sm-weight);
     line-height: 1.2;
-    color: var(--color-text-primary);
+    color: var(--ds-theme-color-text-primary);
     transition: color var(--transition-base);
 }
 
@@ -121,7 +121,7 @@
     overflow-wrap: anywhere;
     font-size: clamp(1rem, 1.15vw, 1.25rem);
     line-height: 1.35;
-    color: var(--color-text-secondary);
+    color: var(--ds-theme-color-text-body);
     transition: color var(--transition-base);
 }
 
@@ -139,13 +139,13 @@
 
 .contact-method__link:hover,
 .contact-method__link:focus-visible {
-    color: var(--color-accent-primary-strong);
+    color: var(--ds-theme-color-action-primary-active);
 }
 
 .contact-method:has(.contact-method__link):hover .contact-method__icon,
 .contact-method:has(.contact-method__link):focus-within .contact-method__icon {
-    color: var(--color-accent-primary-strong);
-    background-color: color-mix(in srgb, var(--color-accent-secondary) 30%, transparent);
+    color: var(--ds-theme-color-action-primary-active);
+    background-color: color-mix(in srgb, var(--ds-color-accent-amber) 30%, transparent);
     transform: translateY(-0.04rem);
 }
 
@@ -153,5 +153,5 @@
 .contact-method:has(.contact-method__link):focus-within .contact-method__title,
 .contact-method:has(.contact-method__link):hover .contact-method__link,
 .contact-method:has(.contact-method__link):focus-within .contact-method__link {
-    color: var(--color-accent-primary-strong);
+    color: var(--ds-theme-color-action-primary-active);
 }

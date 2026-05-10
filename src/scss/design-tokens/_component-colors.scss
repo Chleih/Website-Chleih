@@ -21,17 +21,6 @@
     --ds-button-icon-circular-border-color: var(--ds-theme-color-border);
     --ds-button-text-link-color: var(--ds-theme-color-text-primary);
 
-    --button-height: var(--ds-button-height);
-    --button-padding-block: var(--ds-button-padding-block);
-    --button-padding-inline: var(--ds-button-padding-inline);
-    --button-radius: var(--ds-button-radius);
-    --button-primary-background: var(--ds-button-primary-background);
-    --button-primary-active-background: var(--ds-button-primary-active-background);
-    --button-primary-color: var(--ds-button-primary-color);
-    --button-secondary-background: var(--ds-button-secondary-background);
-    --button-secondary-color: var(--ds-button-secondary-color);
-    --button-secondary-border-color: var(--ds-button-secondary-border-color);
-
     --ds-text-link-color: var(--ds-theme-color-action-primary);
     --ds-text-link-active-color: var(--ds-theme-color-action-primary-active);
 
@@ -113,17 +102,7 @@
     --ds-footer-brand-color: var(--ds-color-on-dark);
     --ds-footer-padding-block: var(--ds-space-cta-band);
 
-    --color-button-secondary-text: var(--ds-button-secondary-color);
-    --color-button-secondary-border: var(--ds-button-secondary-border-color);
-    --color-button-secondary-hover-text: var(--ds-theme-color-action-primary-active);
-    --color-button-secondary-hover-border: var(--ds-theme-color-action-primary-active);
-    --color-button-secondary-hover-background: var(--ds-theme-color-surface-card);
-    --shadow-button-primary: var(--ds-shadow-none);
-    --shadow-button-primary-hover: var(--ds-shadow-raised-subtle);
-    --shadow-button-primary-active: var(--ds-shadow-none);
-
-    --shadow-initial-loader-module: 0 0.45rem 1.4rem rgb(31 31 31 / 5%);
-
-    --color-portrait-frame-highlight: rgb(255 255 255 / 38%);
-    --shadow-portrait-inner: inset 0 0 1.25rem rgb(31 31 31 / 3%);
+    --ds-initial-loader-module-shadow: 0 0.45rem 1.4rem rgb(20 20 19 / 5%);
+    --ds-portrait-frame-highlight: rgb(255 255 255 / 38%);
+    --ds-portrait-inner-shadow: inset 0 0 1.25rem rgb(20 20 19 / 3%);
 }

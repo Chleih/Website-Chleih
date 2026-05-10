@@ -1,7 +1,5 @@
 // ============================================
 // RAW DESIGN COLORS
-// Sass-only palette values. CSS custom properties are exported from
-// design-tokens/_colors.scss and design-tokens/_themes.scss.
 // ============================================
 
 // BRAND / ACCENT
@@ -36,24 +34,3 @@ $on-dark-soft: #a09d96;
 $success: #5db872;
 $warning: #d4a017;
 $error: #c64545;
-
-// LEGACY SASS ALIASES
-// These keep older token files compiling while the application migrates
-// toward the design-system names above.
-$carbon: $ink;
-$charcoal: $surface-dark;
-$iron-grey: $body;
-$soft-grey: $muted;
-$porcelain: $on-dark;
-$paper: $canvas;
-$paper-deep: $surface-cream-strong;
-$alabaster-grey: $hairline-soft;
-$linen-border: $hairline;
-
-$rust: $primary;
-$rust-dark: $primary-active;
-$rust-soft: $primary-disabled;
-
-$warm-brown: $body-strong;
-$warm-sand: $accent-amber;
-$olive-grey: $accent-teal;

@@ -2,14 +2,15 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: clamp(3.25rem, 5.5dvh, 3.875rem);
-    padding: 0.875rem clamp(1.75rem, 2.2vw, 2.25rem);
+    min-height: var(--ds-button-height);
+    padding: var(--ds-button-padding-block) var(--ds-button-padding-inline);
     font-family: var(--font-family-ui);
-    font-size: clamp(0.95rem, 1vw, 1.125rem);
-    font-weight: var(--font-weight-medium);
-    line-height: 1;
+    font-size: var(--ds-typography-button-size);
+    font-weight: var(--ds-typography-button-weight);
+    line-height: var(--ds-typography-button-line-height);
+    letter-spacing: var(--ds-typography-button-letter-spacing);
     border: 1px solid transparent;
-    border-radius: var(--radius-xs);
+    border-radius: var(--ds-button-radius);
     cursor: pointer;
     transition:
         color var(--transition-base),
@@ -28,38 +29,34 @@
 }
 
 .button--primary {
-    color: var(--color-text-inverse);
-    background-color: var(--color-accent-primary);
-    border-color: var(--color-accent-primary);
-    box-shadow: var(--shadow-button-primary);
+    color: var(--ds-button-primary-color);
+    background-color: var(--ds-button-primary-background);
+    border-color: var(--ds-button-primary-background);
+    box-shadow: var(--ds-shadow-none);
 }
 
 .button--primary:hover {
-    background-color: var(--color-accent-primary-strong);
-    border-color: var(--color-accent-primary-strong);
-    box-shadow: var(--shadow-button-primary-hover);
+    background-color: var(--ds-button-primary-active-background);
+    border-color: var(--ds-button-primary-active-background);
+    box-shadow: var(--ds-shadow-raised-subtle);
 }
 
 .button--primary:active {
-    box-shadow: var(--shadow-button-primary-active);
+    box-shadow: var(--ds-shadow-none);
 }
 
 .button--secondary {
-    color: var(--color-button-secondary-text);
-    background-color: transparent;
-    border-color: var(--color-button-secondary-border);
+    color: var(--ds-button-secondary-color);
+    background-color: var(--ds-button-secondary-background);
+    border-color: var(--ds-button-secondary-border-color);
 }
 
 .button--secondary:hover {
-    color: var(--color-button-secondary-hover-text);
-    border-color: var(--color-button-secondary-hover-border);
-    background-color: var(--color-button-secondary-hover-background);
+    color: var(--ds-theme-color-action-primary-active);
+    border-color: var(--ds-theme-color-action-primary-active);
+    background-color: var(--ds-theme-color-surface-card);
 }
 
 .button--secondary:active {
-    background-color: color-mix(
-        in srgb,
-        var(--color-button-secondary-hover-background) 72%,
-        var(--color-surface-primary)
-    );
+    background-color: color-mix(in srgb, var(--ds-theme-color-surface-card) 72%, var(--ds-theme-color-surface-primary));
 }
