@@ -1,27 +1,59 @@
 // ============================================
-// BASE PALETTE
-// Raw design colors only.
+// RAW DESIGN COLORS
+// Sass-only palette values. CSS custom properties are exported from
+// design-tokens/_colors.scss and design-tokens/_themes.scss.
 // ============================================
 
-// NEUTRALS
+// BRAND / ACCENT
+$primary: #cc785c;
+$primary-active: #a9583e;
+$primary-disabled: #e6dfd8;
+$accent-teal: #5db8a6;
+$accent-amber: #e8a55a;
 
-$carbon: #1f1f1f;
-$charcoal: #171717;
-$iron-grey: #474747;
-$soft-grey: #7a746c;
+// SURFACES
+$canvas: #faf9f5;
+$surface-soft: #f5f0e8;
+$surface-card: #efe9de;
+$surface-cream-strong: #e8e0d2;
+$surface-dark: #181715;
+$surface-dark-elevated: #252320;
+$surface-dark-soft: #1f1e1b;
+$hairline: #e6dfd8;
+$hairline-soft: #ebe6df;
 
-$porcelain: #f8faf4;
-$paper: #f4efe7;
-$paper-deep: #ebe1d2;
-$alabaster-grey: #e6e6e6;
-$linen-border: #d8ccba;
+// TEXT
+$ink: #141413;
+$body-strong: #252523;
+$body: #3d3d3a;
+$muted: #6c6a64;
+$muted-soft: #8e8b82;
+$on-primary: #fff;
+$on-dark: #faf9f5;
+$on-dark-soft: #a09d96;
 
-// BRAND / WARM ACCENTS
+// SEMANTIC
+$success: #5db872;
+$warning: #d4a017;
+$error: #c64545;
 
-$rust: #a33a1f; // A3552E
-$rust-dark: #7d2d19;
-$rust-soft: #b95a3f;
+// LEGACY SASS ALIASES
+// These keep older token files compiling while the application migrates
+// toward the design-system names above.
+$carbon: $ink;
+$charcoal: $surface-dark;
+$iron-grey: $body;
+$soft-grey: $muted;
+$porcelain: $on-dark;
+$paper: $canvas;
+$paper-deep: $surface-cream-strong;
+$alabaster-grey: $hairline-soft;
+$linen-border: $hairline;
 
-$warm-brown: #5f442e;
-$warm-sand: #d3b38d;
-$olive-grey: #6f7667;
+$rust: $primary;
+$rust-dark: $primary-active;
+$rust-soft: $primary-disabled;
+
+$warm-brown: $body-strong;
+$warm-sand: $accent-amber;
+$olive-grey: $accent-teal;

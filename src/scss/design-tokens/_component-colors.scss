@@ -1,14 +1,126 @@
-@use '../abstracts/colors' as colors;
-
 :root {
-    --color-button-secondary-text: #{colors.$warm-brown};
-    --color-button-secondary-border: #{colors.$warm-brown};
-    --color-button-secondary-hover-text: #{colors.$rust-dark};
-    --color-button-secondary-hover-border: #{colors.$rust-dark};
-    --color-button-secondary-hover-background: rgb(255 255 255 / 24%);
-    --shadow-button-primary: 0 0.625rem 1.5rem rgb(163 58 31 / 18%);
-    --shadow-button-primary-hover: 0 0.375rem 0.875rem rgb(125 45 25 / 16%);
-    --shadow-button-primary-active: 0 0.125rem 0.35rem rgb(125 45 25 / 12%);
+    --ds-top-nav-height: 4rem;
+    --ds-top-nav-background: var(--ds-theme-color-background);
+    --ds-top-nav-link-color: var(--ds-theme-color-text-primary);
+
+    --ds-button-height: 2.5rem;
+    --ds-button-padding-block: 0.75rem;
+    --ds-button-padding-inline: 1.25rem;
+    --ds-button-radius: var(--ds-radius-md);
+    --ds-button-primary-background: var(--ds-theme-color-action-primary);
+    --ds-button-primary-active-background: var(--ds-theme-color-action-primary-active);
+    --ds-button-primary-disabled-background: var(--ds-theme-color-action-disabled);
+    --ds-button-primary-color: var(--ds-theme-color-text-on-primary);
+    --ds-button-secondary-background: var(--ds-theme-color-background);
+    --ds-button-secondary-color: var(--ds-theme-color-text-primary);
+    --ds-button-secondary-border-color: var(--ds-theme-color-border);
+    --ds-button-secondary-on-dark-background: var(--ds-color-surface-dark-elevated);
+    --ds-button-secondary-on-dark-color: var(--ds-color-on-dark);
+    --ds-button-icon-circular-size: 2.25rem;
+    --ds-button-icon-circular-background: var(--ds-theme-color-background);
+    --ds-button-icon-circular-border-color: var(--ds-theme-color-border);
+    --ds-button-text-link-color: var(--ds-theme-color-text-primary);
+
+    --button-height: var(--ds-button-height);
+    --button-padding-block: var(--ds-button-padding-block);
+    --button-padding-inline: var(--ds-button-padding-inline);
+    --button-radius: var(--ds-button-radius);
+    --button-primary-background: var(--ds-button-primary-background);
+    --button-primary-active-background: var(--ds-button-primary-active-background);
+    --button-primary-color: var(--ds-button-primary-color);
+    --button-secondary-background: var(--ds-button-secondary-background);
+    --button-secondary-color: var(--ds-button-secondary-color);
+    --button-secondary-border-color: var(--ds-button-secondary-border-color);
+
+    --ds-text-link-color: var(--ds-theme-color-action-primary);
+    --ds-text-link-active-color: var(--ds-theme-color-action-primary-active);
+
+    --ds-hero-band-padding-block: var(--ds-space-section);
+    --ds-hero-illustration-card-background: var(--ds-theme-color-background);
+    --ds-hero-illustration-card-radius: var(--ds-radius-xl);
+    --ds-feature-card-background: var(--ds-theme-color-surface-card);
+    --ds-feature-card-radius: var(--ds-radius-lg);
+    --ds-feature-card-padding: var(--ds-space-xl);
+    --ds-product-mockup-card-dark-background: var(--ds-color-surface-dark);
+    --ds-product-mockup-card-dark-color: var(--ds-color-on-dark);
+    --ds-product-mockup-card-dark-radius: var(--ds-radius-lg);
+    --ds-product-mockup-card-dark-padding: var(--ds-space-xl);
+    --ds-code-window-card-background: var(--ds-color-surface-dark);
+    --ds-code-window-card-inner-background: var(--ds-color-surface-dark-soft);
+    --ds-code-window-card-color: var(--ds-color-on-dark);
+    --ds-code-window-card-radius: var(--ds-radius-lg);
+    --ds-code-window-card-padding: var(--ds-space-lg);
+    --ds-model-comparison-card-background: var(--ds-theme-color-background);
+    --ds-model-comparison-card-border-color: var(--ds-theme-color-border);
+    --ds-model-comparison-card-radius: var(--ds-radius-lg);
+    --ds-model-comparison-card-padding: var(--ds-space-xl);
+    --ds-pricing-tier-card-background: var(--ds-theme-color-background);
+    --ds-pricing-tier-card-border-color: var(--ds-theme-color-border);
+    --ds-pricing-tier-card-radius: var(--ds-radius-lg);
+    --ds-pricing-tier-card-padding: var(--ds-space-xl);
+    --ds-pricing-tier-card-featured-background: var(--ds-color-surface-dark);
+    --ds-pricing-tier-card-featured-color: var(--ds-color-on-dark);
+    --ds-callout-card-coral-background: var(--ds-color-primary);
+    --ds-callout-card-coral-color: var(--ds-color-on-primary);
+    --ds-callout-card-coral-radius: var(--ds-radius-lg);
+    --ds-callout-card-coral-padding: var(--ds-space-xxl);
+    --ds-connector-tile-background: var(--ds-theme-color-background);
+    --ds-connector-tile-border-color: var(--ds-theme-color-border);
+    --ds-connector-tile-radius: var(--ds-radius-lg);
+    --ds-connector-tile-padding: 1.25rem;
+
+    --ds-text-input-height: 2.5rem;
+    --ds-text-input-padding-block: 0.625rem;
+    --ds-text-input-padding-inline: 0.875rem;
+    --ds-text-input-radius: var(--ds-radius-md);
+    --ds-text-input-background: var(--ds-theme-color-background);
+    --ds-text-input-color: var(--ds-theme-color-text-primary);
+    --ds-text-input-border-color: var(--ds-theme-color-border);
+    --ds-text-input-focused-border-color: var(--ds-theme-color-action-primary);
+    --ds-text-input-focused-ring: 0 0 0 3px rgb(204 120 92 / 15%);
+    --ds-cookie-consent-card-background: var(--ds-color-surface-dark);
+    --ds-cookie-consent-card-color: var(--ds-color-on-dark);
+    --ds-cookie-consent-card-radius: var(--ds-radius-lg);
+    --ds-cookie-consent-card-padding: var(--ds-space-lg);
+
+    --ds-badge-pill-background: var(--ds-theme-color-surface-card);
+    --ds-badge-pill-color: var(--ds-theme-color-text-primary);
+    --ds-badge-pill-radius: var(--ds-radius-pill);
+    --ds-badge-pill-padding-block: var(--ds-space-xxs);
+    --ds-badge-pill-padding-inline: var(--ds-space-sm);
+    --ds-badge-coral-background: var(--ds-color-primary);
+    --ds-badge-coral-color: var(--ds-color-on-primary);
+    --ds-badge-coral-radius: var(--ds-radius-pill);
+    --ds-badge-coral-padding-block: var(--ds-space-xxs);
+    --ds-badge-coral-padding-inline: var(--ds-space-sm);
+    --ds-category-tab-color: var(--ds-theme-color-text-muted);
+    --ds-category-tab-active-background: var(--ds-theme-color-surface-card);
+    --ds-category-tab-active-color: var(--ds-theme-color-text-primary);
+    --ds-category-tab-padding-block: var(--ds-space-xs);
+    --ds-category-tab-padding-inline: 0.875rem;
+    --ds-category-tab-radius: var(--ds-radius-md);
+
+    --ds-cta-band-coral-background: var(--ds-color-primary);
+    --ds-cta-band-coral-color: var(--ds-color-on-primary);
+    --ds-cta-band-coral-radius: var(--ds-radius-lg);
+    --ds-cta-band-coral-padding: var(--ds-space-cta-band);
+    --ds-cta-band-dark-background: var(--ds-color-surface-dark);
+    --ds-cta-band-dark-color: var(--ds-color-on-dark);
+    --ds-cta-band-dark-radius: var(--ds-radius-lg);
+    --ds-cta-band-dark-padding: var(--ds-space-cta-band);
+    --ds-footer-background: var(--ds-color-surface-dark);
+    --ds-footer-color: var(--ds-color-on-dark-soft);
+    --ds-footer-brand-color: var(--ds-color-on-dark);
+    --ds-footer-padding-block: var(--ds-space-cta-band);
+
+    --color-button-secondary-text: var(--ds-button-secondary-color);
+    --color-button-secondary-border: var(--ds-button-secondary-border-color);
+    --color-button-secondary-hover-text: var(--ds-theme-color-action-primary-active);
+    --color-button-secondary-hover-border: var(--ds-theme-color-action-primary-active);
+    --color-button-secondary-hover-background: var(--ds-theme-color-surface-card);
+    --shadow-button-primary: var(--ds-shadow-none);
+    --shadow-button-primary-hover: var(--ds-shadow-raised-subtle);
+    --shadow-button-primary-active: var(--ds-shadow-none);
 
     --shadow-initial-loader-module: 0 0.45rem 1.4rem rgb(31 31 31 / 5%);
 

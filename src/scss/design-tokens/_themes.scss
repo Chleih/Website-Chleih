@@ -1,0 +1,55 @@
+// ============================================
+// THEME CONTRACTS
+// The app does not set data-theme yet. These aliases are prepared for
+// future light/dark mode without changing component selectors.
+// ============================================
+
+[data-theme='light'] {
+    --ds-theme-color-background: var(--ds-color-canvas);
+    --ds-theme-color-surface-primary: var(--ds-color-canvas);
+    --ds-theme-color-surface-soft: var(--ds-color-surface-soft);
+    --ds-theme-color-surface-card: var(--ds-color-surface-card);
+    --ds-theme-color-surface-strong: var(--ds-color-surface-cream-strong);
+    --ds-theme-color-surface-emphasis: var(--ds-color-surface-dark);
+    --ds-theme-color-surface-emphasis-elevated: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-surface-emphasis-soft: var(--ds-color-surface-dark-soft);
+    --ds-theme-color-text-primary: var(--ds-color-ink);
+    --ds-theme-color-text-strong: var(--ds-color-body-strong);
+    --ds-theme-color-text-body: var(--ds-color-body);
+    --ds-theme-color-text-muted: var(--ds-color-muted);
+    --ds-theme-color-text-subtle: var(--ds-color-muted-soft);
+    --ds-theme-color-text-on-primary: var(--ds-color-on-primary);
+    --ds-theme-color-text-on-emphasis: var(--ds-color-on-dark);
+    --ds-theme-color-text-on-emphasis-soft: var(--ds-color-on-dark-soft);
+    --ds-theme-color-border: var(--ds-color-hairline);
+    --ds-theme-color-border-soft: var(--ds-color-hairline-soft);
+    --ds-theme-color-action-primary: var(--ds-color-primary);
+    --ds-theme-color-action-primary-active: var(--ds-color-primary-active);
+    --ds-theme-color-action-disabled: var(--ds-color-primary-disabled);
+    --ds-theme-color-focus-ring: var(--ds-color-primary);
+}
+
+[data-theme='dark'] {
+    --ds-theme-color-background: var(--ds-color-surface-dark);
+    --ds-theme-color-surface-primary: var(--ds-color-surface-dark-soft);
+    --ds-theme-color-surface-soft: var(--ds-color-surface-dark-soft);
+    --ds-theme-color-surface-card: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-surface-strong: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-surface-emphasis: var(--ds-color-canvas);
+    --ds-theme-color-surface-emphasis-elevated: var(--ds-color-surface-card);
+    --ds-theme-color-surface-emphasis-soft: var(--ds-color-surface-soft);
+    --ds-theme-color-text-primary: var(--ds-color-on-dark);
+    --ds-theme-color-text-strong: var(--ds-color-on-dark);
+    --ds-theme-color-text-body: var(--ds-color-on-dark-soft);
+    --ds-theme-color-text-muted: var(--ds-color-on-dark-soft);
+    --ds-theme-color-text-subtle: var(--ds-color-muted-soft);
+    --ds-theme-color-text-on-primary: var(--ds-color-on-primary);
+    --ds-theme-color-text-on-emphasis: var(--ds-color-ink);
+    --ds-theme-color-text-on-emphasis-soft: var(--ds-color-body);
+    --ds-theme-color-border: rgb(250 249 245 / 14%);
+    --ds-theme-color-border-soft: rgb(250 249 245 / 9%);
+    --ds-theme-color-action-primary: var(--ds-color-primary);
+    --ds-theme-color-action-primary-active: var(--ds-color-primary-active);
+    --ds-theme-color-action-disabled: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-focus-ring: var(--ds-color-primary);
+}
