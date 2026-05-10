@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <img src="./src/resources/images/readme_placeholder.jpg" alt="My Website" width="700" />
+  <img src="./src/resources/images/readme_hero.jpg" alt="My Website" width="700" />
   <br /><br />
   <a href="https://forthebadge.com">
     <img src="./src/resources/images/badges/built-with-love.svg" alt="Built with love" />
