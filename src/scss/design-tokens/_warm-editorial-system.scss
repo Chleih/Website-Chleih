@@ -1,0 +1,320 @@
+// ============================================
+// WARM EDITORIAL DESIGN SYSTEM
+// Inactive token layer for future page and component work.
+// Existing application styles do not consume these tokens yet.
+// ============================================
+
+:root {
+    // Brand and accent colors
+    --ds-color-primary: #cc785c;
+    --ds-color-primary-active: #a9583e;
+    --ds-color-primary-disabled: #e6dfd8;
+    --ds-color-accent-teal: #5db8a6;
+    --ds-color-accent-amber: #e8a55a;
+
+    // Surface colors
+    --ds-color-canvas: #faf9f5;
+    --ds-color-surface-soft: #f5f0e8;
+    --ds-color-surface-card: #efe9de;
+    --ds-color-surface-cream-strong: #e8e0d2;
+    --ds-color-surface-dark: #181715;
+    --ds-color-surface-dark-elevated: #252320;
+    --ds-color-surface-dark-soft: #1f1e1b;
+    --ds-color-hairline: #e6dfd8;
+    --ds-color-hairline-soft: #ebe6df;
+
+    // Text colors
+    --ds-color-ink: #141413;
+    --ds-color-body-strong: #252523;
+    --ds-color-body: #3d3d3a;
+    --ds-color-muted: #6c6a64;
+    --ds-color-muted-soft: #8e8b82;
+    --ds-color-on-primary: #fff;
+    --ds-color-on-dark: #faf9f5;
+    --ds-color-on-dark-soft: #a09d96;
+
+    // Semantic colors
+    --ds-color-success: #5db872;
+    --ds-color-warning: #d4a017;
+    --ds-color-error: #c64545;
+
+    // Future theme aliases
+    --ds-theme-color-background: var(--ds-color-canvas);
+    --ds-theme-color-surface-primary: var(--ds-color-canvas);
+    --ds-theme-color-surface-soft: var(--ds-color-surface-soft);
+    --ds-theme-color-surface-card: var(--ds-color-surface-card);
+    --ds-theme-color-surface-strong: var(--ds-color-surface-cream-strong);
+    --ds-theme-color-surface-emphasis: var(--ds-color-surface-dark);
+    --ds-theme-color-surface-emphasis-elevated: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-surface-emphasis-soft: var(--ds-color-surface-dark-soft);
+    --ds-theme-color-text-primary: var(--ds-color-ink);
+    --ds-theme-color-text-strong: var(--ds-color-body-strong);
+    --ds-theme-color-text-body: var(--ds-color-body);
+    --ds-theme-color-text-muted: var(--ds-color-muted);
+    --ds-theme-color-text-subtle: var(--ds-color-muted-soft);
+    --ds-theme-color-text-on-primary: var(--ds-color-on-primary);
+    --ds-theme-color-text-on-emphasis: var(--ds-color-on-dark);
+    --ds-theme-color-text-on-emphasis-soft: var(--ds-color-on-dark-soft);
+    --ds-theme-color-border: var(--ds-color-hairline);
+    --ds-theme-color-border-soft: var(--ds-color-hairline-soft);
+    --ds-theme-color-action-primary: var(--ds-color-primary);
+    --ds-theme-color-action-primary-active: var(--ds-color-primary-active);
+    --ds-theme-color-action-disabled: var(--ds-color-primary-disabled);
+    --ds-theme-color-focus-ring: var(--ds-color-primary);
+    --ds-theme-color-success: var(--ds-color-success);
+    --ds-theme-color-warning: var(--ds-color-warning);
+    --ds-theme-color-error: var(--ds-color-error);
+
+    // Typography metrics. Font-family roles intentionally stay in the existing app font layer.
+    --ds-typography-display-xl-size: 4rem;
+    --ds-typography-display-xl-weight: 400;
+    --ds-typography-display-xl-line-height: 1.05;
+    --ds-typography-display-xl-letter-spacing: -1.5px;
+
+    --ds-typography-display-lg-size: 3rem;
+    --ds-typography-display-lg-weight: 400;
+    --ds-typography-display-lg-line-height: 1.1;
+    --ds-typography-display-lg-letter-spacing: -1px;
+
+    --ds-typography-display-md-size: 2.25rem;
+    --ds-typography-display-md-weight: 400;
+    --ds-typography-display-md-line-height: 1.15;
+    --ds-typography-display-md-letter-spacing: -0.5px;
+
+    --ds-typography-display-sm-size: 1.75rem;
+    --ds-typography-display-sm-weight: 400;
+    --ds-typography-display-sm-line-height: 1.2;
+    --ds-typography-display-sm-letter-spacing: -0.3px;
+
+    --ds-typography-title-lg-size: 1.375rem;
+    --ds-typography-title-lg-weight: 500;
+    --ds-typography-title-lg-line-height: 1.3;
+    --ds-typography-title-lg-letter-spacing: 0;
+
+    --ds-typography-title-md-size: 1.125rem;
+    --ds-typography-title-md-weight: 500;
+    --ds-typography-title-md-line-height: 1.4;
+    --ds-typography-title-md-letter-spacing: 0;
+
+    --ds-typography-title-sm-size: 1rem;
+    --ds-typography-title-sm-weight: 500;
+    --ds-typography-title-sm-line-height: 1.4;
+    --ds-typography-title-sm-letter-spacing: 0;
+
+    --ds-typography-body-md-size: 1rem;
+    --ds-typography-body-md-weight: 400;
+    --ds-typography-body-md-line-height: 1.55;
+    --ds-typography-body-md-letter-spacing: 0;
+
+    --ds-typography-body-sm-size: 0.875rem;
+    --ds-typography-body-sm-weight: 400;
+    --ds-typography-body-sm-line-height: 1.55;
+    --ds-typography-body-sm-letter-spacing: 0;
+
+    --ds-typography-caption-size: 0.8125rem;
+    --ds-typography-caption-weight: 500;
+    --ds-typography-caption-line-height: 1.4;
+    --ds-typography-caption-letter-spacing: 0;
+
+    --ds-typography-caption-uppercase-size: 0.75rem;
+    --ds-typography-caption-uppercase-weight: 500;
+    --ds-typography-caption-uppercase-line-height: 1.4;
+    --ds-typography-caption-uppercase-letter-spacing: 1.5px;
+
+    --ds-typography-code-size: 0.875rem;
+    --ds-typography-code-weight: 400;
+    --ds-typography-code-line-height: 1.6;
+    --ds-typography-code-letter-spacing: 0;
+
+    --ds-typography-button-size: 0.875rem;
+    --ds-typography-button-weight: 500;
+    --ds-typography-button-line-height: 1;
+    --ds-typography-button-letter-spacing: 0;
+
+    --ds-typography-nav-link-size: 0.875rem;
+    --ds-typography-nav-link-weight: 500;
+    --ds-typography-nav-link-line-height: 1.4;
+    --ds-typography-nav-link-letter-spacing: 0;
+
+    // Spacing and layout
+    --ds-space-xxs: 0.25rem;
+    --ds-space-xs: 0.5rem;
+    --ds-space-sm: 0.75rem;
+    --ds-space-md: 1rem;
+    --ds-space-lg: 1.5rem;
+    --ds-space-xl: 2rem;
+    --ds-space-xxl: 3rem;
+    --ds-space-section: 6rem;
+    --ds-space-cta-band: 4rem;
+    --ds-container-max-width: 75rem;
+    --ds-grid-columns: 12;
+
+    // Breakpoint reference tokens
+    --ds-breakpoint-mobile-max: 47.9375rem;
+    --ds-breakpoint-tablet-min: 48rem;
+    --ds-breakpoint-tablet-max: 63.9375rem;
+    --ds-breakpoint-desktop-min: 64rem;
+    --ds-breakpoint-desktop-max: 89.9375rem;
+    --ds-breakpoint-wide-min: 90rem;
+
+    // Radius
+    --ds-radius-xs: 0.25rem;
+    --ds-radius-sm: 0.375rem;
+    --ds-radius-md: 0.5rem;
+    --ds-radius-lg: 0.75rem;
+    --ds-radius-xl: 1rem;
+    --ds-radius-pill: 9999px;
+    --ds-radius-full: 9999px;
+
+    // Elevation
+    --ds-shadow-none: none;
+    --ds-shadow-raised-subtle: 0 1px 3px rgb(20 20 19 / 8%);
+
+    // Top navigation
+    --ds-top-nav-height: 4rem;
+    --ds-top-nav-background: var(--ds-theme-color-background);
+    --ds-top-nav-link-color: var(--ds-theme-color-text-primary);
+
+    // Buttons
+    --ds-button-height: 2.5rem;
+    --ds-button-padding-block: 0.75rem;
+    --ds-button-padding-inline: 1.25rem;
+    --ds-button-radius: var(--ds-radius-md);
+    --ds-button-primary-background: var(--ds-theme-color-action-primary);
+    --ds-button-primary-active-background: var(--ds-theme-color-action-primary-active);
+    --ds-button-primary-disabled-background: var(--ds-theme-color-action-disabled);
+    --ds-button-primary-color: var(--ds-theme-color-text-on-primary);
+    --ds-button-secondary-background: var(--ds-theme-color-background);
+    --ds-button-secondary-color: var(--ds-theme-color-text-primary);
+    --ds-button-secondary-border-color: var(--ds-theme-color-border);
+    --ds-button-secondary-on-dark-background: var(--ds-color-surface-dark-elevated);
+    --ds-button-secondary-on-dark-color: var(--ds-color-on-dark);
+    --ds-button-icon-circular-size: 2.25rem;
+    --ds-button-icon-circular-background: var(--ds-theme-color-background);
+    --ds-button-icon-circular-border-color: var(--ds-theme-color-border);
+    --ds-button-text-link-color: var(--ds-theme-color-text-primary);
+
+    // Links
+    --ds-text-link-color: var(--ds-theme-color-action-primary);
+    --ds-text-link-active-color: var(--ds-theme-color-action-primary-active);
+
+    // Cards and containers
+    --ds-hero-band-padding-block: var(--ds-space-section);
+    --ds-hero-illustration-card-background: var(--ds-theme-color-background);
+    --ds-hero-illustration-card-radius: var(--ds-radius-xl);
+    --ds-feature-card-background: var(--ds-theme-color-surface-card);
+    --ds-feature-card-radius: var(--ds-radius-lg);
+    --ds-feature-card-padding: var(--ds-space-xl);
+    --ds-product-mockup-card-dark-background: var(--ds-color-surface-dark);
+    --ds-product-mockup-card-dark-color: var(--ds-color-on-dark);
+    --ds-product-mockup-card-dark-radius: var(--ds-radius-lg);
+    --ds-product-mockup-card-dark-padding: var(--ds-space-xl);
+    --ds-code-window-card-background: var(--ds-color-surface-dark);
+    --ds-code-window-card-inner-background: var(--ds-color-surface-dark-soft);
+    --ds-code-window-card-color: var(--ds-color-on-dark);
+    --ds-code-window-card-radius: var(--ds-radius-lg);
+    --ds-code-window-card-padding: var(--ds-space-lg);
+    --ds-model-comparison-card-background: var(--ds-theme-color-background);
+    --ds-model-comparison-card-border-color: var(--ds-theme-color-border);
+    --ds-model-comparison-card-radius: var(--ds-radius-lg);
+    --ds-model-comparison-card-padding: var(--ds-space-xl);
+    --ds-pricing-tier-card-background: var(--ds-theme-color-background);
+    --ds-pricing-tier-card-border-color: var(--ds-theme-color-border);
+    --ds-pricing-tier-card-radius: var(--ds-radius-lg);
+    --ds-pricing-tier-card-padding: var(--ds-space-xl);
+    --ds-pricing-tier-card-featured-background: var(--ds-color-surface-dark);
+    --ds-pricing-tier-card-featured-color: var(--ds-color-on-dark);
+    --ds-callout-card-coral-background: var(--ds-color-primary);
+    --ds-callout-card-coral-color: var(--ds-color-on-primary);
+    --ds-callout-card-coral-radius: var(--ds-radius-lg);
+    --ds-callout-card-coral-padding: var(--ds-space-xxl);
+    --ds-connector-tile-background: var(--ds-theme-color-background);
+    --ds-connector-tile-border-color: var(--ds-theme-color-border);
+    --ds-connector-tile-radius: var(--ds-radius-lg);
+    --ds-connector-tile-padding: 1.25rem;
+
+    // Inputs and forms
+    --ds-text-input-height: 2.5rem;
+    --ds-text-input-padding-block: 0.625rem;
+    --ds-text-input-padding-inline: 0.875rem;
+    --ds-text-input-radius: var(--ds-radius-md);
+    --ds-text-input-background: var(--ds-theme-color-background);
+    --ds-text-input-color: var(--ds-theme-color-text-primary);
+    --ds-text-input-border-color: var(--ds-theme-color-border);
+    --ds-text-input-focused-border-color: var(--ds-theme-color-action-primary);
+    --ds-text-input-focused-ring: 0 0 0 3px rgb(204 120 92 / 15%);
+    --ds-cookie-consent-card-background: var(--ds-color-surface-dark);
+    --ds-cookie-consent-card-color: var(--ds-color-on-dark);
+    --ds-cookie-consent-card-radius: var(--ds-radius-lg);
+    --ds-cookie-consent-card-padding: var(--ds-space-lg);
+
+    // Tags, badges, tabs, and filters
+    --ds-badge-pill-background: var(--ds-theme-color-surface-card);
+    --ds-badge-pill-color: var(--ds-theme-color-text-primary);
+    --ds-badge-pill-radius: var(--ds-radius-pill);
+    --ds-badge-pill-padding-block: var(--ds-space-xxs);
+    --ds-badge-pill-padding-inline: var(--ds-space-sm);
+    --ds-badge-coral-background: var(--ds-color-primary);
+    --ds-badge-coral-color: var(--ds-color-on-primary);
+    --ds-badge-coral-radius: var(--ds-radius-pill);
+    --ds-badge-coral-padding-block: var(--ds-space-xxs);
+    --ds-badge-coral-padding-inline: var(--ds-space-sm);
+    --ds-category-tab-color: var(--ds-theme-color-text-muted);
+    --ds-category-tab-active-background: var(--ds-theme-color-surface-card);
+    --ds-category-tab-active-color: var(--ds-theme-color-text-primary);
+    --ds-category-tab-padding-block: var(--ds-space-xs);
+    --ds-category-tab-padding-inline: 0.875rem;
+    --ds-category-tab-radius: var(--ds-radius-md);
+
+    // CTA and footer
+    --ds-cta-band-coral-background: var(--ds-color-primary);
+    --ds-cta-band-coral-color: var(--ds-color-on-primary);
+    --ds-cta-band-coral-radius: var(--ds-radius-lg);
+    --ds-cta-band-coral-padding: var(--ds-space-cta-band);
+    --ds-cta-band-dark-background: var(--ds-color-surface-dark);
+    --ds-cta-band-dark-color: var(--ds-color-on-dark);
+    --ds-cta-band-dark-radius: var(--ds-radius-lg);
+    --ds-cta-band-dark-padding: var(--ds-space-cta-band);
+    --ds-footer-background: var(--ds-color-surface-dark);
+    --ds-footer-color: var(--ds-color-on-dark-soft);
+    --ds-footer-brand-color: var(--ds-color-on-dark);
+    --ds-footer-padding-block: var(--ds-space-cta-band);
+}
+
+[data-theme='light'] {
+    --ds-theme-color-background: var(--ds-color-canvas);
+    --ds-theme-color-surface-primary: var(--ds-color-canvas);
+    --ds-theme-color-surface-soft: var(--ds-color-surface-soft);
+    --ds-theme-color-surface-card: var(--ds-color-surface-card);
+    --ds-theme-color-surface-strong: var(--ds-color-surface-cream-strong);
+    --ds-theme-color-surface-emphasis: var(--ds-color-surface-dark);
+    --ds-theme-color-surface-emphasis-elevated: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-surface-emphasis-soft: var(--ds-color-surface-dark-soft);
+    --ds-theme-color-text-primary: var(--ds-color-ink);
+    --ds-theme-color-text-strong: var(--ds-color-body-strong);
+    --ds-theme-color-text-body: var(--ds-color-body);
+    --ds-theme-color-text-muted: var(--ds-color-muted);
+    --ds-theme-color-text-subtle: var(--ds-color-muted-soft);
+    --ds-theme-color-border: var(--ds-color-hairline);
+    --ds-theme-color-border-soft: var(--ds-color-hairline-soft);
+    --ds-theme-color-action-disabled: var(--ds-color-primary-disabled);
+}
+
+[data-theme='dark'] {
+    --ds-theme-color-background: var(--ds-color-surface-dark);
+    --ds-theme-color-surface-primary: var(--ds-color-surface-dark-soft);
+    --ds-theme-color-surface-soft: var(--ds-color-surface-dark-soft);
+    --ds-theme-color-surface-card: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-surface-strong: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-surface-emphasis: var(--ds-color-canvas);
+    --ds-theme-color-surface-emphasis-elevated: var(--ds-color-surface-card);
+    --ds-theme-color-surface-emphasis-soft: var(--ds-color-surface-soft);
+    --ds-theme-color-text-primary: var(--ds-color-on-dark);
+    --ds-theme-color-text-strong: var(--ds-color-on-dark);
+    --ds-theme-color-text-body: var(--ds-color-on-dark-soft);
+    --ds-theme-color-text-muted: var(--ds-color-on-dark-soft);
+    --ds-theme-color-text-subtle: var(--ds-color-muted-soft);
+    --ds-theme-color-border: rgb(250 249 245 / 14%);
+    --ds-theme-color-border-soft: rgb(250 249 245 / 9%);
+    --ds-theme-color-action-disabled: var(--ds-color-surface-dark-elevated);
+}
