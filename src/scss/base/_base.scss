@@ -8,7 +8,7 @@ html {
     min-width: 20rem;
     min-height: 100%;
     overflow: hidden;
-    background-color: var(--color-page-background);
+    background-color: var(--ds-theme-color-background);
 }
 
 body {
@@ -18,38 +18,15 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: var(--font-family-body);
-    font-size: var(--font-size-body-md);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-body);
-    color: var(--color-text-primary);
-    background:
-        radial-gradient(circle at 20% 15%, var(--color-page-glow-primary), transparent 24rem),
-        radial-gradient(circle at 80% 10%, var(--color-page-glow-secondary), transparent 26rem),
-        linear-gradient(135deg, var(--color-page-glow-tertiary), transparent 42%), var(--color-page-background);
+    font-size: var(--ds-typography-body-md-size);
+    font-weight: var(--ds-typography-body-md-weight);
+    line-height: var(--ds-typography-body-md-line-height);
+    letter-spacing: var(--ds-typography-body-md-letter-spacing);
+    color: var(--ds-theme-color-text-primary);
+    background: var(--ds-theme-color-background);
     transition: var(--ui-transition);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-}
-
-body::before {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    content: '';
-    background-image:
-        radial-gradient(circle at 18% 22%, var(--color-page-texture-primary) 0 0.04rem, transparent 0.05rem),
-        radial-gradient(circle at 72% 38%, var(--color-page-texture-secondary) 0 0.035rem, transparent 0.045rem),
-        radial-gradient(circle at 42% 78%, var(--color-page-texture-highlight) 0 0.05rem, transparent 0.06rem);
-    background-position:
-        0 0,
-        1.4rem 0.7rem,
-        0.5rem 1.2rem;
-    background-size:
-        2.75rem 2.75rem,
-        3.25rem 3.25rem,
-        2.25rem 2.25rem;
-    opacity: 0.72;
 }
 
 img,
@@ -75,13 +52,13 @@ button {
 }
 
 :focus-visible {
-    outline: 2px solid var(--color-focus-ring);
+    outline: 2px solid var(--ds-theme-color-focus-ring);
     outline-offset: 0.25rem;
 }
 
 ::selection {
-    color: var(--color-text-inverse);
-    background-color: var(--color-accent-primary);
+    color: var(--ds-theme-color-text-on-primary);
+    background-color: var(--ds-theme-color-action-primary);
 }
 
 .visually-hidden {

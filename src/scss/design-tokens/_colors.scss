@@ -1,33 +1,58 @@
 @use '../abstracts/colors' as colors;
 
 :root {
-    --color-text-primary: #{colors.$carbon};
-    --color-text-secondary: #{colors.$iron-grey};
-    --color-text-muted: #{colors.$soft-grey};
-    --color-text-inverse: #{colors.$porcelain};
+    --ds-color-primary: #{colors.$primary};
+    --ds-color-primary-active: #{colors.$primary-active};
+    --ds-color-primary-disabled: #{colors.$primary-disabled};
+    --ds-color-accent-teal: #{colors.$accent-teal};
+    --ds-color-accent-amber: #{colors.$accent-amber};
 
-    --color-page-background: #{colors.$paper};
-    --color-surface-primary: #{colors.$paper};
-    --color-surface-secondary: #{colors.$porcelain};
-    --color-surface-elevated: #fffaf2;
-    --color-surface-inverse: #{colors.$carbon};
-    --color-page-glow-primary: rgb(255 255 255 / 46%);
-    --color-page-glow-secondary: rgb(211 179 141 / 18%);
-    --color-page-glow-tertiary: rgb(255 255 255 / 30%);
-    --color-page-texture-primary: rgb(31 31 31 / 2.8%);
-    --color-page-texture-secondary: rgb(31 31 31 / 2.4%);
-    --color-page-texture-highlight: rgb(255 255 255 / 35%);
+    --ds-color-canvas: #{colors.$canvas};
+    --ds-color-surface-soft: #{colors.$surface-soft};
+    --ds-color-surface-card: #{colors.$surface-card};
+    --ds-color-surface-cream-strong: #{colors.$surface-cream-strong};
+    --ds-color-surface-dark: #{colors.$surface-dark};
+    --ds-color-surface-dark-elevated: #{colors.$surface-dark-elevated};
+    --ds-color-surface-dark-soft: #{colors.$surface-dark-soft};
+    --ds-color-hairline: #{colors.$hairline};
+    --ds-color-hairline-soft: #{colors.$hairline-soft};
 
-    --color-border-primary: #{colors.$linen-border};
-    --color-border-secondary: #{colors.$paper-deep};
+    --ds-color-ink: #{colors.$ink};
+    --ds-color-body-strong: #{colors.$body-strong};
+    --ds-color-body: #{colors.$body};
+    --ds-color-muted: #{colors.$muted};
+    --ds-color-muted-soft: #{colors.$muted-soft};
+    --ds-color-on-primary: #{colors.$on-primary};
+    --ds-color-on-dark: #{colors.$on-dark};
+    --ds-color-on-dark-soft: #{colors.$on-dark-soft};
 
-    --color-accent-primary: #{colors.$rust};
-    --color-accent-primary-strong: #{colors.$rust-dark};
-    --color-accent-primary-soft: #{colors.$rust-soft};
-    --color-accent-secondary: #{colors.$warm-sand};
-    --color-accent-support: #{colors.$olive-grey};
-    --color-hero-accent: #{colors.$rust};
-    --color-hero-accent-strong: #{colors.$rust-dark};
+    --ds-color-success: #{colors.$success};
+    --ds-color-warning: #{colors.$warning};
+    --ds-color-error: #{colors.$error};
 
-    --color-focus-ring: #{colors.$rust};
+    --ds-theme-color-background: var(--ds-color-canvas);
+    --ds-theme-color-surface-primary: var(--ds-color-canvas);
+    --ds-theme-color-surface-soft: var(--ds-color-surface-soft);
+    --ds-theme-color-surface-card: var(--ds-color-surface-card);
+    --ds-theme-color-surface-strong: var(--ds-color-surface-cream-strong);
+    --ds-theme-color-surface-emphasis: var(--ds-color-surface-dark);
+    --ds-theme-color-surface-emphasis-elevated: var(--ds-color-surface-dark-elevated);
+    --ds-theme-color-surface-emphasis-soft: var(--ds-color-surface-dark-soft);
+    --ds-theme-color-text-primary: var(--ds-color-ink);
+    --ds-theme-color-text-strong: var(--ds-color-body-strong);
+    --ds-theme-color-text-body: var(--ds-color-body);
+    --ds-theme-color-text-muted: var(--ds-color-muted);
+    --ds-theme-color-text-subtle: var(--ds-color-muted-soft);
+    --ds-theme-color-text-on-primary: var(--ds-color-on-primary);
+    --ds-theme-color-text-on-emphasis: var(--ds-color-on-dark);
+    --ds-theme-color-text-on-emphasis-soft: var(--ds-color-on-dark-soft);
+    --ds-theme-color-border: var(--ds-color-hairline);
+    --ds-theme-color-border-soft: var(--ds-color-hairline-soft);
+    --ds-theme-color-action-primary: var(--ds-color-primary);
+    --ds-theme-color-action-primary-active: var(--ds-color-primary-active);
+    --ds-theme-color-action-disabled: var(--ds-color-primary-disabled);
+    --ds-theme-color-focus-ring: var(--ds-color-primary);
+    --ds-theme-color-success: var(--ds-color-success);
+    --ds-theme-color-warning: var(--ds-color-warning);
+    --ds-theme-color-error: var(--ds-color-error);
 }

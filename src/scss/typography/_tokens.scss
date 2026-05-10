@@ -11,23 +11,73 @@
     --font-family-editorial: #{fonts.$font-family-editorial};
     --font-family-handwritten: #{fonts.$font-family-handwritten};
 
-    --font-weight-regular: #{scale.$font-weight-regular};
-    --font-weight-medium: #{scale.$font-weight-medium};
-    --font-weight-bold: #{scale.$font-weight-bold};
+    --ds-typography-display-xl-size: #{scale.$typography-display-xl-size};
+    --ds-typography-display-xl-weight: #{scale.$typography-display-xl-weight};
+    --ds-typography-display-xl-line-height: #{scale.$typography-display-xl-line-height};
+    --ds-typography-display-xl-letter-spacing: #{scale.$typography-display-xl-letter-spacing};
 
-    --font-size-body-sm: #{scale.$font-size-body-sm};
-    --font-size-body-md: #{scale.$font-size-body-md};
-    --font-size-body-lg: #{scale.$font-size-body-lg};
+    --ds-typography-display-lg-size: #{scale.$typography-display-lg-size};
+    --ds-typography-display-lg-weight: #{scale.$typography-display-lg-weight};
+    --ds-typography-display-lg-line-height: #{scale.$typography-display-lg-line-height};
+    --ds-typography-display-lg-letter-spacing: #{scale.$typography-display-lg-letter-spacing};
 
-    --font-size-label-sm: #{scale.$font-size-label-sm};
-    --font-size-label-md: #{scale.$font-size-label-md};
+    --ds-typography-display-md-size: #{scale.$typography-display-md-size};
+    --ds-typography-display-md-weight: #{scale.$typography-display-md-weight};
+    --ds-typography-display-md-line-height: #{scale.$typography-display-md-line-height};
+    --ds-typography-display-md-letter-spacing: #{scale.$typography-display-md-letter-spacing};
 
-    --font-size-heading-sm: #{scale.$font-size-heading-sm};
-    --font-size-heading-md: #{scale.$font-size-heading-md};
-    --font-size-heading-lg: #{scale.$font-size-heading-lg};
-    --font-size-hero: #{scale.$font-size-hero};
+    --ds-typography-display-sm-size: #{scale.$typography-display-sm-size};
+    --ds-typography-display-sm-weight: #{scale.$typography-display-sm-weight};
+    --ds-typography-display-sm-line-height: #{scale.$typography-display-sm-line-height};
+    --ds-typography-display-sm-letter-spacing: #{scale.$typography-display-sm-letter-spacing};
 
-    --line-height-body: #{scale.$line-height-body};
-    --line-height-heading: #{scale.$line-height-heading};
-    --line-height-tight: #{scale.$line-height-tight};
+    --ds-typography-title-lg-size: #{scale.$typography-title-lg-size};
+    --ds-typography-title-lg-weight: #{scale.$typography-title-lg-weight};
+    --ds-typography-title-lg-line-height: #{scale.$typography-title-lg-line-height};
+    --ds-typography-title-lg-letter-spacing: #{scale.$typography-title-lg-letter-spacing};
+
+    --ds-typography-title-md-size: #{scale.$typography-title-md-size};
+    --ds-typography-title-md-weight: #{scale.$typography-title-md-weight};
+    --ds-typography-title-md-line-height: #{scale.$typography-title-md-line-height};
+    --ds-typography-title-md-letter-spacing: #{scale.$typography-title-md-letter-spacing};
+
+    --ds-typography-title-sm-size: #{scale.$typography-title-sm-size};
+    --ds-typography-title-sm-weight: #{scale.$typography-title-sm-weight};
+    --ds-typography-title-sm-line-height: #{scale.$typography-title-sm-line-height};
+    --ds-typography-title-sm-letter-spacing: #{scale.$typography-title-sm-letter-spacing};
+
+    --ds-typography-body-md-size: #{scale.$typography-body-md-size};
+    --ds-typography-body-md-weight: #{scale.$typography-body-md-weight};
+    --ds-typography-body-md-line-height: #{scale.$typography-body-md-line-height};
+    --ds-typography-body-md-letter-spacing: #{scale.$typography-body-md-letter-spacing};
+
+    --ds-typography-body-sm-size: #{scale.$typography-body-sm-size};
+    --ds-typography-body-sm-weight: #{scale.$typography-body-sm-weight};
+    --ds-typography-body-sm-line-height: #{scale.$typography-body-sm-line-height};
+    --ds-typography-body-sm-letter-spacing: #{scale.$typography-body-sm-letter-spacing};
+
+    --ds-typography-caption-size: #{scale.$typography-caption-size};
+    --ds-typography-caption-weight: #{scale.$typography-caption-weight};
+    --ds-typography-caption-line-height: #{scale.$typography-caption-line-height};
+    --ds-typography-caption-letter-spacing: #{scale.$typography-caption-letter-spacing};
+
+    --ds-typography-caption-uppercase-size: #{scale.$typography-caption-uppercase-size};
+    --ds-typography-caption-uppercase-weight: #{scale.$typography-caption-uppercase-weight};
+    --ds-typography-caption-uppercase-line-height: #{scale.$typography-caption-uppercase-line-height};
+    --ds-typography-caption-uppercase-letter-spacing: #{scale.$typography-caption-uppercase-letter-spacing};
+
+    --ds-typography-code-size: #{scale.$typography-code-size};
+    --ds-typography-code-weight: #{scale.$typography-code-weight};
+    --ds-typography-code-line-height: #{scale.$typography-code-line-height};
+    --ds-typography-code-letter-spacing: #{scale.$typography-code-letter-spacing};
+
+    --ds-typography-button-size: #{scale.$typography-button-size};
+    --ds-typography-button-weight: #{scale.$typography-button-weight};
+    --ds-typography-button-line-height: #{scale.$typography-button-line-height};
+    --ds-typography-button-letter-spacing: #{scale.$typography-button-letter-spacing};
+
+    --ds-typography-nav-link-size: #{scale.$typography-nav-link-size};
+    --ds-typography-nav-link-weight: #{scale.$typography-nav-link-weight};
+    --ds-typography-nav-link-line-height: #{scale.$typography-nav-link-line-height};
+    --ds-typography-nav-link-letter-spacing: #{scale.$typography-nav-link-letter-spacing};
 }

@@ -1,5 +1,5 @@
 .contact-page {
-    --contact-line-color: color-mix(in srgb, var(--color-text-primary) 46%, transparent);
+    --contact-line-color: color-mix(in srgb, var(--ds-theme-color-text-primary) 46%, transparent);
     --contact-vertical-stroke: url('/src/resources/images/decoratives/stroke_vertical.svg');
 
     display: grid;

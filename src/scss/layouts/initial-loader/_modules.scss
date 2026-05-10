@@ -4,7 +4,7 @@
     background-color: var(--blueprint-surface-color);
     border: 1px solid var(--blueprint-line-color);
     border-radius: 0.38rem 0.28rem 0.42rem 0.32rem;
-    box-shadow: var(--shadow-initial-loader-module);
+    box-shadow: var(--ds-initial-loader-module-shadow);
     opacity: 0;
     transform: rotate(var(--module-angle)) scale(0.92);
     animation:

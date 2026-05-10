@@ -21,10 +21,10 @@
     margin: 0 0 clamp(0.75rem, 1.6dvh, 1.15rem);
     font-family: var(--font-family-ui);
     font-size: clamp(0.78rem, 0.85vw, 0.95rem);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--ds-typography-title-sm-weight);
     line-height: 1.2;
     letter-spacing: 0.34em;
-    color: var(--color-hero-accent);
+    color: var(--ds-theme-color-action-primary);
     text-transform: uppercase;
 }
 
@@ -32,10 +32,10 @@
     margin: 0;
     font-family: var(--font-family-editorial);
     font-size: clamp(4rem, min(7.2vw, 10dvh), 7rem);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--ds-typography-body-md-weight);
     line-height: 0.9;
     letter-spacing: -0.065em;
-    color: var(--color-text-primary);
+    color: var(--ds-theme-color-text-primary);
 }
 
 .not-found-page__title-line {
@@ -43,7 +43,7 @@
 }
 
 .not-found-page__title-line:last-child {
-    color: var(--color-hero-accent);
+    color: var(--ds-theme-color-action-primary);
     font-style: italic;
 }
 
@@ -51,7 +51,7 @@
     width: min(100%, 28rem);
     height: clamp(0.5rem, 1.4dvh, 0.875rem);
     margin-block: clamp(0.6rem, 1.3dvh, 0.95rem) clamp(1rem, 2.2dvh, 1.65rem);
-    border-top: 0.1875rem solid color-mix(in srgb, var(--color-text-primary) 48%, transparent);
+    border-top: 0.1875rem solid color-mix(in srgb, var(--ds-theme-color-text-primary) 48%, transparent);
     border-radius: 50%;
     transform: rotate(-1deg);
     transform-origin: left center;
@@ -62,7 +62,7 @@
     margin: 0;
     font-size: clamp(1.05rem, min(1.25vw, 2.1dvh), 1.3rem);
     line-height: 1.45;
-    color: var(--color-text-secondary);
+    color: var(--ds-theme-color-text-body);
 }
 
 .not-found-page__description + .not-found-page__description {
@@ -83,9 +83,9 @@
     background: linear-gradient(
         to bottom,
         transparent,
-        color-mix(in srgb, var(--color-border-primary) 34%, transparent) 12%,
-        var(--color-border-primary) 50%,
-        color-mix(in srgb, var(--color-border-primary) 34%, transparent) 88%,
+        color-mix(in srgb, var(--ds-theme-color-border) 34%, transparent) 12%,
+        var(--ds-theme-color-border) 50%,
+        color-mix(in srgb, var(--ds-theme-color-border) 34%, transparent) 88%,
         transparent
     );
 }
@@ -97,12 +97,12 @@
     justify-items: center;
     width: min(100%, clamp(13rem, 21vw, 22rem));
     padding: clamp(1.8rem, 3vw, 2.8rem) clamp(1.25rem, 2.4vw, 2.2rem);
-    color: var(--color-accent-primary);
-    background-color: color-mix(in srgb, var(--color-surface-elevated) 86%, transparent);
-    border: 1px solid var(--color-border-secondary);
+    color: var(--ds-theme-color-action-primary);
+    background-color: color-mix(in srgb, var(--ds-theme-color-surface-card) 86%, transparent);
+    border: 1px solid var(--ds-theme-color-border-soft);
     box-shadow:
-        0 0.35rem 0 color-mix(in srgb, var(--color-border-secondary) 70%, transparent),
-        var(--shadow-paper);
+        0 0.35rem 0 color-mix(in srgb, var(--ds-theme-color-border-soft) 70%, transparent),
+        var(--ds-shadow-raised-subtle);
     transform: rotate(1.5deg);
 }
 
@@ -111,8 +111,8 @@
     inset: clamp(0.55rem, 0.9vw, 0.85rem);
     pointer-events: none;
     content: '';
-    border: 1px solid var(--color-portrait-frame-highlight);
-    box-shadow: var(--shadow-portrait-inner);
+    border: 1px solid var(--ds-portrait-frame-highlight);
+    box-shadow: var(--ds-portrait-inner-shadow);
 }
 
 .not-found-page__sign-code {
@@ -120,7 +120,7 @@
     z-index: 1;
     font-family: var(--font-family-editorial);
     font-size: clamp(4.5rem, 8vw, 8.5rem);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--ds-typography-body-md-weight);
     line-height: 0.82;
     letter-spacing: -0.075em;
 }
@@ -131,7 +131,7 @@
     width: min(100%, 12rem);
     height: 1px;
     margin-block: clamp(0.8rem, 1.6dvh, 1.15rem);
-    background-color: color-mix(in srgb, var(--color-text-secondary) 24%, transparent);
+    background-color: color-mix(in srgb, var(--ds-theme-color-text-body) 24%, transparent);
 }
 
 .not-found-page__sign-label {
@@ -139,9 +139,9 @@
     z-index: 1;
     font-family: var(--font-family-handwritten);
     font-size: clamp(1.15rem, 1.8vw, 1.65rem);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--ds-typography-title-sm-weight);
     line-height: 1;
-    color: var(--color-text-secondary);
+    color: var(--ds-theme-color-text-body);
     transform: rotate(-2deg);
 }
 
@@ -161,9 +161,9 @@
         background: linear-gradient(
             to right,
             transparent,
-            color-mix(in srgb, var(--color-border-primary) 34%, transparent) 12%,
-            var(--color-border-primary) 50%,
-            color-mix(in srgb, var(--color-border-primary) 34%, transparent) 88%,
+            color-mix(in srgb, var(--ds-theme-color-border) 34%, transparent) 12%,
+            var(--ds-theme-color-border) 50%,
+            color-mix(in srgb, var(--ds-theme-color-border) 34%, transparent) 88%,
             transparent
         );
     }

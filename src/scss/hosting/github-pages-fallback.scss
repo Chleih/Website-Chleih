@@ -9,10 +9,10 @@
     display: grid;
     place-items: center;
     max-height: none;
-    padding-inline: var(--site-gutter);
+    padding-inline: var(--ds-container-gutter);
     overflow: auto;
 }
 
 .hosting-not-found-root {
-    width: min(100%, var(--site-max-width));
+    width: min(100%, var(--ds-container-max-width));
 }

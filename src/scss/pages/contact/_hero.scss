@@ -9,10 +9,10 @@
     margin: 0 0 clamp(1.25rem, 2.4dvh, 2rem);
     font-family: var(--font-family-ui);
     font-size: clamp(0.68rem, 0.76vw, 0.84rem);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--ds-typography-title-sm-weight);
     line-height: 1.2;
     letter-spacing: 0.34em;
-    color: var(--color-hero-accent);
+    color: var(--ds-theme-color-action-primary);
     text-transform: uppercase;
     animation: contact-reveal 520ms ease both;
 }
@@ -21,10 +21,10 @@
     margin: 0;
     font-family: var(--font-family-editorial);
     font-size: clamp(4rem, min(5.9vw, 8.7dvh), 7rem);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--ds-typography-body-md-weight);
     line-height: 0.95;
     letter-spacing: -0.065em;
-    color: var(--color-text-primary);
+    color: var(--ds-theme-color-text-primary);
     animation: contact-reveal 620ms 80ms ease both;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .contact-hero__title-accent {
-    color: var(--color-hero-accent);
+    color: var(--ds-theme-color-action-primary);
     font-style: italic;
 }
 
@@ -41,7 +41,7 @@
     width: min(100%, 31rem);
     height: clamp(0.5rem, 1.4dvh, 0.875rem);
     margin-block: clamp(0.55rem, 1.15dvh, 0.85rem) clamp(0.95rem, 2dvh, 1.65rem);
-    border-top: 0.1875rem solid color-mix(in srgb, var(--color-text-primary) 54%, transparent);
+    border-top: 0.1875rem solid color-mix(in srgb, var(--ds-theme-color-text-primary) 54%, transparent);
     border-radius: 50%;
     transform: rotate(-1deg) scaleX(1);
     transform-origin: left center;
@@ -53,7 +53,7 @@
     margin: 0;
     font-size: clamp(1.1rem, min(1.35vw, 2.45dvh), 1.45rem);
     line-height: 1.45;
-    color: var(--color-text-secondary);
+    color: var(--ds-theme-color-text-body);
     animation: contact-reveal 560ms 170ms ease both;
 }
 
