@@ -1,6 +1,6 @@
 import { getRequiredElement } from '../dom/required-element';
 import { ROUTE_CHANGED_EVENT, ROUTER_LINK_SELECTOR, ROUTER_OUTLET_SELECTOR } from './constants';
-import { focusRouteContent, syncRouteDocumentMetadata } from './route-document';
+import { focusRouteContent, syncRouteDocumentMetadata, syncRouteDocumentState } from './route-document';
 import { normalizePathname, resolveRoute } from './route-resolution';
 
 /**
@@ -59,7 +59,12 @@ export async function renderRoute(pathname, options = {}) {
     const routerOutlet = getRequiredElement(document, ROUTER_OUTLET_SELECTOR, HTMLElement);
 
     syncRouteDocumentMetadata(route);
+    syncRouteDocumentState(route);
+    routerOutlet.dataset.route = route.name;
     routerOutlet.innerHTML = route.template;
+    routerOutlet.scrollTop = 0;
+    routerOutlet.scrollLeft = 0;
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     updateActiveNavigation(route.path);
     await route.afterRender?.();
 

@@ -1,11 +1,8 @@
-.about-page {
+.about-section--hero {
     display: grid;
-    flex: 1 1 0;
     grid-template-columns: minmax(0, 1fr);
     gap: clamp(var(--ds-space-xl), 5vw, var(--ds-space-section));
     align-items: center;
-    min-height: 0;
-    max-height: 100%;
     padding-block: clamp(var(--ds-space-xs), 1.5dvh, var(--ds-space-lg));
     overflow: hidden;
 }
@@ -104,8 +101,8 @@
 
 .about-portrait__image {
     width: 100%;
-    max-height: min(58dvh, 36rem);
-    aspect-ratio: 5 / 6;
+    max-height: min(66dvh, 42rem);
+    aspect-ratio: 5 / 7;
     object-fit: cover;
     object-position: center top;
 }
