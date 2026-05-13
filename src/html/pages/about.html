@@ -1,5 +1,56 @@
-<section class="page-placeholder" aria-labelledby="about-title">
-    <p class="page-placeholder__eyebrow">About</p>
-    <h1 id="about-title" class="page-placeholder__title">About Mohamad</h1>
-    <p class="page-placeholder__description">This page is ready for the full about content.</p>
+<section class="about-page" aria-labelledby="about-title">
+    <header class="about-hero">
+        <h1 id="about-title" class="about-hero__title">
+            <span class="about-hero__title-line">The developer</span>
+            <span class="about-hero__title-line about-hero__title-line--accent">behind the work.</span>
+        </h1>
+
+        <div class="about-hero__body">
+            <p>
+                I&apos;m Mohamad, an IT developer with a Computer Science background and 3 years of professional experience building reliable digital products.
+            </p>
+
+            <p>
+                I enjoy turning complex problems into simple, maintainable solutions. Clean architecture, thoughtful interfaces, and clear code aren&apos;t just
+                preferences; they&apos;re how I build software that lasts.
+            </p>
+
+            <p>Outside of work, I&apos;m curious by nature and love learning new things, exploring ideas, and refining the craft one project at a time.</p>
+        </div>
+
+        <div class="about-hero__actions">
+            <a class="button button--primary about-hero__button" href="/contact" data-router-link>
+                <span>Let&apos;s build something together</span>
+                <i class="bi bi-arrow-right about-hero__button-icon" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+
+    <figure class="about-portrait" aria-label="Portrait, current focus, and location">
+        <div class="about-portrait__frame">
+            <img
+                class="about-portrait__image"
+                src="/src/resources/images/home/mohamad_placeholder.png"
+                alt="Portrait of Mohamad Chleih"
+                width="640"
+                height="720"
+            />
+        </div>
+
+        <figcaption class="about-portrait__note">
+            <span class="about-portrait__note-kicker">
+                <i class="bi bi-compass" aria-hidden="true"></i>
+                Current focus
+            </span>
+
+            <span class="about-portrait__note-text">Building clean, maintainable backend systems and thoughtful digital products.</span>
+
+            <span class="about-portrait__note-divider" aria-hidden="true"></span>
+
+            <span class="about-portrait__note-location">
+                <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                <span>Based in Copenhagen, Denmark.</span>
+            </span>
+        </figcaption>
+    </figure>
 </section>

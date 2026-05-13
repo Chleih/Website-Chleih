@@ -1,0 +1,155 @@
+.about-page {
+    display: grid;
+    flex: 1 1 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(var(--ds-space-xl), 5vw, var(--ds-space-section));
+    align-items: center;
+    min-height: 0;
+    max-height: 100%;
+    padding-block: clamp(var(--ds-space-xs), 1.5dvh, var(--ds-space-lg));
+    overflow: hidden;
+}
+
+.about-hero {
+    display: block;
+    max-width: 42rem;
+}
+
+.about-hero__title {
+    margin: 0;
+    font-family: var(--font-family-editorial);
+    font-size: clamp(4rem, min(6.1vw, 9.2dvh), 6.5rem);
+    font-weight: var(--ds-typography-display-xl-weight);
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+    color: var(--ds-theme-color-text-primary);
+}
+
+.about-hero__title-line {
+    display: block;
+}
+
+.about-hero__title-line--accent {
+    color: var(--ds-theme-color-action-primary);
+    font-style: italic;
+}
+
+.about-hero__body {
+    display: grid;
+    gap: clamp(var(--ds-space-sm), 1.7dvh, var(--ds-space-md));
+    max-width: 37rem;
+    margin-top: clamp(var(--ds-space-lg), 3dvh, var(--ds-space-xl));
+    font-size: clamp(0.98rem, min(1.04vw, 1.85dvh), 1.125rem);
+    line-height: 1.55;
+    color: var(--ds-theme-color-text-body);
+}
+
+.about-hero__body p {
+    margin: 0;
+}
+
+.about-hero__actions {
+    display: flex;
+    margin-top: clamp(var(--ds-space-lg), 3dvh, var(--ds-space-xl));
+}
+
+.about-hero__button {
+    gap: var(--ds-space-sm);
+}
+
+.about-hero__button-icon {
+    font-size: 1.18em;
+    line-height: 1;
+    transition: transform var(--transition-base);
+}
+
+.about-hero__button:hover .about-hero__button-icon,
+.about-hero__button:focus-visible .about-hero__button-icon {
+    transform: translateX(0.18rem);
+}
+
+.about-portrait {
+    position: relative;
+    width: min(100%, clamp(20rem, 25vw, 29rem));
+    margin: 0 auto;
+}
+
+.about-portrait__frame {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            145deg,
+            color-mix(in srgb, var(--ds-theme-color-surface-card) 76%, white),
+            var(--ds-theme-color-surface-soft)
+        ),
+        var(--ds-theme-color-surface-card);
+    border: 1px solid var(--ds-theme-color-border);
+    border-radius: var(--ds-radius-xl);
+}
+
+.about-portrait__frame::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    background:
+        linear-gradient(
+            180deg,
+            transparent 64%,
+            color-mix(in srgb, var(--ds-theme-color-text-primary) 12%, transparent)
+        ),
+        linear-gradient(135deg, color-mix(in srgb, white 34%, transparent), transparent 48%);
+}
+
+.about-portrait__image {
+    width: 100%;
+    max-height: min(58dvh, 36rem);
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.about-portrait__note {
+    display: grid;
+    gap: clamp(var(--ds-space-md), 1.9dvh, var(--ds-space-lg));
+    padding: clamp(var(--ds-space-lg), 2vw, var(--ds-space-xl)) clamp(var(--ds-space-md), 1.5vw, var(--ds-space-lg));
+    margin: clamp(var(--ds-space-md), 2dvh, var(--ds-space-lg)) 0 0;
+    color: var(--ds-theme-color-text-body);
+    background-color: color-mix(in srgb, var(--ds-theme-color-background) 88%, var(--ds-theme-color-surface-card));
+    border: 1px solid var(--ds-theme-color-border);
+    border-radius: var(--ds-radius-lg);
+}
+
+.about-portrait__note-kicker,
+.about-portrait__note-location {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--ds-space-xs);
+    font-family: var(--font-family-ui);
+    font-size: var(--ds-typography-caption-size);
+    font-weight: var(--ds-typography-caption-weight);
+    line-height: var(--ds-typography-caption-line-height);
+}
+
+.about-portrait__note-kicker {
+    letter-spacing: 0.14em;
+    color: var(--ds-theme-color-action-primary-active);
+    text-transform: uppercase;
+}
+
+.about-portrait__note-text {
+    max-width: 19rem;
+    font-size: var(--ds-typography-body-md-size);
+    line-height: var(--ds-typography-body-md-line-height);
+}
+
+.about-portrait__note-divider {
+    width: 100%;
+    max-width: 7rem;
+    border-top: 1px solid var(--ds-theme-color-action-primary);
+}
+
+.about-portrait__note-location {
+    color: var(--ds-theme-color-text-muted);
+}

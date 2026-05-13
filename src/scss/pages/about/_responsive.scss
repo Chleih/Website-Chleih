@@ -1,0 +1,83 @@
+@use '../../abstracts/media' as media;
+
+@include media.respond-from(lg) {
+    .about-page {
+        grid-template-columns: minmax(0, 1fr) minmax(23rem, 0.62fr);
+    }
+
+    .about-portrait {
+        justify-self: center;
+        margin: 0;
+    }
+
+    .about-portrait__note {
+        position: absolute;
+        top: 15%;
+        right: clamp(-3rem, -2.8vw, -1.75rem);
+        width: clamp(10.75rem, 11.5vw, 12.5rem);
+        margin: 0;
+        box-shadow: var(--ds-shadow-raised-subtle);
+    }
+}
+
+@include media.respond-until(lg) {
+    .about-page {
+        grid-template-columns: minmax(0, 1fr) minmax(17rem, 21rem);
+    }
+
+    .about-hero__title {
+        font-size: clamp(3.25rem, 8vw, 5.5rem);
+    }
+
+    .about-portrait__note {
+        gap: var(--ds-space-sm);
+    }
+}
+
+@include media.respond-until(md) {
+    .about-page {
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+
+    .about-hero {
+        max-width: 38rem;
+    }
+
+    .about-portrait {
+        width: min(100%, 22rem);
+    }
+}
+
+@include media.respond-until(sm) {
+    .about-hero__title {
+        font-size: clamp(3rem, 15vw, 4.35rem);
+    }
+
+    .about-hero__actions,
+    .about-hero__button {
+        width: 100%;
+    }
+
+    .about-portrait {
+        display: none;
+    }
+}
+
+@media (height <= 47rem) and (width >= 64rem) {
+    .about-hero__title {
+        font-size: clamp(3.6rem, 8.4dvh, 5.5rem);
+    }
+
+    .about-hero__body p:nth-child(3) {
+        display: none;
+    }
+
+    .about-portrait__image {
+        max-height: 54dvh;
+    }
+
+    .about-portrait__note-text {
+        display: none;
+    }
+}
