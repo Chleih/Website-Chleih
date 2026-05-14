@@ -2,43 +2,26 @@
 
 @include media.respond-from(lg) {
     .about-section--hero {
-        grid-template-columns: minmax(0, 1fr) minmax(23rem, 0.62fr);
+        grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.72fr);
     }
 
     .about-portrait {
-        --about-portrait-note-width: clamp(10.75rem, 11.5vw, 12.5rem);
-
-        justify-self: start;
-        margin: 0 0 0 clamp(-2rem, -1.6vw, -1rem);
+        justify-self: end;
+        margin: 0;
     }
 
     .about-portrait__image {
         max-height: min(70dvh, 44rem);
     }
-
-    .about-portrait__note {
-        position: absolute;
-        top: 13%;
-        right: calc(var(--about-portrait-note-width) / -2);
-        width: var(--about-portrait-note-width);
-        min-height: clamp(18rem, 36dvh, 23rem);
-        align-content: start;
-        margin: 0;
-        box-shadow: var(--ds-shadow-raised-subtle);
-    }
 }
 
 @include media.respond-until(lg) {
     .about-section--hero {
-        grid-template-columns: minmax(0, 1fr) minmax(17rem, 21rem);
+        grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
     }
 
     .about-hero__title {
         font-size: clamp(3.25rem, 8vw, 5.5rem);
-    }
-
-    .about-portrait__note {
-        gap: var(--ds-space-sm);
     }
 }
 
@@ -87,11 +70,6 @@
         font-size: clamp(3rem, 15vw, 4.35rem);
     }
 
-    .about-hero__actions,
-    .about-hero__button {
-        width: 100%;
-    }
-
     .about-portrait {
         display: none;
     }
@@ -102,7 +80,7 @@
         font-size: clamp(3.6rem, 8.4dvh, 5.5rem);
     }
 
-    .about-hero__body p:nth-child(3) {
+    .about-hero__location {
         display: none;
     }
 
