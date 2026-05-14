@@ -51,17 +51,11 @@
 
     .about-principles__list {
         grid-template-columns: 1fr;
-        gap: var(--ds-space-xl);
+        gap: var(--ds-space-lg);
     }
 
     .about-principle {
-        padding-inline: 0;
-    }
-
-    .about-principle + .about-principle {
-        padding-top: var(--ds-space-xl);
-        border-top: 1px solid var(--ds-theme-color-border);
-        border-left: 0;
+        min-height: 22rem;
     }
 }
 
@@ -86,9 +80,5 @@
 
     .about-portrait__image {
         max-height: 54dvh;
-    }
-
-    .about-portrait__note-text {
-        display: none;
     }
 }
