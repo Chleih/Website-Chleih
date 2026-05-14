@@ -92,11 +92,17 @@
 }
 
 .about-principle__text {
-    max-width: 14.75rem;
+    display: grid;
+    gap: var(--ds-space-sm);
+    max-width: 18rem;
     margin: 0;
-    font-size: var(--ds-typography-body-sm-size);
-    line-height: var(--ds-typography-body-sm-line-height);
+    font-size: clamp(0.8125rem, 0.92vw, var(--ds-typography-body-sm-size));
+    line-height: 1.48;
     color: var(--ds-theme-color-text-body);
+}
+
+.about-principle__text p {
+    margin: 0;
 }
 
 .about-principle__sketch {
