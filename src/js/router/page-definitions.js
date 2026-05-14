@@ -11,15 +11,6 @@ export const appPageDefinitions = [
         navVisible: true,
     },
     {
-        name: 'about',
-        path: '/about',
-        label: 'About',
-        title: 'About | Mohamad Chleih',
-        description:
-            'Learn more about Mohamad Chleih, his background, software engineering experience, and professional focus.',
-        navVisible: true,
-    },
-    {
         name: 'work',
         path: '/work',
         label: 'Work',
@@ -33,6 +24,15 @@ export const appPageDefinitions = [
         label: 'Stack',
         title: 'Stack | Mohamad Chleih',
         description: 'Tools, technologies, and engineering practices used by Mohamad Chleih.',
+        navVisible: true,
+    },
+    {
+        name: 'about',
+        path: '/about',
+        label: 'About',
+        title: 'About | Mohamad Chleih',
+        description:
+            'Learn more about Mohamad Chleih, his background, software engineering experience, and professional focus.',
         navVisible: true,
     },
     {
