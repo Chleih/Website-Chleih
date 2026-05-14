@@ -13,6 +13,10 @@
     .about-portrait__image {
         max-height: min(70dvh, 44rem);
     }
+
+    .about-principles__title {
+        white-space: nowrap;
+    }
 }
 
 @include media.respond-until(lg) {
@@ -75,7 +79,7 @@
     }
 
     .about-principle {
-        min-height: 22rem;
+        min-height: 30rem;
     }
 
     .about-work__list {

@@ -8,7 +8,7 @@
 .about-principles__header {
     display: grid;
     gap: clamp(var(--ds-space-sm), 1.6dvh, var(--ds-space-md));
-    max-width: 59rem;
+    max-width: none;
 }
 
 .about-principles__kicker {
@@ -25,7 +25,7 @@
 .about-principles__title {
     margin: 0;
     font-family: var(--font-family-editorial);
-    font-size: clamp(2.9rem, min(4.15vw, 7.3dvh), 4.65rem);
+    font-size: clamp(2.9rem, min(3.85vw, 6.7dvh), 4.35rem);
     font-weight: var(--ds-typography-display-lg-weight);
     line-height: 1.05;
     letter-spacing: var(--ds-typography-display-lg-letter-spacing);
@@ -40,8 +40,12 @@
 
 .about-principles__list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xl));
+    grid-template-columns: repeat(3, minmax(0, min(100%, 22rem)));
+    justify-content: space-between;
+    gap: var(--ds-space-xl);
+    justify-self: center;
+    width: 100%;
+    max-width: var(--ds-container-content-width);
     padding: 0;
     margin: 0;
     list-style: none;
@@ -52,7 +56,7 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
-    min-height: clamp(23rem, 42dvh, 30rem);
+    min-height: clamp(30rem, 58dvh, 38rem);
     padding: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xl));
     overflow: hidden;
     background-color: color-mix(in srgb, var(--ds-theme-color-background) 84%, var(--ds-theme-color-surface-card));
@@ -98,16 +102,17 @@
 .about-principle__sketch {
     display: grid;
     place-items: end center;
-    min-height: 8rem;
+    min-height: clamp(10rem, 17dvh, 13rem);
     margin-top: auto;
     color: color-mix(in srgb, var(--ds-theme-color-text-muted) 58%, transparent);
 }
 
-.about-principle__sketch i {
-    display: block;
-    font-size: clamp(5.25rem, 8vw, 8.25rem);
-    line-height: 1;
-    filter: drop-shadow(0.04rem 0.06rem 0 color-mix(in srgb, var(--ds-theme-color-action-primary) 18%, transparent));
+.about-principle__sketch img {
+    width: min(100%, 16rem);
+    max-height: 11rem;
+    object-fit: contain;
+    opacity: 0.68;
+    mix-blend-mode: multiply;
     transform: rotate(var(--about-principle-sketch-rotation, 0deg));
 }
 
@@ -119,6 +124,16 @@
     --about-principle-sketch-rotation: 7deg;
 }
 
+.about-principle__sketch--solving img {
+    width: min(112%, 18rem);
+    max-height: 13rem;
+}
+
 .about-principle__sketch--improving {
     --about-principle-sketch-rotation: -3deg;
+}
+
+.about-principle__sketch--improving img {
+    width: min(96%, 15.25rem);
+    max-height: 11rem;
 }
