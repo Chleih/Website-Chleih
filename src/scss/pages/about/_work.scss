@@ -1,0 +1,147 @@
+.about-section--work {
+    display: grid;
+    align-content: center;
+    gap: clamp(var(--ds-space-xl), 5dvh, var(--ds-space-xxl));
+}
+
+.about-work__header {
+    display: grid;
+    gap: clamp(var(--ds-space-sm), 1.6dvh, var(--ds-space-md));
+    max-width: 58rem;
+}
+
+.about-work__kicker {
+    margin: 0;
+    font-family: var(--font-family-ui);
+    font-size: var(--ds-typography-caption-uppercase-size);
+    font-weight: var(--ds-typography-caption-uppercase-weight);
+    line-height: var(--ds-typography-caption-uppercase-line-height);
+    letter-spacing: var(--ds-typography-caption-uppercase-letter-spacing);
+    color: var(--ds-theme-color-action-primary-active);
+    text-transform: uppercase;
+}
+
+.about-work__title {
+    margin: 0;
+    font-family: var(--font-family-editorial);
+    font-size: clamp(2.75rem, min(3.85vw, 6.7dvh), 4.25rem);
+    font-weight: var(--ds-typography-display-lg-weight);
+    line-height: 1.08;
+    letter-spacing: var(--ds-typography-display-lg-letter-spacing);
+    color: var(--ds-theme-color-text-primary);
+}
+
+.about-work__title em {
+    color: var(--ds-theme-color-action-primary);
+    font-style: italic;
+    font-weight: inherit;
+}
+
+.about-work__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.about-work-trait {
+    min-width: 0;
+    padding-inline: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
+}
+
+.about-work-trait + .about-work-trait {
+    border-left: 1px solid var(--ds-theme-color-border);
+}
+
+.about-work-trait__icon {
+    margin-bottom: clamp(var(--ds-space-md), 2.4dvh, var(--ds-space-lg));
+    font-size: clamp(2rem, 2.7vw, 2.55rem);
+    line-height: 1;
+    color: var(--ds-theme-color-action-primary);
+}
+
+.about-work-trait__title {
+    margin: 0;
+    font-family: var(--font-family-editorial);
+    font-size: clamp(1.55rem, 1.85vw, 2rem);
+    font-weight: var(--ds-typography-display-sm-weight);
+    line-height: 1.18;
+    letter-spacing: var(--ds-typography-display-sm-letter-spacing);
+    color: var(--ds-theme-color-text-primary);
+}
+
+.about-work-trait__divider {
+    display: block;
+    width: 1.7rem;
+    margin-block: clamp(var(--ds-space-xs), 1.3dvh, var(--ds-space-sm));
+    border-top: 1px solid var(--ds-theme-color-action-primary);
+}
+
+.about-work-trait__text {
+    max-width: 13.5rem;
+    margin: 0;
+    font-size: var(--ds-typography-body-sm-size);
+    line-height: var(--ds-typography-body-sm-line-height);
+    color: var(--ds-theme-color-text-body);
+}
+
+.about-work-cta {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--ds-space-xl);
+    align-items: center;
+    padding: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
+    background-color: color-mix(in srgb, var(--ds-theme-color-background) 82%, var(--ds-theme-color-surface-card));
+    border: 1px solid var(--ds-theme-color-border);
+    border-radius: var(--ds-radius-lg);
+}
+
+.about-work-cta::before {
+    position: absolute;
+    top: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
+    bottom: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
+    left: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
+    content: '';
+    border-left: 2px solid var(--ds-theme-color-action-primary);
+}
+
+.about-work-cta__content {
+    display: grid;
+    gap: var(--ds-space-xs);
+    min-width: 0;
+    padding-left: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xl));
+}
+
+.about-work-cta__title {
+    margin: 0;
+    font-family: var(--font-family-editorial);
+    font-size: clamp(1.75rem, 2.15vw, 2.35rem);
+    font-weight: var(--ds-typography-display-sm-weight);
+    line-height: 1.12;
+    letter-spacing: var(--ds-typography-display-sm-letter-spacing);
+    color: var(--ds-theme-color-text-primary);
+}
+
+.about-work-cta__text {
+    margin: 0;
+    color: var(--ds-theme-color-text-body);
+}
+
+.about-work-cta__button {
+    gap: var(--ds-space-sm);
+    min-width: 9.75rem;
+}
+
+.about-work-cta__button-icon {
+    font-size: 1.18em;
+    line-height: 1;
+    transition: transform var(--transition-base);
+}
+
+.about-work-cta__button:hover .about-work-cta__button-icon,
+.about-work-cta__button:focus-visible .about-work-cta__button-icon {
+    transform: translateX(0.18rem);
+}
