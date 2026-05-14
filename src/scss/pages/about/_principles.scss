@@ -40,12 +40,12 @@
 
 .about-principles__list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, min(100%, 22rem)));
-    justify-content: space-between;
-    gap: var(--ds-space-xl);
+    grid-template-columns: repeat(3, minmax(0, min(100%, 23.5rem)));
+    justify-content: center;
+    gap: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
     justify-self: center;
     width: 100%;
-    max-width: var(--ds-container-content-width);
+    max-width: 82rem;
     padding: 0;
     margin: 0;
     list-style: none;
