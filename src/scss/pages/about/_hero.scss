@@ -26,7 +26,7 @@
 .about-hero__title {
     margin: 0;
     font-family: var(--font-family-editorial);
-    font-size: clamp(3.75rem, min(5.85vw, 8.8dvh), 6.35rem);
+    font-size: clamp(3.5rem, min(5.45vw, 8dvh), 5.85rem);
     font-weight: var(--ds-typography-display-xl-weight);
     line-height: 0.98;
     letter-spacing: -0.055em;
@@ -45,10 +45,10 @@
 
 .about-hero__body {
     display: grid;
-    gap: clamp(var(--ds-space-md), 2dvh, var(--ds-space-lg));
-    max-width: 34rem;
-    margin-top: clamp(var(--ds-space-xl), 4dvh, var(--ds-space-xxl));
-    font-size: clamp(0.98rem, min(1.04vw, 1.85dvh), 1.125rem);
+    gap: clamp(var(--ds-space-sm), 1.35dvh, var(--ds-space-md));
+    max-width: 38rem;
+    margin-top: clamp(var(--ds-space-lg), 3dvh, var(--ds-space-xl));
+    font-size: clamp(0.95rem, min(1vw, 1.72dvh), 1.05rem);
     line-height: 1.55;
     color: var(--ds-theme-color-text-body);
 }
@@ -61,7 +61,7 @@
     display: flex;
     align-items: center;
     gap: var(--ds-space-sm);
-    margin: clamp(var(--ds-space-xl), 4dvh, var(--ds-space-xxl)) 0 0;
+    margin: clamp(var(--ds-space-lg), 3dvh, var(--ds-space-xl)) 0 0;
     font-family: var(--font-family-ui);
     font-size: var(--ds-typography-body-sm-size);
     font-weight: var(--ds-typography-body-sm-weight);
