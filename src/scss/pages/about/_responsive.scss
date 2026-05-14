@@ -49,6 +49,10 @@
         scroll-snap-align: none;
     }
 
+    .about-section:last-of-type {
+        min-height: auto;
+    }
+
     .about-section--hero {
         grid-template-columns: 1fr;
         align-content: center;

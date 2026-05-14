@@ -1,5 +1,6 @@
 html[data-route='about'] {
     --about-header-offset: calc(var(--ds-top-nav-height) + 1px);
+    --about-footer-offset: clamp(2rem, 3.5dvh, 2.75rem);
 
     overflow: hidden auto;
     scroll-padding-top: var(--about-header-offset);
@@ -33,9 +34,18 @@ body[data-route='about'] .site-main {
     overflow: visible;
 }
 
+body[data-route='about'] .site-footer {
+    min-height: var(--about-footer-offset);
+    scroll-snap-align: none;
+}
+
 .about-section {
     width: 100%;
     min-height: calc(100svh - var(--about-header-offset));
     padding-block: clamp(var(--ds-space-lg), 5dvh, var(--ds-space-section));
     scroll-snap-align: start;
+}
+
+.about-section:last-of-type {
+    min-height: calc(100svh - var(--about-header-offset) - var(--about-footer-offset));
 }
