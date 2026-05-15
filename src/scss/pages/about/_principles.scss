@@ -40,12 +40,12 @@
 
 .about-principles__list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, min(100%, 23.5rem)));
+    grid-template-columns: repeat(3, minmax(0, min(100%, 26rem)));
     justify-content: center;
-    gap: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
+    gap: clamp(var(--ds-space-md), 2vw, var(--ds-space-xl));
     justify-self: center;
     width: 100%;
-    max-width: 82rem;
+    max-width: var(--ds-container-wide-width);
     padding: 0;
     margin: 0;
     list-style: none;
@@ -94,7 +94,7 @@
 .about-principle__text {
     display: grid;
     gap: var(--ds-space-sm);
-    max-width: 18rem;
+    max-width: 21.5rem;
     margin: 0;
     font-size: clamp(0.8125rem, 0.92vw, var(--ds-typography-body-sm-size));
     line-height: 1.48;
