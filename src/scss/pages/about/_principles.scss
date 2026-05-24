@@ -20,6 +20,7 @@
     letter-spacing: var(--ds-typography-caption-uppercase-letter-spacing);
     color: var(--ds-theme-color-action-primary-active);
     text-transform: uppercase;
+    animation: about-reveal 520ms ease both;
 }
 
 .about-principles__title {
@@ -30,6 +31,7 @@
     line-height: 1.05;
     letter-spacing: var(--ds-typography-display-lg-letter-spacing);
     color: var(--ds-theme-color-text-primary);
+    animation: about-reveal 620ms 90ms ease both;
 }
 
 .about-principles__title em {
@@ -62,6 +64,31 @@
     background-color: color-mix(in srgb, var(--ds-theme-color-background) 84%, var(--ds-theme-color-surface-card));
     border: 1px solid var(--ds-theme-color-border);
     border-radius: var(--ds-radius-lg);
+    animation: about-reveal 560ms ease both;
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+}
+
+.about-principle:nth-child(1) {
+    animation-delay: 180ms;
+}
+
+.about-principle:nth-child(2) {
+    animation-delay: 260ms;
+}
+
+.about-principle:nth-child(3) {
+    animation-delay: 340ms;
+}
+
+.about-principle:hover {
+    background-color: color-mix(in srgb, var(--ds-theme-color-background) 72%, var(--ds-theme-color-surface-card));
+    border-color: color-mix(in srgb, var(--ds-theme-color-action-primary) 42%, var(--ds-theme-color-border));
+    box-shadow: var(--ds-shadow-raised-subtle);
+    transform: translateY(-0.16rem);
 }
 
 .about-principle__icon {
@@ -72,6 +99,9 @@
     font-size: clamp(2rem, 2.7vw, 2.55rem);
     line-height: 1;
     color: var(--ds-theme-color-action-primary);
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
 }
 
 .about-principle__title {
@@ -89,6 +119,11 @@
     width: 2rem;
     margin-block: clamp(var(--ds-space-sm), 1.8dvh, var(--ds-space-md));
     border-top: 1px solid var(--ds-theme-color-action-primary);
+    transform-origin: left center;
+    animation: about-divider-draw 620ms 360ms ease both;
+    transition:
+        border-color var(--transition-base),
+        transform var(--transition-base);
 }
 
 .about-principle__text {
@@ -119,7 +154,25 @@
     object-fit: contain;
     opacity: 0.68;
     mix-blend-mode: multiply;
-    transform: rotate(var(--about-principle-sketch-rotation, 0deg));
+    transform: translateY(0) rotate(var(--about-principle-sketch-rotation, 0deg)) scale(1);
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base);
+}
+
+.about-principle:hover .about-principle__icon {
+    color: var(--ds-color-accent-teal);
+    transform: translateY(-0.08rem);
+}
+
+.about-principle:hover .about-principle__divider {
+    border-color: var(--ds-color-accent-teal);
+    transform: scaleX(1.28);
+}
+
+.about-principle:hover .about-principle__sketch img {
+    opacity: 0.78;
+    transform: translateY(-0.18rem) rotate(var(--about-principle-sketch-rotation, 0deg)) scale(1.025);
 }
 
 .about-principle__sketch--learning {

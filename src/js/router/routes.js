@@ -2,6 +2,7 @@ import aboutTemplate from '../../html/pages/about.html?raw';
 import contactTemplate from '../../html/pages/contact.html?raw';
 import homeTemplate from '../../html/pages/home.html?raw';
 import notFoundTemplate from '../../html/pages/not-found.html?raw';
+import resumeTemplate from '../../html/pages/resume.html?raw';
 import stackTemplate from '../../html/pages/stack.html?raw';
 import workTemplate from '../../html/pages/work.html?raw';
 import { appPageDefinitions, notFoundPageDefinition } from './page-definitions';
@@ -12,6 +13,7 @@ const pageTemplates = {
     about: resolveRouteTemplateAssets(aboutTemplate),
     work: resolveRouteTemplateAssets(workTemplate),
     stack: resolveRouteTemplateAssets(stackTemplate),
+    resume: resolveRouteTemplateAssets(resumeTemplate),
     contact: resolveRouteTemplateAssets(contactTemplate),
 };
 

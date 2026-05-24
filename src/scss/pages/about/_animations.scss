@@ -1,0 +1,47 @@
+@keyframes about-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(0.6rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes about-portrait-settle {
+    from {
+        opacity: 0;
+        transform: translateY(0.7rem) scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes about-divider-draw {
+    from {
+        opacity: 0;
+        transform: scaleX(0.18);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes about-rule-draw {
+    from {
+        opacity: 0;
+        transform: scaleY(0.18);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}

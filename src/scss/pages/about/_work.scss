@@ -19,6 +19,7 @@
     letter-spacing: var(--ds-typography-caption-uppercase-letter-spacing);
     color: var(--ds-theme-color-action-primary-active);
     text-transform: uppercase;
+    animation: about-reveal 520ms ease both;
 }
 
 .about-work__title {
@@ -29,6 +30,7 @@
     line-height: 1.08;
     letter-spacing: var(--ds-typography-display-lg-letter-spacing);
     color: var(--ds-theme-color-text-primary);
+    animation: about-reveal 620ms 90ms ease both;
 }
 
 .about-work__title em {
@@ -49,10 +51,30 @@
 .about-work-trait {
     min-width: 0;
     padding-inline: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
+    animation: about-reveal 520ms ease both;
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
 }
 
 .about-work-trait + .about-work-trait {
     border-left: 1px solid var(--ds-theme-color-border);
+}
+
+.about-work-trait:nth-child(1) {
+    animation-delay: 170ms;
+}
+
+.about-work-trait:nth-child(2) {
+    animation-delay: 240ms;
+}
+
+.about-work-trait:nth-child(3) {
+    animation-delay: 310ms;
+}
+
+.about-work-trait:nth-child(4) {
+    animation-delay: 380ms;
 }
 
 .about-work-trait__icon {
@@ -60,6 +82,9 @@
     font-size: clamp(2rem, 2.7vw, 2.55rem);
     line-height: 1;
     color: var(--ds-theme-color-action-primary);
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
 }
 
 .about-work-trait__title {
@@ -70,6 +95,7 @@
     line-height: 1.18;
     letter-spacing: var(--ds-typography-display-sm-letter-spacing);
     color: var(--ds-theme-color-text-primary);
+    transition: color var(--transition-base);
 }
 
 .about-work-trait__divider {
@@ -77,6 +103,11 @@
     width: 1.7rem;
     margin-block: clamp(var(--ds-space-xs), 1.3dvh, var(--ds-space-sm));
     border-top: 1px solid var(--ds-theme-color-action-primary);
+    transform-origin: left center;
+    animation: about-divider-draw 620ms 340ms ease both;
+    transition:
+        border-color var(--transition-base),
+        transform var(--transition-base);
 }
 
 .about-work-trait__text {
@@ -97,6 +128,12 @@
     background-color: color-mix(in srgb, var(--ds-theme-color-background) 82%, var(--ds-theme-color-surface-card));
     border: 1px solid var(--ds-theme-color-border);
     border-radius: var(--ds-radius-lg);
+    animation: about-reveal 560ms 440ms ease both;
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
 }
 
 .about-work-cta::before {
@@ -106,6 +143,9 @@
     left: clamp(var(--ds-space-lg), 3vw, var(--ds-space-xxl));
     content: '';
     border-left: 2px solid var(--ds-theme-color-action-primary);
+    transform-origin: top center;
+    animation: about-rule-draw 680ms 620ms ease both;
+    transition: border-color var(--transition-base);
 }
 
 .about-work-cta__content {
@@ -144,4 +184,33 @@
 .about-work-cta__button:hover .about-work-cta__button-icon,
 .about-work-cta__button:focus-visible .about-work-cta__button-icon {
     transform: translateX(0.18rem);
+}
+
+.about-work-trait:hover {
+    transform: translateY(-0.08rem);
+}
+
+.about-work-trait:hover .about-work-trait__icon {
+    color: var(--ds-color-accent-teal);
+    transform: translateY(-0.08rem);
+}
+
+.about-work-trait:hover .about-work-trait__title {
+    color: var(--ds-theme-color-action-primary-active);
+}
+
+.about-work-trait:hover .about-work-trait__divider {
+    border-color: var(--ds-color-accent-teal);
+    transform: scaleX(1.22);
+}
+
+.about-work-cta:hover {
+    background-color: color-mix(in srgb, var(--ds-theme-color-background) 72%, var(--ds-theme-color-surface-card));
+    border-color: color-mix(in srgb, var(--ds-theme-color-action-primary) 42%, var(--ds-theme-color-border));
+    box-shadow: var(--ds-shadow-raised-subtle);
+    transform: translateY(-0.12rem);
+}
+
+.about-work-cta:hover::before {
+    border-color: var(--ds-theme-color-action-primary-active);
 }
