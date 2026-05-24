@@ -1,0 +1,36 @@
+@media (prefers-reduced-motion: reduce) {
+    .about-hero__kicker,
+    .about-hero__title,
+    .about-hero__body,
+    .about-hero__location,
+    .about-portrait__frame,
+    .about-principles__kicker,
+    .about-principles__title,
+    .about-principle,
+    .about-principle__divider,
+    .about-work__kicker,
+    .about-work__title,
+    .about-work-trait,
+    .about-work-trait__divider,
+    .about-work-cta,
+    .about-work-cta::before {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+
+    .about-portrait__frame,
+    .about-portrait__image,
+    .about-principle,
+    .about-principle__icon,
+    .about-principle__divider,
+    .about-principle__sketch img,
+    .about-work-trait,
+    .about-work-trait__icon,
+    .about-work-trait__title,
+    .about-work-trait__divider,
+    .about-work-cta,
+    .about-work-cta__button-icon {
+        transition: none;
+    }
+}
