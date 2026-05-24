@@ -4,7 +4,6 @@ html[data-route='about'] {
 
     overflow: hidden auto;
     scroll-padding-top: var(--about-header-offset);
-    scroll-snap-type: y proximity;
     scrollbar-width: thin;
     scrollbar-color: color-mix(in srgb, var(--ds-theme-color-action-primary) 48%, transparent) transparent;
 }
@@ -36,14 +35,12 @@ body[data-route='about'] .site-main {
 
 body[data-route='about'] .site-footer {
     min-height: var(--about-footer-offset);
-    scroll-snap-align: none;
 }
 
 .about-section {
     width: 100%;
     min-height: calc(100svh - var(--about-header-offset));
     padding-block: clamp(var(--ds-space-lg), 5dvh, var(--ds-space-section));
-    scroll-snap-align: start;
 }
 
 .about-section:last-of-type {
