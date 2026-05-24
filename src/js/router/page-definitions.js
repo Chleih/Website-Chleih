@@ -36,6 +36,15 @@ export const appPageDefinitions = [
         navVisible: true,
     },
     {
+        name: 'resume',
+        path: '/resume',
+        label: 'Resume',
+        title: 'Resume | Mohamad Chleih',
+        description:
+            'Resume and CV page for Mohamad Chleih, including professional experience, developer journey, education, and downloadable documents.',
+        navVisible: true,
+    },
+    {
         name: 'contact',
         path: '/contact',
         label: 'Contact',
