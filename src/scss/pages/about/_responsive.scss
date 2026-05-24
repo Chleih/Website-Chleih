@@ -53,7 +53,6 @@
     .about-section {
         min-height: auto;
         padding-block: clamp(var(--ds-space-xl), 8dvh, var(--ds-space-section));
-        scroll-snap-align: none;
     }
 
     .about-section:last-of-type {
