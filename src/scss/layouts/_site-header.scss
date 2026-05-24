@@ -8,6 +8,7 @@
     gap: clamp(var(--ds-space-lg), 4vw, var(--ds-space-cta-band));
     min-height: var(--ds-top-nav-height);
     padding-block: var(--ds-space-md);
+    border-bottom: 1px solid color-mix(in srgb, var(--ds-theme-color-border) 58%, transparent);
 }
 
 .site-brand {

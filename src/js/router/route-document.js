@@ -30,6 +30,16 @@ export function syncRouteDocumentMetadata(route) {
 }
 
 /**
+ * Exposes the active route as a document-level styling hook.
+ * @param {import('./types').RouteDefinition} route
+ * @returns {void}
+ */
+export function syncRouteDocumentState(route) {
+    document.documentElement.dataset.route = route.name;
+    document.body.dataset.route = route.name;
+}
+
+/**
  * Moves focus to the route outlet after client-side navigation.
  * @param {HTMLElement} routerOutlet
  * @returns {void}

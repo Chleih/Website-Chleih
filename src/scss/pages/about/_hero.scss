@@ -1,0 +1,112 @@
+.about-section--hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(var(--ds-space-xxl), 8vw, 8rem);
+    align-items: center;
+    padding-block: clamp(var(--ds-space-xl), 7dvh, var(--ds-space-section));
+    overflow: hidden;
+}
+
+.about-hero {
+    display: block;
+    max-width: 41rem;
+}
+
+.about-hero__kicker {
+    margin: 0 0 clamp(var(--ds-space-lg), 3dvh, var(--ds-space-xl));
+    font-family: var(--font-family-ui);
+    font-size: var(--ds-typography-caption-uppercase-size);
+    font-weight: var(--ds-typography-caption-uppercase-weight);
+    line-height: var(--ds-typography-caption-uppercase-line-height);
+    letter-spacing: var(--ds-typography-caption-uppercase-letter-spacing);
+    color: var(--ds-theme-color-action-primary-active);
+    text-transform: uppercase;
+}
+
+.about-hero__title {
+    margin: 0;
+    font-family: var(--font-family-editorial);
+    font-size: clamp(3.5rem, min(5.45vw, 8dvh), 5.85rem);
+    font-weight: var(--ds-typography-display-xl-weight);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    color: var(--ds-theme-color-text-primary);
+}
+
+.about-hero__title-line {
+    display: block;
+}
+
+.about-hero__title em {
+    color: var(--ds-theme-color-action-primary);
+    font-style: italic;
+    font-weight: inherit;
+}
+
+.about-hero__body {
+    display: grid;
+    gap: clamp(var(--ds-space-sm), 1.35dvh, var(--ds-space-md));
+    max-width: 38rem;
+    margin-top: clamp(var(--ds-space-lg), 3dvh, var(--ds-space-xl));
+    font-size: clamp(0.95rem, min(1vw, 1.72dvh), 1.05rem);
+    line-height: 1.55;
+    color: var(--ds-theme-color-text-body);
+}
+
+.about-hero__body p {
+    margin: 0;
+}
+
+.about-hero__location {
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-sm);
+    margin: clamp(var(--ds-space-lg), 3dvh, var(--ds-space-xl)) 0 0;
+    font-family: var(--font-family-ui);
+    font-size: var(--ds-typography-body-sm-size);
+    font-weight: var(--ds-typography-body-sm-weight);
+    line-height: var(--ds-typography-body-sm-line-height);
+    color: var(--ds-theme-color-text-body);
+}
+
+.about-hero__location i {
+    font-size: 1.35rem;
+    line-height: 1;
+    color: var(--ds-theme-color-action-primary);
+}
+
+.about-portrait {
+    position: relative;
+    width: min(100%, clamp(22rem, 28vw, 31rem));
+    margin: 0 auto;
+}
+
+.about-portrait__frame {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--ds-theme-color-surface-card);
+    border: 1px solid var(--ds-theme-color-border);
+    border-radius: var(--ds-radius-xl);
+}
+
+.about-portrait__frame::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    background:
+        linear-gradient(
+            180deg,
+            transparent 64%,
+            color-mix(in srgb, var(--ds-theme-color-text-primary) 12%, transparent)
+        ),
+        linear-gradient(135deg, color-mix(in srgb, white 34%, transparent), transparent 48%);
+}
+
+.about-portrait__image {
+    width: 100%;
+    max-height: min(66dvh, 42rem);
+    aspect-ratio: 4 / 5.7;
+    object-fit: cover;
+    object-position: center top;
+}

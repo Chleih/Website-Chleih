@@ -1,0 +1,51 @@
+html[data-route='about'] {
+    --about-header-offset: calc(var(--ds-top-nav-height) + 1px);
+    --about-footer-offset: clamp(2rem, 3.5dvh, 2.75rem);
+
+    overflow: hidden auto;
+    scroll-padding-top: var(--about-header-offset);
+    scroll-snap-type: y proximity;
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--ds-theme-color-action-primary) 48%, transparent) transparent;
+}
+
+body[data-route='about'] {
+    max-height: none;
+    overflow: visible;
+}
+
+body[data-route='about'] .site-frame {
+    height: auto;
+    min-height: 100dvh;
+    max-height: none;
+    overflow: visible;
+}
+
+body[data-route='about'] .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--ds-theme-color-background);
+}
+
+body[data-route='about'] .site-main {
+    display: block;
+    padding-block-end: 0;
+    overflow: visible;
+}
+
+body[data-route='about'] .site-footer {
+    min-height: var(--about-footer-offset);
+    scroll-snap-align: none;
+}
+
+.about-section {
+    width: 100%;
+    min-height: calc(100svh - var(--about-header-offset));
+    padding-block: clamp(var(--ds-space-lg), 5dvh, var(--ds-space-section));
+    scroll-snap-align: start;
+}
+
+.about-section:last-of-type {
+    min-height: calc(100svh - var(--about-header-offset) - var(--about-footer-offset));
+}
